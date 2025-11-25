@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
+
+.mensaje-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 120px 5%; /* Aire exacto estilo Figma */
+  text-align: center;
+}
+
+/* ICONO */
+.mensaje-icono {
+  width: 40px;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+/* TEXTO PRINCIPAL */
+.mensaje-titulo {
+  font-family: "Marcellus", serif;
+  font-size: 1.7rem;
+  color: #805b4a;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* PÁRRAFO */
+.mensaje-texto {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.55);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========================= */
+/*      RESPONSIVE           */
+/* ========================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .mensaje-titulo {
+    font-size: 1.45rem;
+  }
+
+  .mensaje-texto {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 600px) {
+  .mensaje-section {
+    padding: 90px 5%;
+  }
+
+  .mensaje-titulo {
+    font-size: 1.3rem;
+  }
+
+  .mensaje-texto {
+    font-size: 0.88rem;
+  }
+
+  .mensaje-icono {
+    width: 34px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 450px) {
+  .mensaje-titulo {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .mensaje-texto {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .mensaje-icono {
+    width: 30px;
+  }
+}

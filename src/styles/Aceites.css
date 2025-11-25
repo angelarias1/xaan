@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
+
+/* SECCIÓN */
+.aceites-section {
+  width: 100%;
+  background: #e2d9d2;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.aceites-container {
+  width: 90%;
+  max-width: 1350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ------------------ TEXTO ------------------ */
+.aceites-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.aceites-title {
+  font-family: "Marcellus", serif;
+  color: #805b4a;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.aceites-text {
+  font-family: "Barlow", sans-serif;
+  width: 330px;
+  color: rgba(0,0,0,0.55);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ======================================== */
+/* 🔥 BOTÓN PRINCIPAL CON EFECTO PREMIUM     */
+/* ======================================== */
+.aceites-btn {
+  padding: 10px 25px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 0;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1px;
+
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.25s ease;
+
+  /* elimina halo azul */
+  mix-blend-mode: normal;
+  background-clip: padding-box;
+}
+
+/* Hover sin halo azul */
+.aceites-btn:hover {
+  background-color: rgba(217, 204, 196, 0.85); /* más limpio */
+  border-color: #70503f;
+  box-shadow: 0 0 18px rgba(128, 91, 74, 0.25);
+}
+
+/* Click */
+.aceites-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* ======================================== */
+/* 🔥 BOTONES CHIQUITOS — MICROINTERACCIÓN   */
+/* ======================================== */
+.aceites-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.icon-btn {
+  width: 60px;
+  height: 28px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Hover: luz suave alrededor */
+.icon-btn:hover {
+  box-shadow: 0px 0px 12px rgba(117, 42, 8, 0.25);
+  border-color: #9f7863;
+}
+
+/* Click */
+.icon-btn:active {
+  transform: scale(0.88);
+}
+
+.icon-btn img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* ------------------ CARRUSEL ------------------ */
+.aceites-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aceites-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aceite-item {
+  width: 250px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: 0.5s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.aceite-item img {
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.15));
+}
+
+/* FOCUS EFECTO */
+.aceite-item.focus {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: drop-shadow(0px 14px 20px rgba(0,0,0,0.25));
+}
+
+
+/* 📱📱📱 RESPONSIVE — TABLET */
+@media (max-width: 992px) {
+
+  .aceites-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .aceites-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .aceites-text {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  .aceites-buttons {
+    justify-content: center;
+  }
+
+  .aceites-carousel {
+    margin-top: 20px;
+  }
+
+  .aceite-item {
+    width: 220px;
+    height: 300px;
+  }
+}
+
+
+/* 📱📱📱 RESPONSIVE — MÓVIL */
+@media (max-width: 600px) {
+
+  .aceites-section {
+    padding: 70px 0;
+  }
+
+  .aceites-title {
+    font-size: 1.8rem;
+  }
+
+  .aceites-text {
+    font-size: 0.95rem;
+  }
+
+  .aceites-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .aceites-buttons {
+    gap: 12px;
+  }
+
+  .icon-btn {
+    width: 50px;
+    height: 24px;
+  }
+
+  .aceites-track {
+    gap: 20px;
+  }
+
+  .aceite-item {
+    width: 190px;
+    height: 260px;
+  }
+}

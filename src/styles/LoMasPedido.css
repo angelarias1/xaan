@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
+
+.lomas-section {
+  width: 100%;
+  padding: 80px 5%;
+  background-color: #e2d9d2;
+}
+
+/* TÍTULO */
+.lomas-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  color: #805b4a;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+
+  text-align: left;      /* 👈 Lo alinea a la izquierda */
+  display: block;        /* 👈 Evita que se centre por ser inline */
+}
+
+
+/* GRID DE PRODUCTOS */
+.lomas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+/* CARD PRODUCTO */
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* IMAGEN CUADRADA */
+.producto-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* CATEGORÍA */
+.producto-cat {
+  margin-top: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  color: #805b4a;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* NOMBRE PRODUCTO */
+.producto-nombre {
+  font-family: "Marcellus", serif;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  color: #805b4a;
+}
+
+/* DESCRIPCIÓN */
+.producto-sub {
+  margin-top: 15px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  color: #805b4a;
+}
+
+/* OPCIONES */
+.producto-opciones {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.producto-opciones span {
+  border: 1px solid #805b4a;
+  padding: 4px 12px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  color: #805b4a;
+}
+
+/* BOTÓN */
+.producto-btn {
+  margin-top: 18px;
+  padding: 11px 0;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+}
+
+.producto-btn:hover {
+  background-color: #d9cdc5;
+  transition: 0.3s;
+}
+
+/* AVISO */
+.lomas-aviso {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  font-family: "Barlow", sans-serif;
+  color: #81492C;
+  text-align: center;
+}
+
+/* 🔥 RESPONSIVO PROFESIONAL */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .lomas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .producto-nombre {
+    font-size: 1.2rem;
+  }
+
+  .producto-cat {
+    font-size: 0.80rem;
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 600px) {
+  .lomas-section {
+    padding: 60px 5%;
+  }
+
+  .lomas-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .producto-img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .producto-nombre {
+    font-size: 1.15rem;
+  }
+
+  .producto-sub {
+    font-size: 0.85rem;
+  }
+
+  .producto-btn {
+    padding: 12px 0;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
+
+.who-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 90px 5%;
+}
+
+.who-container {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* IZQUIERDA */
+.who-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.who-tag {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #805b4a;
+  font-size: 0.95rem;
+}
+
+.who-title {
+  margin-top: 14px;
+  font-family: "Marcellus", serif;
+  font-size: 2.5rem;
+  color: #805b4a;
+  line-height: 1.2;
+}
+
+.who-description {
+  margin-top: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  color: #805b4a;
+  font-size: 1rem;
+  max-width: 420px;
+}
+
+/* BOTÓN — MICROINTERACCIÓN PREMIUM */
+.who-button {
+  margin-top: 28px;
+  padding: 12px 110px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+/* HOVER — LUXURY FEEL */
+.who-button:hover {
+  background-color: #d9cdc5;
+  border-color: #6e4d3c;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(128, 91, 74, 0.25);
+}
+
+/* ACTIVE — TAP SUAVE PREMIUM */
+.who-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 4px rgba(128, 91, 74, 0.15);
+}
+
+/* QUITAR BORDES FEOS DEL BOTÓN */
+.who-button:focus {
+  outline: none !important;
+}
+
+.who-button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* DERECHA */
+.who-right {
+  width: 50%;
+  display: flex;
+  gap: 18px;
+}
+
+.who-img {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.who-img.img1 {
+  height: 280px;
+}
+
+.who-img.img2 {
+  height: 380px;
+}
+
+/* ===================================== */
+/*              RESPONSIVO               */
+/* ===================================== */
+
+/* TABLET 1024px */
+@media (max-width: 1024px) {
+  .who-title {
+    font-size: 2.2rem;
+  }
+
+  .who-description {
+    font-size: 0.95rem;
+  }
+
+  .who-img.img1 {
+    height: 250px;
+  }
+
+  .who-img.img2 {
+    height: 330px;
+  }
+}
+
+/* TABLET 900px */
+@media (max-width: 900px) {
+  .who-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .who-left,
+  .who-right {
+    width: 100%;
+  }
+
+  .who-right {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .who-img.img1 {
+    height: 230px;
+  }
+
+  .who-img.img2 {
+    height: 310px;
+  }
+
+  .who-button {
+    padding: 12px 85px;
+  }
+}
+
+/* CELULARES GRANDES 600px */
+@media (max-width: 600px) {
+  .who-title {
+    font-size: 1.9rem;
+  }
+
+  .who-description {
+    max-width: 100%;
+  }
+
+  .who-right {
+    gap: 14px;
+  }
+
+  .who-img {
+    width: 48%;
+  }
+
+  .who-img.img1 {
+    height: 200px;
+  }
+
+  .who-img.img2 {
+    height: 260px;
+  }
+
+  .who-button {
+    padding: 12px 70px;
+  }
+}
+
+/* CELULARES PEQUEÑOS 450px */
+@media (max-width: 450px) {
+  .who-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .who-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .who-img.img1,
+  .who-img.img2 {
+    height: 260px;
+  }
+
+  .who-button {
+    padding: 12px 55px;
+  }
+}

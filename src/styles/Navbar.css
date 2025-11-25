@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400;500&display=swap');
+
+/* ========================================= */
+/* NAV SUPERIOR */
+/* ========================================= */
+
+/* ========================================= */
+/* NAV SUPERIOR */
+/* ========================================= */
+
+.nav {
+  width: 100%;
+  padding: 18px 5%;
+  background-color: #e2d9d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BOTÓN MENU (≡) */
+.nav-menu-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  outline: none !important;
+  transition: transform 0.35s ease;  /* efecto suave */
+}
+
+.nav-menu-btn:focus {
+  outline: none !important;
+}
+
+.nav-menu-btn::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* EFECTO AL CLIC */
+.nav-menu-btn:active {
+  transform: rotate(180deg) scale(0.92);   /* como rueda suave */
+}
+
+/* ICONO MENU */
+.menu-img {
+  width: 28px;
+  opacity: 0.85;
+
+  display: block;   /* elimina márgenes invisibles alrededor */
+  margin: 0;
+  padding: 0;
+  border: none;
+  object-fit: contain;
+}
+
+/* LOGO */
+.nav-logo-img {
+  height: 45px;
+  object-fit: contain;
+}
+
+/* LINK DERECHA */
+.nav-link {
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  font-size: 0.95rem;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+
+/* ========================================= */
+/* OVERLAY MENU */
+/* ========================================= */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #B69077;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  z-index: 99;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.menu-half {
+  width: 50%;
+  height: 100%;
+}
+
+/* ========================================= */
+/* CLOSE BUTTON (FUNCIONAL) */
+/* ========================================= */
+
+.menu-half.left {
+  position: relative;
+}
+
+/* ========================================= */
+/* CLOSE BUTTON ACTUALIZADO */
+/* ========================================= */
+
+.close-btn {
+
+  position: absolute;
+  top: 10%;
+  left: 290px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+
+  outline: none !important;
+  transition: transform 0.4s ease;
+}
+
+.close-btn:focus {
+  outline: none !important;
+}
+
+.close-btn::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.close-btn:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
+.close-img {
+  width: 34px;
+  height: 34px;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+
+
+
+/* ========================================= */
+/* LADO IZQUIERDO */
+/* ========================================= */
+
+.menu-left-content {
+  width: 100%;
+  height: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ARRIBA — XAAN SKIN CARE */
+.top-mini {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  color: #e8dbd1;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/* CENTRO — PRODUCTOS / ACERCA / PROCESO / CONTACTO */
+.center-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.center-links a {
+  font-family: "Marcellus", serif;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  opacity: 0.95;
+  line-height: 1.15;
+}
+
+/* ABAJO — CUN · MX */
+.bottom-mini {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  color: #e8dbd1;
+  opacity: 0.85;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+/* ========================================= */
+/* LADO DERECHO */
+/* ========================================= */
+
+.menu-half.right {
+  position: relative;
+}
+
+.menu-right-content {
+  width: 100%;
+  height: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LOGO ARRIBA */
+.right-logo {
+  position: absolute;
+  top: 10%;
+  right: 400px;
+  width: 115px;
+  opacity: 0.9;
+}
+
+/* ================================ */
+/* BLOQUE DE INFORMACIÓN */
+/* ================================ */
+
+.right-info {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.right-info p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  color: #FEFAF7;
+  letter-spacing: 1px;
+  opacity: 0.92;
+  margin-bottom: 22px;
+
+  /* 🔥 Subrayado REAL tipográfico ligero */
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 0.7px;
+  text-decoration-color: rgba(255,255,255,0.55);
+}
+
+/* ================================ */
+/* ICONOS IG y FACEBOOK */
+/* ================================ */
+
+/* ICONOS BAJO EL TEXTO */
+.right-socials {
+  margin-top: 18px;          /* separación desde “hola@xaan.mx” */
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Tamaño de iconos IG / FB */
+.social-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.92;
+  cursor: pointer;
+  display: block;
+  object-fit: contain;
+}
+
+
+.social-icon {
+  width: 26px;
+  opacity: 0.92;
+  cursor: pointer;
+}
+
+/* ================================ */
+/* DIRECCIÓN FINAL */
+/* ================================ */
+
+.right-address {
+  position: absolute;
+  bottom: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.right-address p {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  color: #e8dbd1;
+  opacity: 0.85;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.right-bottom-img {
+  width: 55px;
+  opacity: 0.85;
+}
+/* ========================================= */
+/*    HOVER PREMIUM ILUMINADO DEL MENÚ       */
+/* ========================================= */
+
+.center-links a,
+.right-info p {
+  position: relative;
+  cursor: pointer;
+  transition:
+    color 0.35s ease,
+    opacity 0.35s ease,
+    text-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* EFECTO HOVER */
+.center-links a:hover,
+.right-info p:hover {
+  color: #ffffff;
+  opacity: 1;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.65); /* ⭐ iluminación */
+  transform: translateX(5px);                      /* desplazamiento sutil */
+}
+/* ========================================= */
+/*    HOVER PREMIUM PARA ICONOS (IG / FB)    */
+/* ========================================= */
+
+.social-icon {
+  width: 26px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* EFECTO */
+.social-icon:hover {
+  transform: scale(1.15); /* agranda suave */
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.55)); /* iluminación */
+}

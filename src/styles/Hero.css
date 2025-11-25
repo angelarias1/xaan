@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
+
+/* Fondo */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #e2d9d2;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.hero-inner {
+  width: 100%;
+  max-width: 1400px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* IZQUIERDA */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-family: "Marcellus", serif;
+  font-size: 3.4rem;
+  color: #805b4a;
+  line-height: 1.1;
+}
+
+/* Link */
+.link {
+  margin-top: 12px;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #805b4a;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+}
+
+/* BOTONES ICONO */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+/* MICRO-INTERACCIÓN PREMIUM */
+.icon-btn {
+  width: 60px;
+  height: 28px;
+  border: 1px solid #805b4a;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* HOVER — ELEGANTE Y SUAVE */
+.icon-btn:hover {
+  transform: scale(1.03);
+  border-color: #6a4a36; /* ligeramente más oscuro */
+  box-shadow: 0 0 8px rgba(128, 91, 74, 0.25);
+}
+
+/* ACTIVE (CLIC) — REBOTE PREMIUM */
+.icon-btn:active {
+  transform: scale(0.94);
+  box-shadow: 0 0 4px rgba(128, 91, 74, 0.18);
+}
+
+/* Para evitar outlines feos (igual que los otros botones) */
+.icon-btn:focus {
+  outline: none !important;
+}
+
+.icon-btn::-moz-focus-inner {
+  border: 0 !important;
+}
+
+
+/* DERECHA */
+.hero-right {
+  width: 45%;
+  height: 70vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-right: -140px;      /* 🔥 DESPLAZAMIENTO SOLO EN DESKTOP */
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* ============================= */
+/*        RESPONSIVE             */
+/* ============================= */
+
+/* 1100px → Laptops medianas */
+@media (max-width: 1100px) {
+  .hero-right {
+    margin-right: -70px;     /* 🔥 Desplaza menos */
+    height: 60vh;
+  }
+}
+
+/* 950px → Se empieza a colapsar layout */
+@media (max-width: 950px) {
+  .hero-right {
+    margin-right: -30px;     /* 🔥 Seguridad para pantallas estrechas */
+  }
+}
+
+/* Tablets pequeñas (900px) */
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-right {
+    width: 100%;
+    margin-right: 0;        /* 👈 YA NO SE DESPLAZA */
+    height: 40vh;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 600px) {
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-right {
+    height: 35vh;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 450px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    height: 30vh;
+  }
+}

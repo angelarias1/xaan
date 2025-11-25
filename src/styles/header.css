@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400&display=swap');
+
+.xaan-header {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 18px 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #c7b8ac;
+
+  position: relative; /* necesario para centrar el logo */
+}
+
+/* ICONO IZQUIERDA */
+.menu-icon {
+  width: 22px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+/* CENTRO – LOGO */
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo {
+  height: 26px;
+  opacity: 0.85;
+}
+
+/* DERECHA – LINK */
+.header-right a {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  color: #805b4a;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.header-right a:hover {
+  opacity: 0.7;
+}
+
+/* ============================ */
+/*         RESPONSIVE           */
+/* ============================ */
+
+@media (max-width: 600px) {
+  .xaan-header {
+    padding: 16px 15px;
+  }
+
+  .header-logo {
+    height: 22px;
+  }
+
+  .header-right a {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400;500&display=swap');
+
+.footer-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 120px 0 120px 0; /* 🔥 MÁS ABAJO TODA LA SECCIÓN */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGO ARRIBA */
+.footer-logo {
+  height: 120px;
+  margin-bottom: 5px; /* 🔥 SAME AS FIGMA */
+}
+
+/* BLOQUE SUPERIOR */
+.footer-top {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.footer-phone,
+.footer-email {
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  font-size: 0.82rem;
+}
+
+/* NAV SUPERIOR */
+.footer-nav-top {
+  display: flex;
+  gap: 34px;
+}
+
+.footer-nav-top a {
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.footer-nav-top a:hover {
+  opacity: 0.7;
+}
+
+/* LÍNEA DIVISORA */
+.footer-divider {
+  width: 100%;
+  max-width: 1300px;
+  height: 1px;
+  background-color: #c7b8ac;
+  margin-bottom: 10px; /* 🔥 MUCHO MÁS ABAJO */
+}
+
+/* BLOQUE FINAL */
+.footer-bottom {
+  display: flex;
+  gap: 40px;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: -120px; 
+}
+
+.footer-bottom a {
+  color: #805b4a;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  opacity: 0.7;
+}
