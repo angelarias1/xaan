@@ -1,4 +1,3 @@
-
 /* SECCIÓN GENERAL */
 .contact-section {
   width: 100%;
@@ -74,17 +73,17 @@
 
 /* FORMULARIO */
 .contact-form {
-  width: 100%;                       /* 🔥 Toma el 100% del contenedor */
-  max-width: 260px;                  /* 🔥 Controla tamaño */
+  width: 100%;
+  max-width: 260px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: center;               /* 🔥 Todo centrado */
+  align-items: center;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;                       /* 🔥 Mismo ancho todos */
+  width: 100%;
   border: none;
   border-bottom: 1px solid #c7b8ac;
   background: transparent;
@@ -103,8 +102,8 @@
 
 /* BOTÓN */
 .contact-btn {
-  width: 100%;                       /* 🔥 MISMO ANCHO QUE LOS INPUTS */
-  padding: 10px 0;                   /* 🔥 Alto pro */
+  width: 100%;
+  padding: 10px 0;
   background-color: #81492C;
   color: #fff;
   border: none;
@@ -117,4 +116,46 @@
 
 .contact-btn:hover {
   opacity: 0.9;
+}
+
+
+
+/* ========================================= */
+/*                RESPONSIVO                 */
+/* ========================================= */
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;       /* 🔥 Se apilan */
+    align-items: center;
+  }
+
+  .image-box {
+    width: 100%;                   /* Imagen ARRIBA */
+    height: 380px;
+  }
+
+  .contact-box {
+    width: 100%;                   /* Contacto ABAJO */
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .contact-form {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-box {
+    height: 260px;                 /* Imagen más chica en cel */
+  }
+
+  .contact-box {
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    max-width: 260px;
+  }
 }

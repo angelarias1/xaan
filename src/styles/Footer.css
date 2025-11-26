@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400;500&display=swap');
 
+/* SECCIÓN GENERAL */
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px 0;
+  padding: 120px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,20 +27,21 @@
   align-items: center;
 }
 
+/* TEXTO */
 .footer-phone,
 .footer-email {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   font-size: 0.82rem;
+  cursor: pointer;
 }
 
-/* NAV LINKS */
+/* NAV SUPERIOR */
 .footer-nav-top {
   display: flex;
-  align-items: center;   /* 🔥 Alineación vertical REAL */
+  align-items: center;
   gap: 34px;
 }
-
 
 .footer-nav-top a {
   font-family: "Barlow", sans-serif;
@@ -51,14 +54,13 @@
   opacity: 0.7;
 }
 
-/* EMAIL + ICONOS */
+/* ICONOS */
 .footer-right-group {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-/* Iconos */
 .footer-icons {
   display: flex;
   gap: 10px;
@@ -72,9 +74,7 @@
   justify-content: center;
   align-items: center;
   padding: 4px;
-  border-radius: 0;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 .footer-icon-btn img {
@@ -82,17 +82,13 @@
   height: 16px;
 }
 
-.footer-icon-btn:hover {
-  background-color: rgba(128, 91, 74, 0.1);
-}
-
-/* LINEA */
+/* LÍNEA */
 .footer-divider {
   width: 100%;
   max-width: 1300px;
   height: 1px;
   background-color: #c7b8ac;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* BOTTOM */
@@ -100,7 +96,7 @@
   display: flex;
   gap: 40px;
   font-family: "Barlow", sans-serif;
-  margin-bottom: -120px; 
+  margin-bottom: 20px;
 }
 
 .footer-bottom a {
@@ -109,11 +105,8 @@
   text-decoration: none;
 }
 
-.footer-bottom a:hover {
-  opacity: 0.7;
-}
 /* ============================= */
-/*       DROPDOWN SUPERIOR      */
+/*       DROPDOWN SUPERIOR       */
 /* ============================= */
 
 .dropdown {
@@ -128,52 +121,90 @@
   font-size: 0.82rem;
   cursor: pointer;
   padding: 0;
-  line-height: 1;        /* 🔥 alinea la base con los otros */
-  margin: 0;            /* 🔥 evita desalineación */
+  line-height: 1;
 }
 
-
-
-.dropdown-btn:hover {
-  opacity: 0.7;
-}
-
-/* SUBMENÚ QUE SE DESPLIEGA HACIA ARRIBA */
 .dropdown-menu {
   position: absolute;
-  bottom: 120%;            /* 🔥 hacia arriba */
+  bottom: 120%;
   left: 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
   background-color: #e2d9d2;
   border: 1px solid #c7b8ac;
-  padding: 14px 18px;
-  border-radius: 0;
-
+  padding: 14px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(8px);   /* Súper suave */
-  transition: all 0.25s ease;
+  transform: translateY(5px);
+  transition: 0.25s ease;
 }
 
-/* LINKS DEL SUBMENÚ */
 .dropdown-menu a {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  text-decoration: none;
   font-size: 0.78rem;
+  text-decoration: none;
 }
 
-.dropdown-menu a:hover {
-  opacity: 0.7;
-}
-
-/* MOSTRAR MENÚ CUANDO HACES HOVER */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+/* ============================= */
+/*        RESPONSIVE MOBILE      */
+/* ============================= */
+
+@media (max-width: 850px) {
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* Número */
+  .footer-phone {
+    margin-bottom: 5px;
+  }
+
+  /* Menú */
+  .footer-nav-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    bottom: auto;
+    top: 120%;      /* 🔥 en móvil se despliega hacia ABAJO */
+  }
+
+  /* Correo */
+  .footer-right-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Iconos */
+  .footer-icons {
+    justify-content: center;
+  }
+
+  /* Línea */
+  .footer-divider {
+    margin-top: 30px;
+  }
+
+  /* Abajo */
+  .footer-bottom {
+    margin-top: 10px;
+    gap: 40px;
+    justify-content: center;
+  }
 }

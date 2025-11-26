@@ -1,36 +1,38 @@
 import "../styles/Footer.css";
 import logo from "../assets/logo-xaan.jfif";
 
-// 👉 Iconos
 import icon1 from "../assets/f.svg";   // Facebook
-import icon2 from "../assets/ig.svg"; // Instagram
+import icon2 from "../assets/ig.svg";  // Instagram
 
 export default function Footer() {
-
-  // 👉 Función para copiar el número
-  const copyPhone = () => {
-    navigator.clipboard.writeText("+52 998 240 3593");
-    alert("Número copiado: +52 998 240 3593");
+  // Función para copiar texto con tooltip dinámico
+  const copiar = (selector: string, texto: string) => {
+    navigator.clipboard.writeText(texto);
+    const el = document.querySelector(selector) as HTMLElement;
+    if (el) {
+      el.setAttribute("data-text", "Copiado");
+      setTimeout(() => el.setAttribute("data-text", "Copiar"), 1200);
+    }
   };
 
   return (
     <footer className="footer-section">
 
-      {/* LOGO ARRIBA */}
       <img src={logo} alt="XA'AN" className="footer-logo" />
 
-      {/* BLOQUE SUPERIOR */}
       <div className="footer-top">
-
-        {/* 🔥 TELÉFONO CON COPIAR AL HACER CLIC */}
-        <span className="footer-phone" onClick={copyPhone}>
+        
+        {/* TELÉFONO (COPIA + TOOLTIP) */}
+        <div 
+          className="footer-phone copy-txt"
+          data-text="Copiar"
+          onClick={() => copiar(".footer-phone", "9982403593")}
+        >
           tel. +52 998 240 3593
-        </span>
+        </div>
 
         {/* NAV SUPERIOR */}
         <nav className="footer-nav-top">
-
-          {/* Dropdown de productos */}
           <div className="dropdown">
             <button className="dropdown-btn">Productos</button>
 
@@ -49,34 +51,42 @@ export default function Footer() {
 
         {/* EMAIL + ICONOS */}
         <div className="footer-right-group">
-          <span className="footer-email">hola@xaan.mx</span>
 
+          {/* CORREO (COPIA + TOOLTIP) */}
+          <div 
+            className="footer-email copy-txt"
+            data-text="Copiar"
+            onClick={() => copiar(".footer-email", "hola@xaan.mx")}
+          >
+            hola@xaan.mx
+          </div>
+
+          {/* ÍCONOS */}
           <div className="footer-icons">
-
-            {/* 🔥 FACEBOOK */}
-            <button
-              className="footer-icon-btn"
-              onClick={() => window.open("https://facebook.com", "_blank")}
+            <a 
+              href="https://facebook.com"
+              target="_blank"
+              className="footer-icon-btn icon-tooltip"
+              data-text="Facebook"
             >
               <img src={icon1} alt="Facebook" />
-            </button>
+            </a>
 
-            {/* 🔥 INSTAGRAM */}
-            <button
-              className="footer-icon-btn"
-              onClick={() => window.open("https://instagram.com", "_blank")}
+            <a 
+              href="https://instagram.com"
+              target="_blank"
+              className="footer-icon-btn icon-tooltip"
+              data-text="Instagram"
             >
               <img src={icon2} alt="Instagram" />
-            </button>
-
+            </a>
           </div>
+
         </div>
       </div>
 
-      {/* LINEA */}
       <div className="footer-divider" />
 
-      {/* PARTE FINAL */}
       <div className="footer-bottom">
         <a href="#">Aviso de privacidad</a>
         <a href="#">Términos y condiciones</a>

@@ -387,3 +387,148 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   opacity: 1;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.55)); /* iluminación */
 }
+/* ========================================= */
+/* RESPONSIVE MENU (MÓVIL / TABLET)          */
+/* ========================================= */
+
+@media (max-width: 900px) {
+
+  /* CONTENEDOR GENERAL */
+  .menu-container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 70px;      /* espacio para X + logo */
+    padding-bottom: 40px;
+  }
+
+  .menu-half {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ========================================= */
+  /* BOTÓN CLOSE — SIEMPRE SUPERIOR IZQUIERDA  */
+  /* ========================================= */
+  .close-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: auto;
+    z-index: 9999;
+  }
+
+  /* ========================================= */
+  /* LOGO — SIEMPRE SUPERIOR DERECHA           */
+  /* ========================================= */
+  .right-logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    width: 105px;
+    margin: 0;
+    z-index: 9998;
+  }
+
+  /* ========================================= */
+  /* LADO IZQUIERDO (ARRIBA)                   */
+  /* ========================================= */
+
+  .menu-half.left {
+    padding: 0;
+  }
+
+  .menu-left-content {
+    width: 100%;
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;     /* 🔥 separaciones compactas */
+    align-items: flex-start;
+  }
+
+.top-mini {
+  position: relative;        /* 🔥 vuelve a tener posición propia */
+  margin: 15px 0 18px 0;      /* 🔥 ahora sí tendrá espacio visible */
+  opacity: 0.75;
+  text-align: left;
+  left: 180px;
+  z-index: 10;                /* 🔥 por si estaba debajo de algo */
+}
+
+
+  .center-links {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 330px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;     /* 🔥 menos separación */
+  }
+
+  .center-links a {
+    font-size: 1.32rem;
+    letter-spacing: 0.5px;
+  }
+
+  .bottom-mini {
+    position: static;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+
+  /* ========================================= */
+  /* LADO DERECHO (ABAJO)                      */
+  /* ========================================= */
+
+ .menu-right-content {
+  padding: 10px 18px 35px 200px; /* 🔥 10px menos hacia la izquierda */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+
+  .right-info {
+    position: static;
+    margin: 0;
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .right-info p {
+    margin-bottom: 14px; /* antes 22px */
+    font-size: 1rem;
+  }
+
+  .right-socials {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* ========================================= */
+  /* DIRECCIÓN + LOGO PEQUEÑO AL FINAL         */
+  /* ========================================= */
+  .right-address {
+    position: static;
+    width: 100%;
+    max-width: 330px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin-top: 10px;
+  }
+
+  .right-bottom-img {
+    width: 60px;
+    opacity: 0.9;
+    margin-top: 12px;
+  }
+}
