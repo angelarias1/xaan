@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
 
 /* SECCIÓN */
 .aceites-section {
@@ -26,8 +25,9 @@
 }
 
 .aceites-title {
-  font-family: "Marcellus", serif;
-  color: #805b4a;
+font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
+  font-weight: 400; 
+    color: #805b4a;
   font-size: 2.2rem;
   margin-bottom: 10px;
 }

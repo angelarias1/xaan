@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 .who-section {
   width: 100%;
   background-color: #e2d9d2;
@@ -26,26 +25,27 @@
 }
 
 .who-tag {
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
+font-family: "Barlow", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
   color: #805b4a;
-  font-size: 0.95rem;
 }
 
 .who-title {
   margin-top: 14px;
-  font-family: "Marcellus", serif;
-  font-size: 2.5rem;
+  font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
+  font-weight: 400;     
+  font-size: 2.0rem;
+                 /* REGULAR */
   color: #805b4a;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .who-description {
   margin-top: 18px;
   font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  color: #805b4a;
+  font-weight: 400;
+  color: #484848;
   font-size: 1rem;
   max-width: 420px;
 }
@@ -57,10 +57,11 @@
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
-  font-family: "Barlow", sans-serif;
+  font-family: "Archivo Narrow", sans-serif;
   cursor: pointer;
   font-size: 0.95rem;
   letter-spacing: 1px;
+    font-weight: 100;
   border-radius: 0;
   -webkit-appearance: none;
   appearance: none;

@@ -14,7 +14,6 @@ const Hero: React.FC = () => {
     >
       <div className="hero-inner">
 
-        {/* TEXTO PRINCIPAL */}
         <div className="hero-left">
           <h1>
             TU NUEVO <br />
@@ -25,34 +24,25 @@ const Hero: React.FC = () => {
           <a 
             className="link barlow-light" 
             href="#productos"
-            aria-label="Conoce nuestros productos de XAAN"
           >
             Conoce nuestros productos
           </a>
 
-          {/* BOTONES DE NAVEGACIÓN */}
-          <div className="hero-buttons" aria-label="Navegación de imágenes">
-            <button 
-              className="icon-btn"
-              aria-label="Ver producto anterior"
-            >
+          <div className="hero-buttons">
+            <button className="icon-btn">
               <img src={ArrowLeft} alt="Flecha izquierda" />
             </button>
 
-            <button 
-              className="icon-btn"
-              aria-label="Ver siguiente producto"
-            >
+            <button className="icon-btn">
               <img src={ArrowRight} alt="Flecha derecha" />
             </button>
           </div>
         </div>
 
-        {/* IMAGEN DERECHA */}
         <div className="hero-right">
           <img 
             src={heroImg} 
-            alt="Amenidades premium de XAAN Skin Care" 
+            alt="Amenidades premium de XAAN Skin Care"
             loading="lazy"
           />
         </div>

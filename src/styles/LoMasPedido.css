@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@200;300;400;500&display=swap');
 
 .lomas-section {
   width: 100%;
@@ -8,8 +7,9 @@
 
 /* TÍTULO */
 .lomas-title {
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
+font-family: "Barlow", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
   color: #805b4a;
   letter-spacing: 2px;
   margin-bottom: 50px;
@@ -53,10 +53,12 @@
 
 /* NOMBRE PRODUCTO */
 .producto-nombre {
-  font-family: "Marcellus", serif;
+  font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
+  font-weight: 400; 
   font-size: 1.3rem;
   margin-top: 5px;
   color: #805b4a;
+  
 }
 
 /* DESCRIPCIÓN */

@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400;500&display=swap');
 
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px 0 120px 0; /* 🔥 MÁS ABAJO TODA LA SECCIÓN */
+  padding: 120px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* LOGO ARRIBA */
+/* LOGO */
 .footer-logo {
   height: 120px;
-  margin-bottom: 5px; /* 🔥 SAME AS FIGMA */
+  margin-bottom: 5px;
 }
 
 /* BLOQUE SUPERIOR */
@@ -24,7 +23,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; 
 }
 
 .footer-phone,
@@ -34,11 +32,13 @@
   font-size: 0.82rem;
 }
 
-/* NAV SUPERIOR */
+/* NAV LINKS */
 .footer-nav-top {
   display: flex;
+  align-items: center;   /* 🔥 Alineación vertical REAL */
   gap: 34px;
 }
+
 
 .footer-nav-top a {
   font-family: "Barlow", sans-serif;
@@ -51,16 +51,51 @@
   opacity: 0.7;
 }
 
-/* LÍNEA DIVISORA */
+/* EMAIL + ICONOS */
+.footer-right-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Iconos */
+.footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icon-btn {
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer-icon-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-icon-btn:hover {
+  background-color: rgba(128, 91, 74, 0.1);
+}
+
+/* LINEA */
 .footer-divider {
   width: 100%;
   max-width: 1300px;
   height: 1px;
   background-color: #c7b8ac;
-  margin-bottom: 10px; /* 🔥 MUCHO MÁS ABAJO */
+  margin: 10px 0;
 }
 
-/* BLOQUE FINAL */
+/* BOTTOM */
 .footer-bottom {
   display: flex;
   gap: 40px;
@@ -76,4 +111,69 @@
 
 .footer-bottom a:hover {
   opacity: 0.7;
+}
+/* ============================= */
+/*       DROPDOWN SUPERIOR      */
+/* ============================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;        /* 🔥 alinea la base con los otros */
+  margin: 0;            /* 🔥 evita desalineación */
+}
+
+
+
+.dropdown-btn:hover {
+  opacity: 0.7;
+}
+
+/* SUBMENÚ QUE SE DESPLIEGA HACIA ARRIBA */
+.dropdown-menu {
+  position: absolute;
+  bottom: 120%;            /* 🔥 hacia arriba */
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  background-color: #e2d9d2;
+  border: 1px solid #c7b8ac;
+  padding: 14px 18px;
+  border-radius: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);   /* Súper suave */
+  transition: all 0.25s ease;
+}
+
+/* LINKS DEL SUBMENÚ */
+.dropdown-menu a {
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+
+.dropdown-menu a:hover {
+  opacity: 0.7;
+}
+
+/* MOSTRAR MENÚ CUANDO HACES HOVER */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
