@@ -1,64 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500&display=swap');
+/* ============================= */
+/* HERO BASE */
+/* ============================= */
 
-/* Fondo */
 .hero {
   width: 100%;
   height: 100vh;
   background-color: #e2d9d2;
-
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-/* Contenedor principal */
 .hero-inner {
   width: 100%;
   max-width: 1400px;
-
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
-/* IZQUIERDA */
+/* ============================= */
+/* CARRUSEL REAL Y FUNCIONAL */
+/* ============================= */
+
+.hero-right {
+  width: 45%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  width: 100%;       /* 🔥 cada slide ocupa el 100% del wrapper */
+  height: 100%;
+  flex-shrink: 0;  
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transform: scale(1.28) translateY(-180px); /* 🔥 zoom + ajuste */
+  transform-origin: center;
+}
+
+
+
+/* ============================= */
+/* TEXTO */
+/* ============================= */
+
 .hero-left {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  width: 50%;
+  align-items: flex-start; /* esto está perfecto */
 }
 
 .hero-left h1 {
-  font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
-  font-weight: 400;                    /* REGULAR */
-  font-size: 3.4rem;
+  font-family: "aviano-flare", serif;
+  font-size: 2.2rem;
   color: #805b4a;
-  line-height: 1.1;
+  font-weight: 400;
+  text-align: left !important;   /* 🔥 alineado correcto */
+  line-height: 1;
 }
 
-/* Link */
+
 .link {
   margin-top: 12px;
-  font-size: 1rem;
-  text-decoration: underline;
   color: #805b4a;
+  text-decoration: underline;
   font-family: "Barlow", sans-serif;
-  font-weight: 300;
 }
 
-/* BOTONES ICONO */
+/* BOTONES */
 .hero-buttons {
   display: flex;
   gap: 16px;
   margin-top: 25px;
 }
 
-/* MICRO-INTERACCIÓN PREMIUM */
 .icon-btn {
   width: 60px;
   height: 28px;
@@ -66,12 +104,11 @@
   border-radius: 0;
   background: transparent;
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: 
+  transition:
     transform 0.18s ease,
     border-color 0.18s ease,
     box-shadow 0.18s ease;
@@ -88,49 +125,9 @@
   box-shadow: 0 0 4px rgba(128, 91, 74, 0.18);
 }
 
-.icon-btn:focus {
-  outline: none !important;
-}
-
-.icon-btn::-moz-focus-inner {
-  border: 0 !important;
-}
-
-/* DERECHA */
-.hero-right {
-  width: 45%;
-  height: 70vh;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  margin-right: -140px;
-}
-
-.hero-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 /* ============================= */
-/*        RESPONSIVE             */
+/* RESPONSIVE */
 /* ============================= */
-
-@media (max-width: 1100px) {
-  .hero-right {
-    margin-right: -70px;
-    height: 60vh;
-  }
-}
-
-@media (max-width: 950px) {
-  .hero-right {
-    margin-right: -30px;
-  }
-}
 
 @media (max-width: 900px) {
   .hero {
@@ -141,40 +138,21 @@
   .hero-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
-  }
-
-  .hero-left {
-    width: 100%;
-  }
-
-  .hero-left h1 {
-    font-size: 2.6rem;
   }
 
   .hero-right {
     width: 100%;
-    margin-right: 0;
     height: 40vh;
+    margin-top: 25px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  .hero-right {
+    height: 32vh;
+  }
+
   .hero-left h1 {
     font-size: 2.2rem;
-  }
-
-  .hero-right {
-    height: 35vh;
-  }
-}
-
-@media (max-width: 450px) {
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-right {
-    height: 30vh;
   }
 }

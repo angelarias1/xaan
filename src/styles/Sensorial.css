@@ -71,11 +71,11 @@
 .sensorial-title {
 font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   font-weight: 400; 
-    font-size: 2.3rem;
+    font-size: 2.0rem;
   line-height: 1.25;
   color: #805b4a;
   text-align: left;
-  max-width: 460px;
+  max-width: 440px;
   letter-spacing: 0.5px;
   margin-bottom: 25px;
 }

@@ -4,7 +4,7 @@
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px 0 0;
+  padding: 120px  0px 0;  /* antes 120px abajo → ahora 40px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,13 +21,12 @@
   width: 100%;
   max-width: 1300px;
   padding: 0 40px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* TEXTO */
+/* TEXTO GENERAL */
 .footer-phone,
 .footer-email {
   font-family: "Barlow", sans-serif;
@@ -39,9 +38,10 @@
 /* NAV SUPERIOR */
 .footer-nav-top {
   display: flex;
-  align-items: center;
+  align-items: center;   /* 🔥 Alineación vertical REAL */
   gap: 34px;
 }
+
 
 .footer-nav-top a {
   font-family: "Barlow", sans-serif;
@@ -54,13 +54,14 @@
   opacity: 0.7;
 }
 
-/* ICONOS */
+/* EMAIL + ICONOS */
 .footer-right-group {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
+/* ICONOS */
 .footer-icons {
   display: flex;
   gap: 10px;
@@ -75,11 +76,17 @@
   align-items: center;
   padding: 4px;
   cursor: pointer;
+  border-radius: 0;
+  transition: 0.2s ease;
 }
 
 .footer-icon-btn img {
   width: 16px;
   height: 16px;
+}
+
+.footer-icon-btn:hover {
+  background-color: rgba(128, 91, 74, 0.1);
 }
 
 /* LÍNEA */
@@ -88,7 +95,7 @@
   max-width: 1300px;
   height: 1px;
   background-color: #c7b8ac;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 /* BOTTOM */
@@ -96,13 +103,49 @@
   display: flex;
   gap: 40px;
   font-family: "Barlow", sans-serif;
-  margin-bottom: 20px;
+  margin-top: 0px;
+    margin-bottom: -20px;
+
+
 }
 
 .footer-bottom a {
   color: #805b4a;
   font-size: 0.78rem;
   text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  opacity: 0.7;
+}
+
+/* ============================= */
+/*         COPIAR TOOLTIP        */
+/* ============================= */
+
+.copy-txt {
+  position: relative;
+}
+
+.copy-txt::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #805b4a;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-family: "Barlow", sans-serif;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.copy-txt:hover::after {
+  opacity: 1;
 }
 
 /* ============================= */
@@ -121,8 +164,10 @@
   font-size: 0.82rem;
   cursor: pointer;
   padding: 0;
-  line-height: 1;
+  line-height: 1;        /* 🔥 alinea la base con los otros */
+  margin: 0;            /* 🔥 evita desalineación */
 }
+
 
 .dropdown-menu {
   position: absolute;
@@ -151,60 +196,29 @@
 }
 
 /* ============================= */
-/*        RESPONSIVE MOBILE      */
+/*          TOOLTIP ICONS        */
 /* ============================= */
 
-@media (max-width: 850px) {
+.icon-tooltip {
+  position: relative;
+}
 
-  .footer-top {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 0;
-  }
+.icon-tooltip::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #805b4a;
+  color: white;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  opacity: 0;
+  border-radius: 4px;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
 
-  /* Número */
-  .footer-phone {
-    margin-bottom: 5px;
-  }
-
-  /* Menú */
-  .footer-nav-top {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .dropdown-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .dropdown-menu {
-    bottom: auto;
-    top: 120%;      /* 🔥 en móvil se despliega hacia ABAJO */
-  }
-
-  /* Correo */
-  .footer-right-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Iconos */
-  .footer-icons {
-    justify-content: center;
-  }
-
-  /* Línea */
-  .footer-divider {
-    margin-top: 30px;
-  }
-
-  /* Abajo */
-  .footer-bottom {
-    margin-top: 10px;
-    gap: 40px;
-    justify-content: center;
-  }
+.icon-tooltip:hover::after {
+  opacity: 1;
 }
