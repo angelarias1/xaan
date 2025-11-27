@@ -1,8 +1,11 @@
+/* ============================= */
+/*         SECCIÓN BASE          */
+/* ============================= */
 
 .qs-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 140px 0;
+  padding: 110px 0;              /* antes 140px → demasiado */
   display: flex;
   justify-content: center;
 }
@@ -10,55 +13,62 @@
 .qs-container {
   width: 90%;
   max-width: 1300px;
-
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 42% 58%;   /* proporción más elegante */
   align-items: center;
-  gap: 75px;
+  gap: 70px;
 }
 
-/* IZQUIERDA */
+/* ============================= */
+/*             IZQUIERDA         */
+/* ============================= */
+
 .qs-left {
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 26px;
 }
 
 .qs-subtitle {
   font-family: "Barlow", sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
   color: #805b4a;
+  opacity: 0.9;
 }
 
 .qs-text {
-  font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
-  font-weight: 500; 
+  font-family: "aviano-flare", serif;
+  font-weight: 500;
   color: #805b4a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.55;
-  max-width: 360px;
+  max-width: 380px;
 }
 
 .qs-btn {
   font-family: "Barlow", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   padding: 10px 22px;
   background: transparent;
   border: 1px solid #805b4a;
   color: #81492C;
   cursor: pointer;
   width: fit-content;
-  border-radius: 0px;
+  letter-spacing: 0.5px;
+  border-radius: 0;
+  transition: 0.3s ease;
 }
 
 .qs-btn:hover {
   background-color: #d9cdc5;
-  transition: 0.3s;
 }
 
-/* DERECHA — DOS IMÁGENES */
+/* ============================= */
+/*             DERECHA           */
+/* ============================= */
+
 .qs-right {
   display: flex;
   gap: 26px;
@@ -66,24 +76,20 @@
 }
 
 .qs-img {
-  width: 310px;
-  height: 380px;
+  width: 300px;
+  height: 370px;
   object-fit: cover;
   border-radius: 6px;
+  filter: brightness(0.97);     /* look más boutique */
 }
 
-/* EFECTOS ESCALONADOS */
-.img-up {
-  transform: translateY(-90px);
-}
+/* escalonados */
+.img-up { transform: translateY(-70px); }
+.img-down { transform: translateY(45px); }
 
-.img-down {
-  transform: translateY(55px);
-}
-
-/* ========================================================= */
-/* 👉👉 RESPONSIVE REAL, PROFESIONAL Y PROBADO VISUALMENTE   */
-/* ========================================================= */
+/* ============================= */
+/*           RESPONSIVE          */
+/* ============================= */
 
 @media (max-width: 1100px) {
   .qs-container {
@@ -96,19 +102,14 @@
     height: 330px;
   }
 
-  .img-up {
-    transform: translateY(-60px);
-  }
-
-  .img-down {
-    transform: translateY(35px);
-  }
+  .img-up { transform: translateY(-50px); }
+  .img-down { transform: translateY(30px); }
 }
 
 @media (max-width: 900px) {
   .qs-container {
     grid-template-columns: 1fr;
-    gap: 70px;
+    gap: 60px;
   }
 
   .qs-left {
@@ -121,58 +122,44 @@
   }
 
   .qs-img {
-    width: 230px;
-    height: 300px;
+    width: 220px;
+    height: 290px;
   }
 
-  /* 🔥 Mantiene el efecto escalonado sin romper layout */
-  .img-up {
-    transform: translateY(-40px);
-  }
-
-  .img-down {
-    transform: translateY(20px);
-  }
+  .img-up { transform: translateY(-35px); }
+  .img-down { transform: translateY(18px); }
 }
 
 @media (max-width: 600px) {
   .qs-section {
-    padding: 100px 0;
+    padding: 90px 0;
   }
 
   .qs-img {
-    width: 180px;
-    height: 240px;
+    width: 170px;
+    height: 230px;
   }
 
-  .img-up {
-    transform: translateY(-25px);
-  }
-
-  .img-down {
-    transform: translateY(12px);
-  }
+  .img-up { transform: translateY(-20px); }
+  .img-down { transform: translateY(10px); }
 
   .qs-text {
     font-size: 1.2rem;
+    max-width: 320px;
   }
 }
 
 @media (max-width: 450px) {
   .qs-img {
-    width: 150px;
-    height: 200px;
+    width: 140px;
+    height: 190px;
   }
 
-  .img-up {
-    transform: translateY(-18px);
-  }
-
-  .img-down {
-    transform: translateY(8px);
-  }
+  .img-up { transform: translateY(-15px); }
+  .img-down { transform: translateY(8px); }
 
   .qs-text {
     font-size: 1.1rem;
+    max-width: 280px;
   }
 }

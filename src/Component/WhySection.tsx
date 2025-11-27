@@ -59,7 +59,6 @@ const WhySection: React.FC = () => {
               <button className="why-button" onClick={() => toggle(index)}>
                 <span>{item.title}</span>
 
-                {/* Flecha */}
                 <span
                   className={`arrow ${openIndex === index ? "open" : ""}`}
                 >
@@ -67,15 +66,13 @@ const WhySection: React.FC = () => {
                 </span>
               </button>
 
-              {/* Desplegable */}
               <div
-                className={`why-content ${
-                  openIndex === index ? "show" : ""
-                }`}
+                className={`why-content ${openIndex === index ? "show" : ""}`}
               >
                 <p>{item.content}</p>
               </div>
 
+              {/* Línea estilo Figma */}
               <span className="why-line"></span>
             </div>
           ))}

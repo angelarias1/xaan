@@ -1,84 +1,120 @@
-/* SECCIÓN GENERAL */
+/* ============================= */
+/*      SECCIÓN GENERAL          */
+/* ============================= */
+
 .contact-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 100px 0;
+  padding: 90px 5%;
   display: flex;
   justify-content: center;
 }
 
-/* WRAPPER PRINCIPAL */
+/* ============================= */
+/*      WRAPPER PRINCIPAL        */
+/* ============================= */
+
 .contact-wrapper {
-  width: 90%;
+  width: 100%;
   max-width: 1300px;
   display: flex;
   gap: 0;
+  align-items: stretch;
 }
 
-/* BLOQUE DE CONTACTO */
+/* ============================= */
+/*        BLOQUE CONTACTO        */
+/* ============================= */
+
 .contact-box {
   width: 50%;
-  height: 430px;
-  border: 1px solid #c7b8ac;
   background-color: #e2d9d2;
+  border: 1px solid #c7b8ac;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  padding: 45px 40px;
+  /* ⭐ BLOQUE TOTALMENTE CENTRADO ⭐ */
+  justify-content: center;     /* centra verticalmente */
+  align-items: center;         /* centra horizontalmente */
+
+  padding: 55px 40px;
 }
 
-/* BLOQUE DE IMAGEN */
+/* ⭐ ALINEA TODO EL CONTENIDO A LA IZQUIERDA ⭐ */
+.contact-box > * {
+  width: 100%;
+  text-align: left;
+}
+
+/* ============================= */
+/*         BLOQUE IMAGEN         */
+/* ============================= */
+
 .image-box {
   width: 50%;
-  height: 520px;
   border: 1px solid #c7b8ac;
-  padding: 0;
+  overflow: hidden;
 }
 
 .contact-side-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px;
+  filter: brightness(0.97);
 }
 
-/* TEXTOS */
+/* ============================= */
+/*            TEXTOS             */
+/* ============================= */
+
 .contact-label {
   font-family: "Barlow", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   letter-spacing: 2px;
   color: #9f7a63;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  text-align: left;
+      margin-left: 180px;   /* 🔥 AJUSTA AQUÍ */
+
 }
 
 .contact-address {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   line-height: 1.4;
-  font-size: 0.85rem;
-  margin-bottom: 8px;
-  text-align: center;
+  font-size: .8rem;
+  margin-bottom: 10px;
+  text-align: left;
   max-width: 270px;
+      margin-left: -18px;   /* 🔥 AJUSTA AQUÍ */
+
 }
 
 .contact-info {
   font-family: "Barlow", sans-serif;
   color: #8b6a55;
-  font-size: 0.80rem;
-  margin-bottom: 20px;
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: left;
+    margin-left: 180px;   /* 🔥 AJUSTA AQUÍ */
+
 }
 
-/* FORMULARIO */
+/* ============================= */
+/*          FORMULARIO           */
+/* ============================= */
+
 .contact-form {
   width: 100%;
-  max-width: 260px;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  align-items: center;
+  gap: 14px;
+
+  align-items: flex-start;
+  text-align: left;
 }
 
 .contact-form input,
@@ -87,68 +123,73 @@
   border: none;
   border-bottom: 1px solid #c7b8ac;
   background: transparent;
-  padding: 4px 0;
+  padding: 5px 0;
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 0.80rem;
+  font-size: 0.85rem;
 }
 
 .contact-form textarea {
-  height: 90px;
+  height: 95px;
   resize: none;
   border: 1px solid #c7b8ac;
   padding: 8px;
 }
 
-/* BOTÓN */
+/* ============================= */
+/*             BOTÓN             */
+/* ============================= */
+
 .contact-btn {
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 0;
   background-color: #81492C;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-family: "Barlow", sans-serif;
-  margin-top: 6px;
+  margin-top: 8px;
+  letter-spacing: 1px;
   border-radius: 0;
+  transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-
-
-/* ========================================= */
-/*                RESPONSIVO                 */
-/* ========================================= */
+/* ============================= */
+/*           RESPONSIVO          */
+/* ============================= */
 
 @media (max-width: 900px) {
   .contact-wrapper {
-    flex-direction: column;       /* 🔥 Se apilan */
+    flex-direction: column;
     align-items: center;
   }
 
   .image-box {
-    width: 100%;                   /* Imagen ARRIBA */
-    height: 380px;
+    width: 100%;
+    height: 340px;
   }
 
   .contact-box {
-    width: 100%;                   /* Contacto ABAJO */
-    height: auto;
-    padding: 50px 20px;
-  }
+    width: 100%;
+    padding: 50px 25px;
 
-  .contact-form {
-    max-width: 300px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 70px 5%;
+  }
+
   .image-box {
-    height: 260px;                 /* Imagen más chica en cel */
+    height: 250px;
   }
 
   .contact-box {
@@ -156,6 +197,14 @@
   }
 
   .contact-form {
-    max-width: 260px;
+    max-width: 270px;
+  }
+
+  .contact-address {
+    font-size: 0.85rem;
+  }
+
+  .contact-info {
+    font-size: 0.78rem;
   }
 }

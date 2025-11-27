@@ -1,23 +1,26 @@
+/* ===================================== */
+/*         SECCIÓN GENERAL                */
+/* ===================================== */
 
-/* FONDO GENERAL */
 .sensorial-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px 0;
+  padding: 130px 0;
   display: flex;
   justify-content: center;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR */
 .sensorial-container {
   width: 90%;
   max-width: 1300px;
   background-color: #e2d9d2;
   border: 1px solid #c7b8ac;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 80px 70px;
   position: relative;
-  padding: 70px 60px;
 }
 
 /* LÍNEA CENTRAL */
@@ -32,153 +35,152 @@
   transform: translateX(-0.5px);
 }
 
-/* IZQUIERDA */
+/* ===================================== */
+/*                IZQUIERDA              */
+/* ===================================== */
+
 .sensorial-left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* IMAGEN SIN EFECTOS NI RECORTES */
 .sensorial-image-wrapper {
   width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border-radius: 0;
-  overflow: visible;
+  max-width: 380px;   /* + equilibrio visual */
 }
 
 .sensorial-image {
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 0;
 }
 
-/* DERECHA — TEXTO */
+/* ===================================== */
+/*                DERECHA                */
+/* ===================================== */
+
 .sensorial-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;   /* 🔥 Alineación editorial */
+  padding-left: 60px;        /* equilibrio real */
 }
 
 /* TÍTULO */
 .sensorial-title {
-font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
-  font-weight: 400; 
-    font-size: 2.0rem;
+  font-family: "aviano-flare", serif;
+  font-weight: 400;
+  font-size: 2.0rem;
   line-height: 1.25;
   color: #805b4a;
-  text-align: left;
-  max-width: 440px;
-  letter-spacing: 0.5px;
+  max-width: 430px;
   margin-bottom: 25px;
+
+  text-align: left !important;   /* ← fuerza alineación */
+  align-self: flex-start;         /* ← evita centrado por flexbox */
+  margin-left: 0;                 /* ← elimina centrado automático */
 }
 
 /* TEXTO */
 .sensorial-text {
   font-family: "Barlow", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
-  max-width: 420px;
+  max-width: 440px;
   color: rgba(0,0,0,0.55);
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   white-space: pre-line;
-  text-align: left;
+
+  text-align: left !important;   /* ← obliga la alineación */
+  align-self: flex-start;         /* ← evita centrado por flexbox */
+  margin-left: 0;                 /* ← elimina centrado automático */
 }
+
 
 /* BOTÓN */
 .sensorial-btn {
-  padding: 12px 100px;
+  padding: 13px 90px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
   font-size: 0.9rem;
-  border-radius: 0px;
+  border-radius: 0;
+  transition: 0.3s ease;
 }
 
 .sensorial-btn:hover {
   background-color: #d9cdc5;
-  transition: 0.3s;
 }
 
-/* ========================= */
-/*       RESPONSIVE          */
-/* ========================= */
+/* ===================================== */
+/*               RESPONSIVE              */
+/* ===================================== */
 
 /* Tablets grandes */
 @media (max-width: 1100px) {
   .sensorial-container {
-    padding: 60px 40px;
+    padding: 70px 50px;
   }
 
   .sensorial-title {
     font-size: 2rem;
   }
 
-  .sensorial-text {
-    font-size: 0.9rem;
+  .sensorial-right {
+    padding-left: 40px;
   }
 }
 
-/* Tablets y dispositivos medianos */
+/* Tablets medianos */
 @media (max-width: 900px) {
   .sensorial-container {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 50px 40px;
+    padding: 55px 40px;
   }
 
   .sensorial-container::before {
-    display: none; /* 🔥 QUITA LA LÍNEA CENTRAL EN MÓVIL */
+    display: none;   /* quita la línea central */
   }
 
   .sensorial-right {
-    margin-top: 40px;
+    padding-left: 0;
     align-items: center;
     text-align: center;
-  }
-
-  .sensorial-title,
-  .sensorial-text {
-    text-align: center;
+    margin-top: 45px;
   }
 
   .sensorial-btn {
-    padding: 12px 80px;
+    padding: 13px 70px;
   }
 }
 
-/* Celulares grandes */
+/* Móvil grande */
 @media (max-width: 600px) {
   .sensorial-image-wrapper {
     max-width: 260px;
   }
 
   .sensorial-title {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
   }
 
   .sensorial-text {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 
   .sensorial-btn {
-    padding: 12px 65px;
+    padding: 12px 55px;
   }
 }
 
-/* Celulares pequeños */
+/* Móvil pequeño */
 @media (max-width: 420px) {
   .sensorial-title {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .sensorial-text {
@@ -187,6 +189,6 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   }
 
   .sensorial-btn {
-    padding: 10px 50px;
+    padding: 10px 45px;
   }
 }

@@ -25,7 +25,7 @@ const LoMasPedido: React.FC = () => {
 
           <span className="producto-cat">ACEITES</span>
 
-          <h3 className="producto-nombre">ACEITE PARA MASAJE ENERGÍA</h3>
+<h3 className="producto-nombre">ACEITE PARA <br />MASAJE ENERGÍA</h3>
 
           <span className="producto-sub">PRESENTACIONES</span>
 
@@ -49,7 +49,7 @@ const LoMasPedido: React.FC = () => {
 
           <span className="producto-cat">CUERPO</span>
 
-          <h3 className="producto-nombre">CREMA CORPORAL HUMECTANTE</h3>
+<h3 className="producto-nombre">CREMA CORPORAL <br />HUMECTANTE</h3>
 
           <span className="producto-sub">PRESENTACIONES</span>
 
@@ -73,7 +73,7 @@ const LoMasPedido: React.FC = () => {
 
           <span className="producto-cat">AROMATIZANTES</span>
 
-          <h3 className="producto-nombre">AROMATIZANTE DE BLANCOS</h3>
+<h3 className="producto-nombre">AROMATIZANTE <br />DE BLANCOS</h3>
 
           <span className="producto-sub">PRESENTACIONES</span>
 

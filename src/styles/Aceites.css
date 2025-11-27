@@ -1,94 +1,105 @@
+/* =============================== */
+/*      SECCIÓN ACEITES            */
+/* =============================== */
 
-/* SECCIÓN */
 .aceites-section {
   width: 100%;
   background: #e2d9d2;
-  padding: 120px 0;
+  padding: 90px 0;
   display: flex;
   justify-content: center;
 }
 
 .aceites-container {
   width: 90%;
-  max-width: 1350px;
+  max-width: 1300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ------------------ TAG: LO MÁS PEDIDO ------------------ */
+
+.aceites-tag {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: #805b4a;
+  opacity: 0.9;
+
+  margin-bottom: 90px; /* lo dejaste así */
+  margin-top: -6px;
 }
 
 /* ------------------ TEXTO ------------------ */
+
 .aceites-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  max-width: 480px;
 }
 
 .aceites-title {
-font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
-  font-weight: 400; 
-    color: #805b4a;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-family: "aviano-flare", serif;
+  font-weight: 400;
+  color: #805b4a;
+  font-size: 2rem;
+  margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .aceites-text {
   font-family: "Barlow", sans-serif;
-  width: 330px;
   color: rgba(0,0,0,0.55);
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+  max-width: 380px;
 }
 
-/* ======================================== */
-/* 🔥 BOTÓN PRINCIPAL CON EFECTO PREMIUM     */
-/* ======================================== */
+/* ------------------ BOTÓN PRINCIPAL ------------------ */
+
 .aceites-btn {
-  padding: 10px 25px;
+  padding: 12px 32px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
-  margin-bottom: 20px;
   cursor: pointer;
   border-radius: 0;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
+  font-size: 0.95rem;
 
-  transition:
+  transition: 
     background-color 0.35s ease,
     box-shadow 0.35s ease,
     transform 0.25s ease;
-
-  /* elimina halo azul */
-  mix-blend-mode: normal;
-  background-clip: padding-box;
 }
 
-/* Hover sin halo azul */
 .aceites-btn:hover {
-  background-color: rgba(217, 204, 196, 0.85); /* más limpio */
+  background-color: rgba(217, 204, 196, 0.85);
   border-color: #70503f;
   box-shadow: 0 0 18px rgba(128, 91, 74, 0.25);
 }
 
-/* Click */
 .aceites-btn:active {
   transform: scale(0.95);
 }
 
+/* ------------------ BOTONES MINI ------------------ */
 
-/* ======================================== */
-/* 🔥 BOTONES CHIQUITOS — MICROINTERACCIÓN   */
-/* ======================================== */
 .aceites-buttons {
   display: flex;
-  gap: 16px;
-  margin-top: 10px;
+  gap: 14px;
+  margin-top: 15px;
 }
 
 .icon-btn {
-  width: 60px;
-  height: 28px;
+  width: 55px;
+  height: 26px;
   border: 1px solid #805b4a;
   background: transparent;
   cursor: pointer;
@@ -103,13 +114,11 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
     border-color 0.3s ease;
 }
 
-/* Hover: luz suave alrededor */
 .icon-btn:hover {
   box-shadow: 0px 0px 12px rgba(117, 42, 8, 0.25);
   border-color: #9f7863;
 }
 
-/* Click */
 .icon-btn:active {
   transform: scale(0.88);
 }
@@ -120,50 +129,53 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   pointer-events: none;
 }
 
-/* ------------------ CARRUSEL ------------------ */
-.aceites-carousel {
+/* =============================== */
+/*   NUEVO SISTEMA MANUAL + AUTO   */
+/* =============================== */
+
+.aceites-manual {
   width: 100%;
-  overflow: hidden;
-}
-
-.aceites-track {
-  display: flex;
-  gap: 40px;
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.aceite-item {
-  width: 250px;
-  height: 330px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  transition: 0.5s ease;
-  opacity: 0.6;
-  transform: scale(0.9);
+  align-items: center;
 }
 
-.aceite-item img {
-  height: 100%;
+/* Imagen individual con efecto */
+.aceite-img {
+  width: 360px;
+  height: 440px;
   object-fit: contain;
-  filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.15));
+
+  /* EFECTO SUAVE */
+  opacity: 0;
+  transform: scale(0.92);
+  animation: fadePop 0.6s ease forwards;
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
 }
 
-/* FOCUS EFECTO */
-.aceite-item.focus {
-  transform: scale(1.1);
-  opacity: 1;
-  filter: drop-shadow(0px 14px 20px rgba(0,0,0,0.25));
+/* Animación suave */
+@keyframes fadePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
+/* =============================== */
+/*          RESPONSIVE             */
+/* =============================== */
 
-/* 📱📱📱 RESPONSIVE — TABLET */
 @media (max-width: 992px) {
-
   .aceites-container {
     grid-template-columns: 1fr;
-    text-align: center;
     justify-items: center;
+    text-align: center;
+    gap: 40px;
   }
 
   .aceites-left {
@@ -172,60 +184,17 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   }
 
   .aceites-text {
-    width: 90%;
-    max-width: 420px;
+    max-width: 90%;
   }
 
-  .aceites-buttons {
-    justify-content: center;
-  }
-
-  .aceites-carousel {
-    margin-top: 20px;
-  }
-
-  .aceite-item {
-    width: 220px;
-    height: 300px;
+  .aceites-tag {
+    margin-bottom: 14px; /* más lógico en móvil */
   }
 }
 
-
-/* 📱📱📱 RESPONSIVE — MÓVIL */
 @media (max-width: 600px) {
-
-  .aceites-section {
-    padding: 70px 0;
-  }
-
-  .aceites-title {
-    font-size: 1.8rem;
-  }
-
-  .aceites-text {
-    font-size: 0.95rem;
-  }
-
-  .aceites-btn {
-    padding: 10px 25px;
-    font-size: 0.9rem;
-  }
-
-  .aceites-buttons {
-    gap: 12px;
-  }
-
-  .icon-btn {
-    width: 50px;
-    height: 24px;
-  }
-
-  .aceites-track {
-    gap: 20px;
-  }
-
-  .aceite-item {
-    width: 190px;
-    height: 260px;
+  .aceite-img {
+    width: 260px;
+    height: 330px;
   }
 }

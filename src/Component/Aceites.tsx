@@ -9,8 +9,7 @@ import img2 from "../assets/web/prod2.webp";
 import img3 from "../assets/web/prod3.webp";
 
 const Aceites: React.FC = () => {
-  const images = [img1, img2, img3, img1, img2, img3];
-
+  const images = [img1, img2, img3];
   const [index, setIndex] = useState(0);
 
   const next = () => {
@@ -21,11 +20,12 @@ const Aceites: React.FC = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // AUTO SLIDE
+  // 🔥 AUTO-SLIDE SUAVE Y SIN BUGS
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 2600);
+    }, 1000); // cada 3.5 segundos
+
     return () => clearInterval(interval);
   }, []);
 
@@ -35,6 +35,8 @@ const Aceites: React.FC = () => {
 
         {/* IZQUIERDA */}
         <div className="aceites-left">
+          <span className="aceites-tag">LO MÁS PEDIDO</span>
+
           <h3 className="aceites-title">ACEITES CORPORALES</h3>
 
           <p className="aceites-text">
@@ -46,33 +48,24 @@ const Aceites: React.FC = () => {
             Ver todos nuestros productos
           </button>
 
-          {/* 🔥 BOTONES IGUALES AL HERO */}
           <div className="aceites-buttons">
             <button className="icon-btn" onClick={prev}>
               <img src={ArrowLeft} />
             </button>
-
             <button className="icon-btn" onClick={next}>
               <img src={ArrowRight} />
             </button>
           </div>
         </div>
 
-        {/* CARRUSEL */}
-        <div className="aceites-carousel">
-          <div
-            className="aceites-track"
-            style={{ transform: `translateX(-${index * 260}px)` }}
-          >
-            {images.map((img, i) => (
-              <div
-                className={`aceite-item ${i === index + 1 ? "focus" : ""}`}
-                key={i}
-              >
-                <img src={img} alt={`product-${i}`} />
-              </div>
-            ))}
-          </div>
+        {/* IMAGEN MANUAL + AUTO-SLIDE */}
+        <div className="aceites-manual">
+          <img
+            src={images[index]}
+            key={index}
+            className="aceite-img"
+            alt="Aceite"
+          />
         </div>
 
       </div>

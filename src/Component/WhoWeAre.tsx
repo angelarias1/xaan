@@ -24,10 +24,11 @@ const WhoWeAre: React.FC = () => {
           </h2>
 
           {/* DESCRIPCIÓN CON PALABRAS CLAVE NATURALES */}
-          <p className="who-description">
-            Nuestros productos están elaborados a base de ingredientes naturales, 
-            saludables y con los más altos estándares de calidad.
-          </p>
+       <p className="who-description">
+  Nuestros productos están elaborados a base de ingredientes naturales, 
+  saludables y con los más altos estándares de calidad.
+</p>
+
 
           {/* CTA */}
           <button className="who-button">

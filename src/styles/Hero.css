@@ -12,117 +12,104 @@
 
 .hero-inner {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1350px;
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 /* ============================= */
-/* CARRUSEL REAL Y FUNCIONAL */
+/* NUEVO SISTEMA MANUAL (SIN CARRUSEL) */
 /* ============================= */
 
 .hero-right {
   width: 45%;
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+    margin-bottom: 180px;   /* 🔥 SUBE LA IMAGEN */
+
+
 }
 
-.carousel-wrapper {
-  width: 80%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-track {
+.hero-manual-img-container {
+  width: 100%;
   display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease;
+  justify-content: center;
+  align-items: center;
+
+  /* ⭐ TAMAÑO FIJO */
+  width: 430px;     /* 🔥 AJUSTA EL ANCHO */
+  height: 540px;    /* 🔥 AJUSTA LA ALTURA */
 }
 
-.slide {
-  width: 100%;       /* 🔥 cada slide ocupa el 100% del wrapper */
-  height: 100%;
-  flex-shrink: 0;  
-}
-
-.slide img {
+.hero-manual-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  position: relative;
-  transform: scale(1.28) translateY(-180px); /* 🔥 zoom + ajuste */
-  transform-origin: center;
+  object-fit: cover;     /* ⭐ todas llenan el mismo tamaño */
+  border-radius: 10px;   /* opcional */
 }
 
 
 
 /* ============================= */
-/* TEXTO */
+/* TEXTO IZQUIERDO (NO TOCADO) */
 /* ============================= */
 
 .hero-left {
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* esto está perfecto */
+  align-items: flex-start;
 }
 
 .hero-left h1 {
   font-family: "aviano-flare", serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: #805b4a;
   font-weight: 400;
-  text-align: left !important;   /* 🔥 alineado correcto */
-  line-height: 1;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  text-align: left !important;
+    margin-top: 70px;   /* 🔥 BAJA TODO EL CONTENIDO DERECHA */
+
 }
 
-
 .link {
-  margin-top: 12px;
+  margin-top: 10px;
   color: #805b4a;
   text-decoration: underline;
   font-family: "Barlow", sans-serif;
+  font-size: 1rem;
 }
 
 /* BOTONES */
 .hero-buttons {
   display: flex;
-  gap: 16px;
-  margin-top: 25px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .icon-btn {
   width: 60px;
-  height: 28px;
+  height: 30px;
   border: 1px solid #805b4a;
-  border-radius: 0;
   background: transparent;
   cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition:
-    transform 0.18s ease,
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
+  transition: transform 0.2s ease;
 }
 
-.icon-btn:hover {
-  transform: scale(1.03);
-  border-color: #6a4a36;
-  box-shadow: 0 0 8px rgba(128, 91, 74, 0.25);
-}
-
-.icon-btn:active {
-  transform: scale(0.94);
-  box-shadow: 0 0 4px rgba(128, 91, 74, 0.18);
+.icon-btn img {
+  width: 18px !important;
+  height: 18px !important;
+  object-fit: contain !important;
 }
 
 /* ============================= */
@@ -137,22 +124,26 @@
 
   .hero-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-left {
+    width: 100%;
   }
 
   .hero-right {
     width: 100%;
-    height: 40vh;
-    margin-top: 25px;
+    height: auto;
+  }
+
+  .hero-manual-img-container {
+    height: 45vh;
   }
 }
 
-@media (max-width: 500px) {
-  .hero-right {
-    height: 32vh;
-  }
-
-  .hero-left h1 {
-    font-size: 2.2rem;
+@media (max-width: 600px) {
+  .hero-manual-img-container {
+    height: 35vh;
   }
 }

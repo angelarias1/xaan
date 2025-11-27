@@ -1,52 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400;500&display=swap');
 
-/* SECCIÓN GENERAL */
+/* =============================== */
+/*          FOOTER GENERAL         */
+/* =============================== */
+
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px  0px 0;  /* antes 120px abajo → ahora 40px */
+  padding: 80px 0 40px;        /* antes 120px → enorme */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* LOGO */
+/* =============================== */
+/*             LOGO                */
+/* =============================== */
+
 .footer-logo {
-  height: 120px;
-  margin-bottom: 5px;
+  height: 90px;                /* antes 120px → demasiado */
+  margin-bottom: 25px;
 }
 
-/* BLOQUE SUPERIOR */
+/* =============================== */
+/*          TOP FOOTER             */
+/* =============================== */
+
 .footer-top {
   width: 100%;
   max-width: 1300px;
   padding: 0 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
-/* TEXTO GENERAL */
+/* CONTACTO */
+
 .footer-phone,
 .footer-email {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
-/* NAV SUPERIOR */
+/* NAV */
+
 .footer-nav-top {
   display: flex;
-  align-items: center;   /* 🔥 Alineación vertical REAL */
-  gap: 34px;
+  align-items: center;
+  gap: 32px;
 }
-
 
 .footer-nav-top a {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
@@ -55,63 +67,73 @@
 }
 
 /* EMAIL + ICONOS */
+
 .footer-right-group {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
 /* ICONOS */
+
 .footer-icons {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-icon-btn {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   background: transparent;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: 0;
   padding: 4px;
   cursor: pointer;
-  border-radius: 0;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .footer-icon-btn img {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
 }
 
 .footer-icon-btn:hover {
-  background-color: rgba(128, 91, 74, 0.1);
+  background-color: rgba(128, 91, 74, 0.12);
 }
 
-/* LÍNEA */
+/* =============================== */
+/*             DIVIDER             */
+/* =============================== */
+
 .footer-divider {
   width: 100%;
   max-width: 1300px;
   height: 1px;
   background-color: #c7b8ac;
-  margin: 10px 0;
+  margin: 25px 0;
 }
 
-/* BOTTOM */
+/* =============================== */
+/*          FOOTER BOTTOM          */
+/* =============================== */
+
 .footer-bottom {
   display: flex;
   gap: 40px;
+  justify-content: center;
+  width: 100%;
+
   font-family: "Barlow", sans-serif;
-  margin-top: 0px;
-    margin-bottom: -20px;
-
-
+  margin-bottom: 10px;
 }
 
 .footer-bottom a {
   color: #805b4a;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   text-decoration: none;
 }
 
@@ -119,9 +141,9 @@
   opacity: 0.7;
 }
 
-/* ============================= */
-/*         COPIAR TOOLTIP        */
-/* ============================= */
+/* =============================== */
+/*         COPY TOOLTIP            */
+/* =============================== */
 
 .copy-txt {
   position: relative;
@@ -137,7 +159,6 @@
   color: #fff;
   padding: 3px 8px;
   font-size: 0.7rem;
-  font-family: "Barlow", sans-serif;
   border-radius: 4px;
   opacity: 0;
   pointer-events: none;
@@ -148,9 +169,9 @@
   opacity: 1;
 }
 
-/* ============================= */
-/*       DROPDOWN SUPERIOR       */
-/* ============================= */
+/* =============================== */
+/*        DROPDOWN SUPERIOR        */
+/* =============================== */
 
 .dropdown {
   position: relative;
@@ -161,13 +182,11 @@
   border: none;
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   cursor: pointer;
   padding: 0;
-  line-height: 1;        /* 🔥 alinea la base con los otros */
-  margin: 0;            /* 🔥 evita desalineación */
+  line-height: 1;
 }
-
 
 .dropdown-menu {
   position: absolute;
@@ -178,14 +197,14 @@
   padding: 14px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(5px);
+  transform: translateY(6px);
   transition: 0.25s ease;
 }
 
 .dropdown-menu a {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   text-decoration: none;
 }
 
@@ -195,9 +214,9 @@
   transform: translateY(0);
 }
 
-/* ============================= */
-/*          TOOLTIP ICONS        */
-/* ============================= */
+/* =============================== */
+/*         ICON TOOLTIPS           */
+/* =============================== */
 
 .icon-tooltip {
   position: relative;
@@ -213,12 +232,67 @@
   color: white;
   padding: 3px 8px;
   font-size: 0.68rem;
-  opacity: 0;
   border-radius: 4px;
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
 
 .icon-tooltip:hover::after {
   opacity: 1;
+}
+
+/* =============================== */
+/*            RESPONSIVE           */
+/* =============================== */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-nav-top {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 60px 0 30px;
+  }
+
+  .footer-logo {
+    height: 70px;
+  }
+
+  .footer-nav-top a,
+  .dropdown-btn,
+  .footer-phone,
+  .footer-email {
+    font-size: 0.85rem;
+  }
+
+  .footer-top {
+    padding: 0 20px;
+  }
+
+  .footer-bottom a {
+    font-size: 0.78rem;
+  }
+
+  .footer-icon-btn {
+    width: 26px;
+    height: 26px;
+  }
 }

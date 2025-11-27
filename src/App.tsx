@@ -17,18 +17,11 @@ import Footer from './Component/Footer'
 function App() {
   return (
     <>
-      {/* MENÚ HAMBURGUESA */}
+      {/* NAVBAR */}
       <Navbar />
 
-      {/* HERO (no necesita ID) */}
+      {/* HERO */}
       <Hero />
-
-      {/* ============================= */}
-      {/* PRODUCTOS → Lo Más Pedido     */}
-      {/* ============================= */}
-      <section id="productos">
-        <LoMasPedido />
-      </section>
 
       {/* ============================= */}
       {/* ACERCA DE XAAN → WhoWeAre     */}
@@ -38,14 +31,21 @@ function App() {
       </section>
 
       {/* ============================= */}
+      {/* PRODUCTOS → Lo Más Pedido     */}
+      {/* ============================= */}
+      <section id="productos">
+        <LoMasPedido />
+      </section>
+      <SectionMensaje />
+
+      {/* ============================= */}
       {/* PROCESO → ExperienciaSensorial */}
       {/* ============================= */}
       <section id="proceso">
         <ExperienciaSensorial />
       </section>
 
-      {/* Puedes dejar estas secciones libres sin IDs */}
-      <SectionMensaje />
+      {/* Secciones sin IDs */}
       <Aceites />
       <LogoCenter />
       <WhySection />

@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@200;300;400&display=swap');
+
+/* ===================================== */
+/*              CONTENEDOR               */
+/* ===================================== */
+
 .who-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 90px 5%;
+  padding: 110px 5%;
 }
 
 .who-container {
@@ -12,10 +17,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 55px;
 }
 
-/* IZQUIERDA */
+/* ===================================== */
+/*                IZQUIERDA              */
+/* ===================================== */
+
 .who-left {
   width: 45%;
   display: flex;
@@ -25,20 +33,23 @@
 }
 
 .who-tag {
-font-family: "Barlow", sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
   color: #805b4a;
+  opacity: 0.9;
+    margin-bottom: 90px;     /* 🔥 antes estaba demasiado lejos */
+  margin-top: -8px;  
 }
 
 .who-title {
-  margin-top: 14px;
-  font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
-  font-weight: 400;     
-  font-size: 2.0rem;
-                 /* REGULAR */
+  margin-top: 16px;
+  font-family: "aviano-flare", serif;
+  font-weight: 400;
+  font-size: 2.rem;          /* Mejor proporción */
   color: #805b4a;
-  line-height: 1.1;
+  line-height: 1.15;
+  max-width: 480px;
 }
 
 .who-description {
@@ -46,14 +57,19 @@ font-family: "Barlow", sans-serif;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   color: #484848;
-  font-size: 1rem;
-  max-width: 420px;
+
+  font-size: 0.92rem;       /* 🔥 más pequeño */
+  line-height: 1.55;        /* 🔥 más aire, más elegante */
+
+  max-width: 380px;         /* 🔥 más compacto y equilibrado */
+  text-align: left;
 }
 
-/* BOTÓN — MICROINTERACCIÓN PREMIUM */
+
+/* BOTÓN */
 .who-button {
-  margin-top: 28px;
-  padding: 12px 110px;
+  margin-top: 32px;
+  padding: 12px 115px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
@@ -61,46 +77,32 @@ font-family: "Barlow", sans-serif;
   cursor: pointer;
   font-size: 0.95rem;
   letter-spacing: 1px;
-    font-weight: 100;
   border-radius: 0;
-  -webkit-appearance: none;
-  appearance: none;
 
   transition:
     transform 0.22s ease,
-    border-color 0.22s ease,
     background-color 0.22s ease,
     box-shadow 0.22s ease;
 }
 
-/* HOVER — LUXURY FEEL */
 .who-button:hover {
   background-color: #d9cdc5;
-  border-color: #6e4d3c;
   transform: scale(1.03);
   box-shadow: 0 0 10px rgba(128, 91, 74, 0.25);
 }
 
-/* ACTIVE — TAP SUAVE PREMIUM */
 .who-button:active {
   transform: scale(0.95);
-  box-shadow: 0 0 4px rgba(128, 91, 74, 0.15);
 }
 
-/* QUITAR BORDES FEOS DEL BOTÓN */
-.who-button:focus {
-  outline: none !important;
-}
+/* ===================================== */
+/*                DERECHA                */
+/* ===================================== */
 
-.who-button::-moz-focus-inner {
-  border: 0 !important;
-}
-
-/* DERECHA */
 .who-right {
   width: 50%;
   display: flex;
-  gap: 18px;
+  gap: 22px;
 }
 
 .who-img {
@@ -109,42 +111,24 @@ font-family: "Barlow", sans-serif;
   border-radius: 4px;
 }
 
-.who-img.img1 {
-  height: 280px;
-}
-
-.who-img.img2 {
-  height: 380px;
-}
+.who-img.img1 { height: 300px; }
+.who-img.img2 { height: 400px; }
 
 /* ===================================== */
-/*              RESPONSIVO               */
+/*              RESPONSIVE               */
 /* ===================================== */
 
-/* TABLET 1024px */
 @media (max-width: 1024px) {
-  .who-title {
-    font-size: 2.2rem;
-  }
-
-  .who-description {
-    font-size: 0.95rem;
-  }
-
-  .who-img.img1 {
-    height: 250px;
-  }
-
-  .who-img.img2 {
-    height: 330px;
-  }
+  .who-title { font-size: 2.1rem; }
+  .who-description { font-size: 0.95rem; }
+  .who-img.img1 { height: 260px; }
+  .who-img.img2 { height: 350px; }
 }
 
-/* TABLET 900px */
 @media (max-width: 900px) {
   .who-container {
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
   }
 
   .who-left,
@@ -157,51 +141,32 @@ font-family: "Barlow", sans-serif;
     gap: 20px;
   }
 
-  .who-img.img1 {
-    height: 230px;
-  }
-
-  .who-img.img2 {
-    height: 310px;
-  }
+  .who-img.img1 { height: 240px; }
+  .who-img.img2 { height: 320px; }
 
   .who-button {
-    padding: 12px 85px;
+    padding: 12px 95px;
   }
 }
 
-/* CELULARES GRANDES 600px */
 @media (max-width: 600px) {
-  .who-title {
-    font-size: 1.9rem;
-  }
-
-  .who-description {
-    max-width: 100%;
-  }
+  .who-title { font-size: 1.9rem; }
+  .who-description { max-width: 100%; }
 
   .who-right {
-    gap: 14px;
+    gap: 16px;
   }
 
-  .who-img {
-    width: 48%;
-  }
+  .who-img { width: 48%; }
 
-  .who-img.img1 {
-    height: 200px;
-  }
-
-  .who-img.img2 {
-    height: 260px;
-  }
+  .who-img.img1 { height: 210px; }
+  .who-img.img2 { height: 270px; }
 
   .who-button {
     padding: 12px 70px;
   }
 }
 
-/* CELULARES PEQUEÑOS 450px */
 @media (max-width: 450px) {
   .who-right {
     flex-direction: column;

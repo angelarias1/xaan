@@ -1,57 +1,65 @@
-/* Fondo general */
+/* ============================= */
+/*      FONDO GENERAL            */
+/* ============================= */
+
 .logo-center-section {
   width: 100%;
   background-color: #e2d9d2;
 
-  padding: 160px 0;                /* Igual que Figma */
+  padding: 120px 0;        /* antes 160px → demasiado vacío */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Logo */
+/* ============================= */
+/*          LOGO                 */
+/* ============================= */
+
 .logo-center-img {
-  width: 120px;                    /* Tamaño base */
-  opacity: 0.75;                   /* Igual a Figma */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Suavidad */
+  width: 110px;            /* antes 120px → baja 8% para elegancia */
+  opacity: 0.78;           /* ligera claridad */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover pequeño (opcional, elegante como XA’AN) */
 .logo-center-img:hover {
   opacity: 1;
-  transform: scale(1.03);
+  transform: scale(1.04);  /* más suave, premium */
 }
 
 /* ============================= */
-/*       RESPONSIVE              */
+/*        RESPONSIVE             */
 /* ============================= */
 
 /* Tablets */
 @media (max-width: 900px) {
   .logo-center-section {
-    padding: 120px 0;
+    padding: 95px 0;
   }
+
   .logo-center-img {
-    width: 100px;
+    width: 95px;
   }
 }
 
 /* Celulares grandes */
 @media (max-width: 600px) {
   .logo-center-section {
-    padding: 90px 0;
+    padding: 75px 0;
   }
+
   .logo-center-img {
-    width: 85px;
+    width: 82px;
   }
 }
 
 /* Celulares pequeños */
 @media (max-width: 450px) {
   .logo-center-section {
-    padding: 70px 0;
+    padding: 60px 0;
   }
+
   .logo-center-img {
-    width: 75px;
+    width: 70px;
   }
 }

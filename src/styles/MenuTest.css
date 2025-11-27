@@ -1,44 +1,154 @@
-/* BOTÓN ABRIR */
-.open-btn {
-  margin: 20px;
+/* =============================== */
+/*         BOTONES (TEMP)          */
+/* =============================== */
+
+.open-btn,
+.close-btn {
   padding: 10px 20px;
   cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  letter-spacing: 1px;
 }
 
-/* BOTÓN CERRAR */
 .close-btn {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
+  top: 25px;
+  left: 25px;
+  z-index: 20;
+  font-size: 1rem;
 }
 
-/* CONTAINER GENERAL */
+/* =============================== */
+/*       CONTENEDOR PRINCIPAL      */
+/* =============================== */
+
 .menu-container {
   position: fixed;
   inset: 0;
   background: #e2d9d2;
+  z-index: 999;
 
   display: flex;
   flex-direction: row;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
-/* MITAD IZQUIERDA */
+/* Mostrar menú */
+.menu-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =============================== */
+/*       MITAD IZQUIERDA           */
+/* =============================== */
+
 .menu-left {
   width: 50%;
-  background: #d8c7bb;
+  background: #ddcec4;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: transform 0.45s ease;
+  transform: translateX(-40px);
+  opacity: 0;
 }
 
-/* MITAD DERECHA */
+/* Activación suave */
+.menu-container.active .menu-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* =============================== */
+/*       MITAD DERECHA             */
+/* =============================== */
+
 .menu-right {
   width: 50%;
-  background: #c7b0a1;
+  background: #cbb5a8;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: transform 0.45s ease;
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.menu-container.active .menu-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* =============================== */
+/*            CONTENIDO            */
+/* =============================== */
+
+.menu-left-content,
+.menu-right-content {
+  text-align: center;
+  font-family: "aviano-flare", serif;
+  font-size: 1.4rem;
+  color: #805b4a;
+  letter-spacing: 1px;
+}
+
+/* =============================== */
+/*            RESPONSIVE           */
+/* =============================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-left,
+  .menu-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .menu-left-content,
+  .menu-right-content {
+    font-size: 1.2rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .close-btn {
+    top: 18px;
+    left: 18px;
+    font-size: 0.9rem;
+  }
+
+  .menu-left,
+  .menu-right {
+    height: 50%;
+  }
+
+  .menu-left-content,
+  .menu-right-content {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 420px) {
+  .menu-left-content,
+  .menu-right-content {
+    font-size: 1rem;
+  }
 }
