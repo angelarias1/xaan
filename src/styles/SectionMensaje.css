@@ -14,7 +14,6 @@
   width: 42px;
   margin-bottom: 25px;
   opacity: 0.78;
-
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,9 +23,9 @@
 .mensaje-titulo {
   font-family: "aviano-flare", serif;
   font-weight: 400;
-  font-size: 1.2rem;       /* Ajuste más elegante */
+  font-size: 1.2rem;
   color: #805b4a;
-  line-height: 1.38;        /* Compacto y fino */
+  line-height: 1.38;
   margin-bottom: 22px;
 
   max-width: 650px;
@@ -35,7 +34,6 @@
   text-align: center;
 }
 
-/* BR más suave visualmente */
 .mensaje-titulo br {
   display: block;
   margin-bottom: 6px;
@@ -53,13 +51,13 @@
 }
 
 /* ============================= */
-/*          RESPONSIVE           */
+/*             TABLET            */
+/*        <= 1024px             */
 /* ============================= */
 
-/* Tablet */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .mensaje-titulo {
-    font-size: 1.35rem;
+    font-size: .8rem;
     line-height: 1.34;
   }
 
@@ -68,25 +66,35 @@
   }
 
   .mensaje-texto {
-    font-size: 0.9rem;
-    max-width: 90%;
+    font-size: 0.6rem;
+    max-width: 95%;
   }
 
   .mensaje-icono {
-    width: 36px;
+    width: 38px;
+  }
+
+  .mensaje-section {
+    padding: 95px 5%;
   }
 }
 
-/* Móvil grande */
-@media (max-width: 600px) {
+/* ============================= */
+/*              MÓVIL            */
+/*        <= 480px              */
+/* ============================= */
+
+@media (max-width: 480px) {
   .mensaje-section {
-    padding: 85px 5%;
+    padding: 80px 5%;
   }
 
   .mensaje-titulo {
-    font-size: 1.18rem;
-    line-height: 1.32;
-    max-width: 90%;
+    font-size: .96rem;
+    line-height: 1.30;
+    max-width: 100%;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .mensaje-titulo br {
@@ -94,31 +102,15 @@
   }
 
   .mensaje-texto {
-    font-size: 0.88rem;
+    font-size:.81rem;
+    line-height: 1.2;
+    max-width: 100%;
+    margin-top: 40px;
+
+
   }
 
   .mensaje-icono {
-    width: 32px;
-  }
-}
-
-/* Móvil pequeño */
-@media (max-width: 450px) {
-  .mensaje-titulo {
-    font-size: 1.05rem;
-    line-height: 1.28;
-  }
-
-  .mensaje-titulo br {
-    margin-bottom: 3px;
-  }
-
-  .mensaje-texto {
-    font-size: 0.84rem;
-    line-height: 1.52;
-  }
-
-  .mensaje-icono {
-    width: 28px;
+    width: 30px;
   }
 }

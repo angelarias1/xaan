@@ -58,17 +58,21 @@ const Hero: React.FC = () => {
         </div>
 
         {/* DERECHA */}
-        <div className="hero-right">
-          <div className="hero-manual-img-container">
-            <img
-              src={images[index].src}
-              key={index}
-              className="hero-manual-img"
-              alt={images[index].alt}
-              loading="lazy"
-            />
-          </div>
-        </div>
+   <div className="hero-manual-img-container">
+  <img
+    src={images[index].src}
+    key={index}
+    className="hero-manual-img"
+    alt={images[index].alt}
+    loading="lazy"
+  />
+
+  {/* 🔥 Numerador estilo de referencia */}
+  <div className="hero-counter-vertical">
+    {index + 1}/{images.length}
+  </div>
+</div>
+
 
       </div>
     </section>
