@@ -21,7 +21,7 @@
 }
 
 /* ============================= */
-/* NUEVO SISTEMA MANUAL (SIN CARRUSEL) */
+/* IMAGEN MANUAL */
 /* ============================= */
 
 .hero-right {
@@ -29,40 +29,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    margin-bottom: 180px;   /* 🔥 SUBE LA IMAGEN */
-
-
+  margin-bottom: 180px; 
 }
 
 .hero-manual-img-container {
-  width: 100%;
+  width: 430px;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* ⭐ TAMAÑO FIJO */
-  width: 430px;     /* 🔥 AJUSTA EL ANCHO */
-  height: 540px;    /* 🔥 AJUSTA LA ALTURA */
 }
 
 .hero-manual-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* ⭐ todas llenan el mismo tamaño */
-  border-radius: 10px;   /* opcional */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-
-
 /* ============================= */
-/* TEXTO IZQUIERDO (NO TOCADO) */
+/* TEXTO IZQUIERDO */
 /* ============================= */
 
 .hero-left {
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start;   /* 🔥 SIEMPRE A LA IZQUIERDA */
+  text-align: left;          /* 🔥 SIEMPRE A LA IZQUIERDA */
 }
 
 .hero-left h1 {
@@ -72,9 +66,8 @@
   font-weight: 400;
   line-height: 1.05;
   margin-bottom: 10px;
-  text-align: left !important;
-    margin-top: 70px;   /* 🔥 BAJA TODO EL CONTENIDO DERECHA */
-
+  text-align: left;
+  margin-top: 0;
 }
 
 .link {
@@ -128,22 +121,44 @@
     gap: 40px;
   }
 
+  /* 🔥 IZQUIERDA SIGUE A LA IZQUIERDA */
   .hero-left {
     width: 100%;
+    align-items: flex-start;    /* izquierda */
+    text-align: left;           /* izquierda */
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+    text-align: left;
   }
 
   .hero-right {
+    margin-bottom: 0;
     width: 100%;
-    height: auto;
   }
 
   .hero-manual-img-container {
-    height: 45vh;
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+    margin: 0 auto;     /* solo la imagen se centra */
   }
 }
 
 @media (max-width: 600px) {
+
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+
   .hero-manual-img-container {
-    height: 35vh;
+    max-width: 300px;
+    height: 350px;
+  }
+
+  .icon-btn {
+    width: 50px;
+    height: 26px;
   }
 }
