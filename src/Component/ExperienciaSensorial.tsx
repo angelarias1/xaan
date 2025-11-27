@@ -11,7 +11,11 @@ const Sensorial: React.FC = () => {
         {/* IZQUIERDA CON IMAGEN */}
         <div className="sensorial-left">
           <div className="sensorial-image-wrapper">
-            <img src={imagen} alt="Sensorial" className="sensorial-image" />
+            <img
+              src={imagen}
+              alt="Persona disfrutando una experiencia sensorial con productos XA’AN"
+              className="sensorial-image"
+            />
           </div>
         </div>
 

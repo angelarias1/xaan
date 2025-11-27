@@ -12,7 +12,7 @@ import rightImg from "../assets/Isotipo.svg";
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
-  // 🔥 SCROLL A SECCIONES
+  // Scroll suave
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +21,6 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // 🔥 ENLACES SOCIALES
   const socialLinks = {
     fb: "https://www.facebook.com/",
     ig: "https://www.instagram.com/",
@@ -33,38 +32,78 @@ const Navbar: React.FC = () => {
     <>
       {/* NAVBAR */}
       <nav className="nav">
-        <button className="nav-menu-btn" onClick={() => setOpen(true)}>
-          <img src={menuIcon} alt="menu" className="menu-img" />
+        <button 
+          className="nav-menu-btn"
+          onClick={() => setOpen(true)}
+          aria-label="Abrir menú"
+        >
+          <img src={menuIcon} alt="Abrir menú de navegación" className="menu-img" />
         </button>
 
-        <img src={xaanLogo} alt="XAAN" className="nav-logo-img" />
+        <img 
+          src={xaanLogo} 
+          alt="Logo de XA'AN Skin Care" 
+          className="nav-logo-img" 
+        />
 
-        {/* Brochure → PDF o lo que quieras */}
-        <a className="nav-link" href="#">Brochure</a>
+        <a className="nav-link" href="#" aria-label="Abrir brochure">
+          Brochure
+        </a>
       </nav>
 
       {/* OVERLAY */}
       <div className={`menu-overlay ${open ? "show" : ""}`}>
 
         {/* BOTÓN CERRAR */}
-        <button className="close-btn" onClick={() => setOpen(false)}>
-          <img src={closeIcon} alt="close" className="close-img" />
+        <button 
+          className="close-btn" 
+          onClick={() => setOpen(false)}
+          aria-label="Cerrar menú"
+        >
+          <img src={closeIcon} alt="Cerrar menú" className="close-img" />
         </button>
 
         {/* CONTENEDOR */}
         <div className="menu-container">
 
-          {/* LADO IZQUIERDO */}
+          {/* IZQUIERDA */}
           <div className="menu-half left">
             <div className="menu-left-content">
 
               <p className="top-mini">XAAN SKIN CARE</p>
 
               <div className="center-links">
-                <a onClick={() => scrollTo("productos")}>PRODUCTOS</a>
-                <a onClick={() => scrollTo("acerca")}>ACERCA DE XAAN</a>
-                <a onClick={() => scrollTo("proceso")}>PROCESO</a>
-                <a onClick={() => scrollTo("contacto")}>CONTACTO</a>
+                <a 
+                  role="button" 
+                  tabIndex={0}
+                  onClick={() => scrollTo("productos")}
+                >
+                  PRODUCTOS
+                </a>
+
+                <a 
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => scrollTo("acerca")}
+                >
+                  ACERCA DE XAAN
+                </a>
+
+                <a 
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => scrollTo("proceso")}
+                >
+                  PROCESO
+                </a>
+
+                <a 
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => scrollTo("contacto")}
+                >
+                  CONTACTO
+                </a>
               </div>
 
               <p className="bottom-mini">CUN · MX</p>
@@ -72,18 +111,20 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* LADO DERECHO */}
+          {/* DERECHA */}
           <div className="menu-half right">
             <div className="menu-right-content">
 
-              <img src={logoImg} alt="Logo" className="right-logo" />
+              <img 
+                src={logoImg} 
+                alt="Isotipo de XA'AN Skin Care" 
+                className="right-logo" 
+              />
 
-              {/* INFO + REDES JUNTOS */}
               <div className="right-info">
-                <p onClick={() => window.open("#", "_blank")}>Brochure</p>
-                <p onClick={() => window.open("#", "_blank")}>Cátalogo de dispensadores</p>
+                <p role="button" tabIndex={0}>Brochure</p>
+                <p role="button" tabIndex={0}>Catálogo de dispensadores</p>
 
-                {/* WHATSAPP */}
                 <p
                   style={{ cursor: "pointer" }}
                   onClick={() => window.open(socialLinks.whatsapp, "_blank")}
@@ -91,40 +132,45 @@ const Navbar: React.FC = () => {
                   TEL. +52 998 240 3593
                 </p>
 
-                {/* EMAIL */}
                 <p
                   style={{ cursor: "pointer" }}
-                  onClick={() => window.location.href = socialLinks.email}
+                  onClick={() => (window.location.href = socialLinks.email)}
                 >
                   hola@xaan.mx
                 </p>
 
-                {/* ICONOS */}
+                {/* REDES */}
                 <div className="right-socials">
                   <img
                     src={igIcon}
                     className="social-icon"
-                    alt="Instagram"
+                    alt="Instagram oficial de XA'AN Skin Care"
                     onClick={() => window.open(socialLinks.ig, "_blank")}
+                    loading="lazy"
                   />
 
                   <img
                     src={fbIcon}
                     className="social-icon"
-                    alt="Facebook"
+                    alt="Facebook oficial de XA'AN Skin Care"
                     onClick={() => window.open(socialLinks.fb, "_blank")}
+                    loading="lazy"
                   />
                 </div>
               </div>
 
-              {/* DIRECCIÓN */}
               <div className="right-address">
                 <p>
                   Colima 392, 2do. Piso Colonia Roma, Delegación Cuauhtémoc  
                   C.P. 06700, Ciudad de México.
                 </p>
 
-                <img src={rightImg} alt="Decor" className="right-bottom-img" />
+                <img 
+                  src={rightImg} 
+                  alt="Elemento decorativo de XA'AN" 
+                  className="right-bottom-img" 
+                  loading="lazy"
+                />
               </div>
 
             </div>

@@ -30,10 +30,23 @@ const QuienesSomos: React.FC = () => {
           </button>
         </div>
 
-        {/* IMÁGENES LADO A LADO CON DESPLAZAMIENTO */}
+        {/* IMÁGENES */}
         <div className="qs-right">
-          <img src={imgGrande} className="qs-img img-up" />
-          <img src={imgChica} className="qs-img img-down" />
+
+          <img 
+            src={imgGrande} 
+            className="qs-img img-up"
+            alt="Productos de XA'AN Skin Care presentados en formato profesional"
+            loading="lazy"
+          />
+
+          <img 
+            src={imgChica} 
+            className="qs-img img-down"
+            alt="Botellas y envases de cuidado de la piel de XA'AN"
+            loading="lazy"
+          />
+          
         </div>
 
       </div>

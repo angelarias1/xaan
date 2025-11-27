@@ -9,7 +9,12 @@ import Img2 from "../assets/web/imagen2.webp";
 import Img3 from "../assets/web/Rectangle 954.webp";
 import Img4 from "../assets/web/imagen8.webp";
 
-const images = [Img1, Img2, Img3, Img4];
+const images = [
+  { src: Img1, alt: "Aceites naturales para hoteles y spas XA'AN" },
+  { src: Img2, alt: "Productos corporales y amenidades premium XA'AN" },
+  { src: Img3, alt: "Aceites corporales para masaje de alta calidad XA'AN" },
+  { src: Img4, alt: "Productos de cuidado de la piel de XA'AN Skin Care" }
+];
 
 const Hero: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -17,11 +22,10 @@ const Hero: React.FC = () => {
   const next = () => setIndex((prev) => (prev + 1) % images.length);
   const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
 
-  /* ⭐ AUTO SLIDE — igual que el anterior */
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 3500); // 🔥 Velocidad ajustable
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,7 +34,7 @@ const Hero: React.FC = () => {
     <section className="hero" id="inicio">
       <div className="hero-inner">
 
-        {/* IZQUIERDA — NO TOCADA */}
+        {/* IZQUIERDA */}
         <div className="hero-left">
           <h1>
             TU NUEVO <br />
@@ -44,23 +48,24 @@ const Hero: React.FC = () => {
 
           <div className="hero-buttons">
             <button className="icon-btn" onClick={prev}>
-              <img src={ArrowLeft} alt="Anterior" />
+              <img src={ArrowLeft} alt="Imagen anterior" />
             </button>
 
             <button className="icon-btn" onClick={next}>
-              <img src={ArrowRight} alt="Siguiente" />
+              <img src={ArrowRight} alt="Imagen siguiente" />
             </button>
           </div>
         </div>
 
-        {/* DERECHA — IMAGEN MANUAL */}
+        {/* DERECHA */}
         <div className="hero-right">
           <div className="hero-manual-img-container">
             <img
-              src={images[index]}
+              src={images[index].src}
               key={index}
               className="hero-manual-img"
-              alt="Hero"
+              alt={images[index].alt}
+              loading="lazy"
             />
           </div>
         </div>

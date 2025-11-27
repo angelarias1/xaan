@@ -24,7 +24,7 @@ const Aceites: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 1000); // cada 3.5 segundos
+    }, 3500); // cada 3.5 segundos
 
     return () => clearInterval(interval);
   }, []);
@@ -50,10 +50,10 @@ const Aceites: React.FC = () => {
 
           <div className="aceites-buttons">
             <button className="icon-btn" onClick={prev}>
-              <img src={ArrowLeft} />
+              <img src={ArrowLeft} alt="Imagen anterior" />
             </button>
             <button className="icon-btn" onClick={next}>
-              <img src={ArrowRight} />
+              <img src={ArrowRight} alt="Imagen siguiente" />
             </button>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Aceites: React.FC = () => {
             src={images[index]}
             key={index}
             className="aceite-img"
-            alt="Aceite"
+            alt={`Aceite corporal ${index + 1}`}
           />
         </div>
 
