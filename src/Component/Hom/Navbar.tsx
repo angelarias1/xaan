@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "../styles/Navbar.css";
+import "../../styles/Navbar.css";
 
-import menuIcon from "../assets/menu.png";
-import xaanLogo from "../assets/loogo.jfif";
-import closeIcon from "../assets/51e5d1d8-096f-4c57-90f2-8ba9af697072.jfif";
-import logoImg from "../assets/48a38a8d-aa0e-4d91-8354-89cd1f210dd0.jfif";
-import igIcon from "../assets/Vector.svg";
-import fbIcon from "../assets/face.svg";
-import rightImg from "../assets/Isotipo.svg";
+import menuIcon from "../../assets/menu.png";
+import xaanLogo from "../../assets/loogo.jfif";
+import closeIcon from "../../assets/51e5d1d8-096f-4c57-90f2-8ba9af697072.jfif";
+import logoImg from "../../assets/48a38a8d-aa0e-4d91-8354-89cd1f210dd0.jfif";
+import igIcon from "../../assets/Vector.svg";
+import fbIcon from "../../assets/face.svg";
+import rightImg from "../../assets/Isotipo.svg";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);

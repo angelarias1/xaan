@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Hero.css";
+import "../../styles/Hero.css";
 
-import ArrowLeft from "../assets/web/izquierda.webp";
-import ArrowRight from "../assets/web/derecha.webp";
+import ArrowLeft from "../../assets/web/izquierda.webp";
+import ArrowRight from "../../assets/web/derecha.webp";
 
-import Img1 from "../assets/web/Rectangle 954.webp";
-import Img2 from "../assets/web/imagen2.webp";
-import Img3 from "../assets/web/Rectangle 954.webp";
-import Img4 from "../assets/web/imagen8.webp";
+import Img1 from "../../assets/web/Rectangle 954.webp";
+import Img2 from "../../assets/web/imagen2.webp";
+import Img3 from "../../assets/web/Rectangle 954.webp";
+import Img4 from "../../assets/web/imagen8.webp";
 
 const images = [
   { src: Img1, alt: "Aceites naturales para hoteles y spas XA'AN" },

@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/QuienesSomos.css";
+import "../../styles/QuienesSomos.css";
 
-import imgGrande from "../assets/web/imagen7.webp";
-import imgChica from "../assets/web/imagen7.webp";
+import imgGrande from "../../assets/web/imagen7.webp";
+import imgChica from "../../assets/web/imagen7.webp";
 
 const QuienesSomos: React.FC = () => {
   return (

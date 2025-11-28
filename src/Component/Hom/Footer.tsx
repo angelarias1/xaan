@@ -1,8 +1,8 @@
-import "../styles/Footer.css";
-import logo from "../assets/web/logo-xaan.webp";
+import "../../styles/Footer.css";
+import logo from "../../assets/web/logo-xaan.webp";
 
-import icon1 from "../assets/f.svg";   // Facebook
-import icon2 from "../assets/ig.svg";  // Instagram
+import icon1 from "../../assets/f.svg";   // Facebook
+import icon2 from "../../assets/ig.svg";  // Instagram
 
 export default function Footer() {
   // Función para copiar texto con tooltip dinámico
