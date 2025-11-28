@@ -1,5 +1,5 @@
 import "../styles/Footer.css";
-import logo from "../assets/logo-xaan.jfif";
+import logo from "../assets/web/logo-xaan.webp";
 
 import icon1 from "../assets/f.svg";   // Facebook
 import icon2 from "../assets/ig.svg";  // Instagram

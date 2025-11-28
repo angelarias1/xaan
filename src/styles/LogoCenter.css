@@ -32,13 +32,13 @@
 /* ============================= */
 
 /* Tablets */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .logo-center-section {
     padding: 95px 0;
   }
 
   .logo-center-img {
-    width: 95px;
+    width: 10px;
   }
 }
 
@@ -49,17 +49,17 @@
   }
 
   .logo-center-img {
-    width: 82px;
+    width: 150px;
   }
 }
 
 /* Celulares pequeños */
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .logo-center-section {
     padding: 60px 0;
   }
 
   .logo-center-img {
-    width: 70px;
+    width: 120px;
   }
 }

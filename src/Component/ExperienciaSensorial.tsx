@@ -23,7 +23,7 @@ const Sensorial: React.FC = () => {
         <div className="sensorial-right">
 
           <h3 className="sensorial-title">
-            CREAMOS EN <br />
+            CREAMOS EN 
             TUS CLIENTES <br />
             UNA EXPERIENCIA <br />
             SENSORIAL

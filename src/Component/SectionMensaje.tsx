@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/SectionMensaje.css";
 
-import icono from "../assets/icono.jfif"; // el iconito que aparece arriba
+import icono from "../assets/web/icono.webp"; // el iconito que aparece arriba
 
 const SectionMensaje: React.FC = () => {
   return (

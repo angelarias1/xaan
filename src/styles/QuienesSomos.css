@@ -5,7 +5,7 @@
 .qs-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 110px 0;              /* antes 140px → demasiado */
+  padding: 110px 0;
   display: flex;
   justify-content: center;
 }
@@ -14,7 +14,7 @@
   width: 90%;
   max-width: 1300px;
   display: grid;
-  grid-template-columns: 42% 58%;   /* proporción más elegante */
+  grid-template-columns: 42% 58%;
   align-items: center;
   gap: 70px;
 }
@@ -80,33 +80,22 @@
   height: 370px;
   object-fit: cover;
   border-radius: 6px;
-  filter: brightness(0.97);     /* look más boutique */
+  filter: brightness(0.97);
 }
 
-/* escalonados */
 .img-up { transform: translateY(-70px); }
 .img-down { transform: translateY(45px); }
 
 /* ============================= */
-/*           RESPONSIVE          */
+/*         TABLET ≤1024px        */
 /* ============================= */
 
-@media (max-width: 1100px) {
-  .qs-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+@media (max-width: 1024px) {
+
+  .qs-section {
+    padding: 95px 0;
   }
 
-  .qs-img {
-    width: 250px;
-    height: 330px;
-  }
-
-  .img-up { transform: translateY(-50px); }
-  .img-down { transform: translateY(30px); }
-}
-
-@media (max-width: 900px) {
   .qs-container {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -117,49 +106,97 @@
     text-align: left;
   }
 
+  .qs-text {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+ .qs-btn {
+    font-size: 0.8rem;
+    padding: 8px 126px;
+  }
+
+
+
   .qs-right {
+    display: flex;
+    flex-direction: column;        /* 🔥 una arriba, una abajo */
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
   }
 
-  .qs-img {
-    width: 220px;
-    height: 290px;
-  }
-
-  .img-up { transform: translateY(-35px); }
-  .img-down { transform: translateY(18px); }
+.qs-img {
+  width: 85vw;           /* 🔥 más grandes */
+  max-width: 450px;      /* 🔥 límite profesional */
+  height: auto;
+  border-radius: 6px;
 }
 
-@media (max-width: 600px) {
+
+  /* 🔥 se elimina el efecto escalonado */
+  .img-up,
+  .img-down {
+    transform: none !important;
+  }
+ 
+}
+
+/* ============================= */
+/*         MÓVIL ≤480px          */
+/* ============================= */
+
+@media (max-width: 480px) {
+
   .qs-section {
-    padding: 90px 0;
+    padding: 80px 0;
+  }
+
+  .qs-container {
+    gap: 45px;
+  }
+
+  /* ========================= */
+  /*      TEXTO IZQUIERDA     */
+  /* ========================= */
+
+  .qs-text {
+    font-size: 1rem;
+    line-height: 1.45;
+    max-width: 100%;
+  }
+
+  .qs-left {
+    gap: 20px;
+  }
+
+  .qs-btn {
+    font-size: 0.8rem;
+    padding: 8px 43px;
+  }
+
+  /* ========================= */
+  /*   IMÁGENES — NUEVO ESTILO */
+  /* ========================= */
+
+  .qs-right {
+    flex-direction: column;     /* 🔥 una arriba y otra abajo */
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
   }
 
   .qs-img {
-    width: 170px;
-    height: 230px;
+    width: 85vw;                /* 🔥 imágenes grandes, responsivas */
+    max-width: 320px;           /* límite elegante */
+    height: auto;               /* 🔥 proporciones reales */
+    border-radius: 6px;
   }
 
-  .img-up { transform: translateY(-20px); }
-  .img-down { transform: translateY(10px); }
-
-  .qs-text {
-    font-size: 1.2rem;
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 450px) {
-  .qs-img {
-    width: 140px;
-    height: 190px;
-  }
-
-  .img-up { transform: translateY(-15px); }
-  .img-down { transform: translateY(8px); }
-
-  .qs-text {
-    font-size: 1.1rem;
-    max-width: 280px;
+  /* 🔥 Sin escalonados en móvil */
+  .img-up,
+  .img-down {
+    transform: none !important;
   }
 }
+

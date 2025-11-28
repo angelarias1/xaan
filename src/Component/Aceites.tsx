@@ -45,7 +45,7 @@ const Aceites: React.FC = () => {
           </p>
 
           <button className="aceites-btn">
-            Ver todos nuestros productos
+            Ver productos
           </button>
 
           <div className="aceites-buttons">

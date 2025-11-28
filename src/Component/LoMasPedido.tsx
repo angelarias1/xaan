@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/LoMasPedido.css";
 
-import img1 from "../assets/imagen4.jpg"; 
+import img1 from "../assets/web/imagen4.webp"; 
 import img2 from "../assets/imagen5.jpg";
 import img3 from "../assets/imagen6.jpg";
 

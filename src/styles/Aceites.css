@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-/* ------------------ TAG: LO MÁS PEDIDO ------------------ */
+/* ------------------ TAG ------------------ */
 
 .aceites-tag {
   font-family: "Barlow", sans-serif;
@@ -27,8 +27,7 @@
   letter-spacing: 2px;
   color: #805b4a;
   opacity: 0.9;
-
-  margin-bottom: 90px; /* lo dejaste así */
+  margin-bottom: 90px;
   margin-top: -6px;
 }
 
@@ -68,15 +67,11 @@
   background: transparent;
   color: #805b4a;
   cursor: pointer;
-  border-radius: 0;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
   font-size: 0.95rem;
-
-  transition: 
-    background-color 0.35s ease,
-    box-shadow 0.35s ease,
-    transform 0.25s ease;
+  border-radius: 0;
+  transition: background-color .35s, box-shadow .35s, transform .25s;
 }
 
 .aceites-btn:hover {
@@ -103,19 +98,14 @@
   border: 1px solid #805b4a;
   background: transparent;
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  transition: transform .25s, box-shadow .3s, border-color .3s;
 }
 
 .icon-btn:hover {
-  box-shadow: 0px 0px 12px rgba(117, 42, 8, 0.25);
+  box-shadow: 0 0 12px rgba(117, 42, 8, 0.25);
   border-color: #9f7863;
 }
 
@@ -125,13 +115,10 @@
 
 .icon-btn img {
   width: 100%;
-  height: auto;
   pointer-events: none;
 }
 
-/* =============================== */
-/*   NUEVO SISTEMA MANUAL + AUTO   */
-/* =============================== */
+/* ------------------ IMAGEN MANUAL ------------------ */
 
 .aceites-manual {
   width: 100%;
@@ -140,61 +127,129 @@
   align-items: center;
 }
 
-/* Imagen individual con efecto */
 .aceite-img {
   width: 360px;
   height: 440px;
   object-fit: contain;
-
-  /* EFECTO SUAVE */
   opacity: 0;
   transform: scale(0.92);
   animation: fadePop 0.6s ease forwards;
-
   filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
 }
 
-/* Animación suave */
 @keyframes fadePop {
-  0% {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  0% { opacity: 0; transform: scale(0.92); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* =============================== */
-/*          RESPONSIVE             */
+/*           TABLET 1024px         */
 /* =============================== */
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+
+  .aceites-section {
+    padding: 70px 0;
+  }
+
   .aceites-container {
     grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
+    gap: 50px;
+    justify-items: center;   /* mantiene el grid centrado */
+  }
+
+  .aceites-left {
+    width: 100%;
+    max-width: 600px;        /* ⭐ ancho controlado */
+    margin: 0 auto;
+    text-align: left;        /* ⭐ fuerza alineación izquierda */
+    align-items: flex-start; /* ⭐ evita centrado vertical */
+  }
+
+  /* TAG */
+  .aceites-tag {
+    width: 100%;             /* ⭐ para que respete el alineado */
+    text-align: left;        /* ya funciona */
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+
+  /* TÍTULO */
+  .aceites-title {
+    text-align: left;
+    font-size: 2.2rem;
+    width: 100%;
+  }
+
+  /* TEXTO */
+  .aceites-text {
+    max-width: 100%;
+    font-size: 1.3rem;
+    text-align: left;
+    width: 100%;
+  }
+  .aceites-btn {
+    font-size: 1rem;
+    padding: 10px 170px;
+  }
+  /* IMAGEN */
+  .aceite-img {
+    width: 300px;
+    height: 380px;
+  }
+}
+
+
+/* =============================== */
+/*           MÓVIL 480px           */
+/* =============================== */
+
+@media (max-width: 480px) {
+
+  .aceites-section {
+    padding: 55px 0;
+  }
+
+  .aceites-container {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .aceites-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .aceites-text {
-    max-width: 90%;
+    max-width: 300px;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto;
   }
 
   .aceites-tag {
-    margin-bottom: 14px; /* más lógico en móvil */
+    font-size: 0.7rem;
+    margin-bottom: 18px;
   }
-}
 
-@media (max-width: 600px) {
+  .aceites-title {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .aceites-text {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    max-width: 300px;
+  }
+
   .aceite-img {
-    width: 260px;
-    height: 330px;
+    width: 240px;
+    height: 300px;
+  }
+
+  .aceites-btn {
+    font-size: 0.61rem;
+    padding: 10px 100px;
+  }
+
+  .icon-btn {
+    width: 45px;
+    height: 22px;
   }
 }

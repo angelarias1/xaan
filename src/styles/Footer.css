@@ -7,7 +7,7 @@
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 80px 0 40px;        /* antes 120px → enorme */
+  padding: 80px 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@
 /* =============================== */
 
 .footer-logo {
-  height: 90px;                /* antes 120px → demasiado */
+  height: 90px;
   margin-bottom: 25px;
 }
 
@@ -37,12 +37,10 @@
   gap: 30px;
 }
 
-/* CONTACTO */
-
 .footer-phone,
 .footer-email {
   font-family: "Barlow", sans-serif;
-  color: #805b4a;
+  color: #81492C;
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -57,7 +55,7 @@
 
 .footer-nav-top a {
   font-family: "Barlow", sans-serif;
-  color: #805b4a;
+  color: #81492C;
   font-size: 0.9rem;
   text-decoration: none;
 }
@@ -85,12 +83,9 @@
   width: 30px;
   height: 30px;
   background: transparent;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-radius: 0;
   padding: 4px;
   cursor: pointer;
   transition: 0.25s ease;
@@ -126,13 +121,12 @@
   gap: 40px;
   justify-content: center;
   width: 100%;
-
   font-family: "Barlow", sans-serif;
   margin-bottom: 10px;
 }
 
 .footer-bottom a {
-  color: #805b4a;
+  color: #81492C;
   font-size: 0.82rem;
   text-decoration: none;
 }
@@ -155,7 +149,7 @@
   bottom: -26px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #805b4a;
+  background-color: #81492C;
   color: #fff;
   padding: 3px 8px;
   font-size: 0.7rem;
@@ -181,11 +175,10 @@
   background: none;
   border: none;
   font-family: "Barlow", sans-serif;
-  color: #805b4a;
+  color: #81492C;
   font-size: 0.9rem;
   cursor: pointer;
   padding: 0;
-  line-height: 1;
 }
 
 .dropdown-menu {
@@ -203,7 +196,7 @@
 
 .dropdown-menu a {
   font-family: "Barlow", sans-serif;
-  color: #805b4a;
+  color: #81492C;
   font-size: 0.82rem;
   text-decoration: none;
 }
@@ -228,7 +221,7 @@
   bottom: -26px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #805b4a;
+  background-color: #81492C;
   color: white;
   padding: 3px 8px;
   font-size: 0.68rem;
@@ -243,56 +236,191 @@
 }
 
 /* =============================== */
-/*            RESPONSIVE           */
+/*            TABLET 1024px        */
 /* =============================== */
 
-/* TABLET */
-@media (max-width: 992px) {
-  .footer-top {
-    flex-direction: column;
-    gap: 25px;
-    text-align: center;
-  }
+/* =============================== */
+/*            TABLET 1024px        */
+/* =============================== */
+/* =============================== */
+/*            TABLET 1024px        */
+/* =============================== */
+@media (max-width: 1024px) {
 
-  .footer-nav-top {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 22px;
-  }
-
-  .footer-bottom {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-}
-
-/* MÓVIL */
-@media (max-width: 600px) {
+  /* SECCIÓN */
   .footer-section {
-    padding: 60px 0 30px;
+    padding-bottom: 5px !important;
   }
 
-  .footer-logo {
-    height: 70px;
-  }
-
-  .footer-nav-top a,
-  .dropdown-btn,
-  .footer-phone,
-  .footer-email {
-    font-size: 0.85rem;
-  }
-
+  /* BLOQUE SUPERIOR */
   .footer-top {
-    padding: 0 20px;
+    width: 100%;
+    padding: 0 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;  /* un poco más aire que móvil */
+    padding-bottom: 0 !important;
   }
 
-  .footer-bottom a {
-    font-size: 0.78rem;
+  /* LOGO */
+  .footer-logo {
+    height: 180px;      /* más grande que en móvil */
+    margin-bottom: 35px;
+  }
+
+  /* TEL, EMAIL, NAV */
+  .footer-phone,
+  .footer-email,
+  .footer-nav-top a,
+  .dropdown-btn {
+    font-size: 1rem;      /* más grande que en móvil */
+    line-height: 1.20;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* NAV — LISTA VERTICAL */
+  .footer-nav-top {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* EMAIL + ICONOS */
+  .footer-right-group {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  /* ICONOS */
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
   }
 
   .footer-icon-btn {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-icon-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* DIVIDER */
+  .footer-divider {
+    margin: 6px 0 !important;   /* pegado pero elegante */
+  }
+
+  /* BOTTOM LINKS */
+  .footer-bottom {
+    gap: 40px !important;  
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .footer-bottom a {
+    font-size: 0.85rem;
+    line-height: 1.15;
+    margin-bottom: -8px;
+    margin-top: 10px;
   }
 }
+
+
+
+/* =============================== */
+/*            MÓVIL 480px          */
+/* =============================== */
+@media (max-width: 480px) {
+
+  /* SECCIÓN FOOTER */
+  .footer-section {
+    padding-bottom: 0 !important;  /* 🔥 ultra-compacto */
+  }
+
+  /* BLOQUE SUPERIOR */
+  .footer-top {
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px; 
+    padding-bottom: 0 !important;
+  }
+
+  /* LOGO */
+  .footer-logo {
+    height: 150px;        /* grande y elegante */
+    margin-bottom: 30px;
+  }
+
+  /* TEXTO DE TEL/EMAIL Y NAV */
+  .footer-phone,
+  .footer-email,
+  .footer-nav-top a,
+  .dropdown-btn {
+    font-size: 0.85rem;
+    line-height: 1.15;     /* interlineado fino */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* NAV — LISTA VERTICAL */
+  .footer-nav-top {
+    flex-direction: column;
+    gap: 12px;   /* ⭐ separación elegante */
+  }
+
+  /* GRUPO DE EMAIL + ICONOS */
+  .footer-right-group {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;  /* antes 50px */
+  }
+
+  /* ICONOS */
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 6px;
+  }
+
+  .footer-icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-icon-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* DIVIDER — ULTRA PEGADO */
+  .footer-divider {
+    margin: 4px 0 !important;
+  }
+
+  /* FOOTER BOTTOM */
+  .footer-bottom {
+    gap: 45px !important;          /* Antes 76px */
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .footer-bottom a {
+    font-size: 0.75rem;
+    line-height: 1.1;
+    margin-bottom: -15px;
+    margin-top: 15px;
+
+  }
+
+}
+
