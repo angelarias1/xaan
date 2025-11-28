@@ -123,63 +123,191 @@
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
+@media (max-width: 1024px) {
 
-@media (max-width: 900px) {
+  /* HERO GENERAL */
   .hero {
     height: auto;
-    padding: 60px 0;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-inner {
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 45px;
+    padding: 0 6%;
+    align-items: flex-start;    /* 🔥 izquierda */
   }
 
-  /* 🔥 IZQUIERDA SIGUE A LA IZQUIERDA */
+  /* ============================= */
+  /* TEXTO IZQUIERDO — TABLET      */
+  /* ============================= */
+
   .hero-left {
     width: 100%;
-    align-items: flex-start;    /* izquierda */
-    text-align: left;           /* izquierda */
-  }
-
-  .hero-left h1 {
-    font-size: 2rem;
+    align-items: flex-start;   /* 🔥 izquierda real */
     text-align: left;
   }
 
-  .hero-right {
-    margin-bottom: 0;
-    width: 100%;
-  }
-.hero-counter-vertical {
-    position: absolute;
-    top: -20px;        /* ahora va arriba */
-    left: 10px;       /* pegado al borde */
-    transform: rotate(0deg); /* deja de ser vertical */
-    font-size: 0.8rem;
-  }
-  .hero-manual-img-container {
-    width: 100%;
-    max-width: 380px;
-    height: 420px;
-    margin: 0 auto;     /* solo la imagen se centra */
-  }
-}
-
-@media (max-width: 600px) {
-
   .hero-left h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;           /* tamaño elegante tablet */
+    line-height: 1.1;
+    max-width: 360px;
+    text-align: left;
   }
 
-  .hero-manual-img-container {
-    max-width: 300px;
-    height: 350px;
+  .link {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  .hero-buttons {
+    margin-top: 22px;
+    gap: 14px;
   }
 
   .icon-btn {
-    width: 50px;
-    height: 26px;
+    width: 54px;
+    height: 28px;
+  }
+
+  .icon-btn img {
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  /* ============================= */
+  /* IMAGEN — TABLET GRANDE        */
+  /* ============================= */
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .hero-manual-img-container {
+    width: 75vw;               /* 🔥 más grande que móvil */
+    max-width: 420px;          /* límite elegante tablet */
+    aspect-ratio: 3/4;
+    position: relative;
+    margin: 0 auto;            /* centro de la pantalla */
+  }
+
+  .hero-manual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ============================= */
+  /* NUMERADOR EN TABLET           */
+  /* ============================= */
+
+  .hero-counter-vertical {
+    position: absolute;
+    top: -22px;        /* arriba de la imagen */
+    left: 8px;         /* pegado al borde izquierdo */
+    transform: rotate(0deg); /* ya no vertical */
+    font-size: 0.85rem;
+    opacity: 0.9;
   }
 }
+
+
+@media (max-width: 480px) {
+
+  /* HERO BASE */
+  .hero {
+    height: auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;   /* 🔥 izquierda real */
+    gap: 32px;
+    padding: 0 6%;
+  }
+
+  /* ============================= */
+  /* TEXTO IZQUIERDO — LEFT FIXED */
+  /* ============================= */
+
+  .hero-left {
+    width: 100%;
+    align-items: flex-start;     /* 🔥 izquierda */
+    text-align: left;            /* 🔥 izquierda */
+  }
+
+  .hero-left h1 {
+    font-size: 1.35rem;
+    line-height: 1.12;
+    max-width: 260px;            /* 🔥 visible y equilibrado */
+    text-align: left;
+  }
+
+  .link {
+    font-size: .92rem;
+    text-align: left;
+  }
+
+  /* BOTONES */
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .icon-btn {
+    width: 46px;
+    height: 24px;
+  }
+
+  .icon-btn img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* ============================= */
+  /* IMAGEN – CENTRADA SIEMPRE     */
+  /* ============================= */
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* ✔ la imagen se centra */
+    margin-bottom: 0;
+  }
+
+  .hero-manual-img-container {
+    width: 85vw;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3/4;         /* 🔥 mantiene forma elegante */
+    margin: 0 auto;            /* ✔ centrado */
+    position: relative;
+  }
+
+  .hero-manual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ============================= */
+  /* NUMERADOR — POSICIÓN MÓVIL    */
+  /* ============================= */
+
+  .hero-counter-vertical {
+    position: absolute;
+    top: -18px;               /* 🔥 arriba de la imagen */
+    left: 4px;                /* 🔥 alineado a la izquierda real */
+    transform: rotate(0deg);  /* ya no vertical */
+    font-size: 0.72rem;
+    opacity: 0.9;
+  }
+}
+

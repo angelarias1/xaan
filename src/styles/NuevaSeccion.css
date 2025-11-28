@@ -163,48 +163,122 @@
 /*           RESPONSIVO          */
 /* ============================= */
 
-@media (max-width: 900px) {
-  .contact-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (max-width: 1024px) {
 
-  .image-box {
-    width: 100%;
-    height: 340px;
-  }
-
-  .contact-box {
-    width: 100%;
-    padding: 50px 25px;
-
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media (max-width: 600px) {
   .contact-section {
-    padding: 70px 5%;
+    padding: 0; /* igual que móvil, sin espacios */
   }
 
+  .contact-wrapper {
+    flex-direction: column;  /* imagen arriba, texto abajo */
+    gap: 0;                  /* sin separación */
+    align-items: center;
+  }
+
+  /* ================ IMAGEN ARRIBA ================ */
   .image-box {
-    height: 250px;
+    width: 100%;
+    height: 420px;   /* un poco más grande para tablet */
+    margin: 0;
+    padding: 0;
   }
 
+  /* ================ BLOQUE DE TEXTO ================ */
   .contact-box {
-    padding: 40px 20px;
+    width: 100%;
+    padding: 50px 30px;   /* más aire porque es tablet */
+    margin: 0;
+    border-top: none;     /* pegado a la imagen */
   }
 
-  .contact-form {
-    max-width: 270px;
+  /* textos */
+  .contact-label {
+    font-size: 0.85rem;
+    margin-left: 0;
   }
 
   .contact-address {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .contact-info {
-    font-size: 0.78rem;
+    display: block;
+    font-size: 1.3rem;
+    margin-left: 0;
+    max-width: 100%;       /* aquí sí funciona */
+  }
+
+  /* formulario */
+  .contact-form {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    padding: 14px 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 0; /* SIN espacio arriba/abajo */
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 0;  /* SIN separación entre imagen y texto */
+  }
+
+  .image-box {
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-box {
+    width: 100%;
+    padding: 35px 18px;
+    margin: 0; /* 🔥 pegado totalmente */
+    border-top: none;
+  }
+
+  /* textos */
+  .contact-label {
+    font-size: 0.75rem;
+    margin-left: 0;
+  }
+
+  .contact-address {
+    font-size: 1rem;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+ .contact-info {
+  display: block;        /* 🔥 ahora SÍ respeta width/max-width */
+  font-size: .8rem;
+  margin-left: 0;
+  max-width: 110%;
+}
+
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-btn {
+    font-size: 0.85rem;
+    padding: 10px 0;
   }
 }

@@ -21,7 +21,7 @@ export default function NuevaSeccion() {
           <p className="contact-label">CONTACTA A UN ASESOR</p>
 
           <p className="contact-address">
-            Colima 392, 2do. Piso Colonia Roma, Delegación <br />
+            Colima 392, 2do. Piso Colonia Roma, Delegación 
             Cuauhtémoc C.P. 06700, Ciudad de México.
             <br />
           </p>

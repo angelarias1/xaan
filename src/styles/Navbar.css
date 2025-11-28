@@ -394,14 +394,144 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
 /* ========================================= */
 /* RESPONSIVE MENU (MÓVIL / TABLET)          */
 /* ========================================= */
+/* ========================================= */
+/* RESPONSIVE EXTRA — 480PX */
+/* ========================================= */
 
-@media (max-width: 900px) {
+/* ========================================= */
+/* RESPONSIVE — TABLET 1024px */
+/* ========================================= */
+/* ========================================= */
+/* RESPONSIVE — TABLET 1024px (IZQUIERDA) */
+/* ========================================= */
+@media (max-width: 1024px) {
 
-  /* CONTENEDOR GENERAL */
+  /* LAYOUT APILADO (como móvil, pero más espacioso) */
   .menu-container {
     flex-direction: column;
     height: auto;
-    padding-top: 90px;  /* espacio superior para X y logo */
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .menu-half {
+    width: 100%;
+    height: auto;
+  }
+
+  /* BOTÓN CLOSE */
+  .close-btn {
+    position: fixed;
+    top: 22px;
+    left: 22px;
+    z-index: 9999;
+  }
+
+  /* LOGO SUPERIOR DERECHO */
+  .right-logo {
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    width: 115px;
+  }
+
+  /* CONTENEDORES */
+  .menu-left-content,
+  .menu-right-content {
+    padding: 45px 45px;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  /* TOP MINI */
+  .top-mini {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 55px;
+    text-align: left !important;
+  }
+
+  /* CENTER LINKS */
+  .center-links {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 32px;
+  }
+
+  .center-links a {
+    font-size: 1.35rem;
+    text-align: left !important;
+  }
+
+  /* BOTTOM MINI */
+  .bottom-mini {
+    position: relative;
+    margin-top: 30px;
+    max-width: 100%;
+
+    text-align: left !important;
+  }
+
+  /* RIGHT INFO */
+  .right-info {
+    position: relative;
+    margin-top: -55px;
+    max-width: 100%;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .right-info p {
+    font-size: .9rem;
+    text-align: left !important;
+  }
+
+  /* ICONOS SOCIALES */
+  .right-socials {
+    justify-content: flex-start !important;
+    gap: 20px;
+  }
+
+  .social-icon {
+    width: 28px;
+  }
+
+  /* DIRECCIÓN FINAL */
+  .right-address {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 50%;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .right-bottom-img {
+    width: 60px;
+  }
+}
+
+
+/* ========================================= */
+/* RESPONSIVE — MÓVIL 480px (IZQUIERDA) */
+/* ========================================= */
+@media (max-width: 480px) {
+
+  /* LAYOUT APILADO */
+  .menu-container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 90px;
     padding-bottom: 60px;
   }
 
@@ -410,123 +540,108 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
     height: auto;
   }
 
-  /* ========================================= */
-  /* BOTÓN CLOSE — IZQUIERDA */
-  /* ========================================= */
+  /* BOTÓN CLOSE */
   .close-btn {
     position: fixed;
-    top: 22px;
-    left: 22px;
+    top: 18px;
+    left: 18px;
     z-index: 9999;
   }
 
-  /* ========================================= */
-  /* LOGO — DERECHA */
-  /* ========================================= */
+  /* LOGO */
   .right-logo {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 105px;
-    z-index: 9998;
+    top: 16px;
+    right: 16px;
+    width: 95px;
   }
 
-  /* ========================================= */
-  /* LADO IZQUIERDO (ARRIBA) */
-  /* ========================================= */
-
-  .menu-left-content {
-    width: 100%;
-    padding: 20px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    align-items: flex-start;
+  /* AJUSTES GENERALES DE CONTENIDO */
+  .menu-left-content,
+  .menu-right-content {
+    padding: 28px 26px;
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 
+  /* TOP MINI */
   .top-mini {
     position: relative;
-    left: 0;             /* 🔥 ya no se mueve hacia la derecha */
-    margin: 10px 0 18px 0;
-    text-align: left;
-    opacity: 0.75;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 40px;
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 
+  /* CENTER LINKS */
   .center-links {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
     transform: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 26px;
   }
 
   .center-links a {
-    font-size: 1.32rem;
-    letter-spacing: 0.5px;
+    font-size: 1.15rem;
+    text-align: left !important;
   }
 
+  /* BOTTOM MINI */
   .bottom-mini {
-    position: static;
-    margin-top: 10px;
-    opacity: 0.8;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 40px;
+    text-align: left !important;
   }
 
-  /* ========================================= */
-  /* LADO DERECHO (ABAJO) — TOTALMENTE IZQUIERDA */
-  /* ========================================= */
-
-  .menu-right-content {
-    width: 100%;
-    padding: 20px 28px;    /* 🔥 elimina el desplazamiento a la derecha */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;  
-    padding-left: 140px;   /* 🔥 muévelo a la derecha */
-
-    align-items: flex-start;  /* 🔥 alineación izquierda real */
-  }
-
+  /* RIGHT INFO (TEXTO) */
   .right-info {
-    position: static;
-    width: 100%;
-    max-width: 330px;
-    margin: 0;
-    text-align: left;        /* 🔥 alinea texto */
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: -30px;
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 
   .right-info p {
-    text-align: left;
-    margin-bottom: 14px;
+    text-align: left !important;
     font-size: 1rem;
   }
 
+  /* ICONOS SOCIALES */
   .right-socials {
-    display: flex;
-    gap: 16px;
-    justify-content: flex-start;  /* 🔥 iconos alineados a la izquierda */
-    margin-bottom: 10px;
+    justify-content: flex-start !important;
   }
 
-  /* DIRECCIÓN */
+  .social-icon {
+    width: 24px;
+  }
+
+  /* DIRECCIÓN FINAL */
   .right-address {
-    position: static;
-    width: 100%;
-    max-width: 330px;
-
-    display: flex;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    margin-top: 30px;
+    max-width: 60%;
     flex-direction: column;
-    align-items: flex-start;   /* 🔥 izquierda perfecta */
-    gap: 8px;
-
-    margin-top: 10px;
+    gap: 10px;
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 
   .right-bottom-img {
-    width: 60px;
-    opacity: 0.9;
-    margin-top: 12px;
+    width: 48px;
   }
 }
 

@@ -99,6 +99,8 @@
   .qs-container {
     grid-template-columns: 1fr;
     gap: 60px;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .qs-left {
@@ -110,37 +112,46 @@
     font-size: 1.6rem;
     max-width: 100%;
   }
- .qs-btn {
+
+  .qs-btn {
     font-size: 0.8rem;
     padding: 8px 126px;
   }
 
-
+  /* ========================= */
+  /*   IMÁGENES CENTRADAS     */
+  /* ========================= */
 
   .qs-right {
+    width: 100%;
     display: flex;
-    flex-direction: column;        /* 🔥 una arriba, una abajo */
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
     gap: 30px;
-    margin-top: 10px;
+    margin: 0 auto;
+    padding: 0;
   }
 
-.qs-img {
-  width: 85vw;           /* 🔥 más grandes */
-  max-width: 450px;      /* 🔥 límite profesional */
-  height: auto;
-  border-radius: 6px;
-}
+  .qs-img {
+    width: 85vw;              /* ancho grande */
+    max-width: 500px;         /* 🔥 MÁS GRANDE AÚN */
+    height: auto;
 
+    display: block;
+    margin-left: auto;        /* 🔥 centrado absoluto */
+    margin-right: auto;       /* 🔥 centrado absoluto */
+    border-radius: 6px;
+  }
 
-  /* 🔥 se elimina el efecto escalonado */
+  /* Sin escalonados */
   .img-up,
   .img-down {
     transform: none !important;
   }
- 
 }
+
+
 
 /* ============================= */
 /*         MÓVIL ≤480px          */
@@ -152,9 +163,11 @@
     padding: 80px 0;
   }
 
-  .qs-container {
-    gap: 45px;
-  }
+ .qs-container {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 
   /* ========================= */
   /*      TEXTO IZQUIERDA     */
@@ -179,19 +192,28 @@
   /*   IMÁGENES — NUEVO ESTILO */
   /* ========================= */
 
-  .qs-right {
-    flex-direction: column;     /* 🔥 una arriba y otra abajo */
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
-  }
+.qs-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
 
-  .qs-img {
-    width: 85vw;                /* 🔥 imágenes grandes, responsivas */
-    max-width: 320px;           /* límite elegante */
-    height: auto;               /* 🔥 proporciones reales */
-    border-radius: 6px;
-  }
+  padding: 0;      /* 🔥 Elimina empujones laterales */
+  margin: 0 auto;  /* 🔥 Centra el contenedor completo */
+}
+
+
+.qs-img {
+  width: 85vw;
+  max-width: 350px;
+  height: auto;
+
+  display: block;
+  margin-left: auto;   /* 🔥 fuerza el centrado */
+  margin-right: auto;  /* 🔥 fuerza el centrado */
+}
+
 
   /* 🔥 Sin escalonados en móvil */
   .img-up,
