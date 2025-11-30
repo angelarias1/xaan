@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Sensorial.css";
+import "../../styles/Hom/Sensorial.css";
 import imagen from "../../assets/web/imagen.webp"; // 👈 IMPORTA LA IMAGEN
 
 const Sensorial: React.FC = () => {

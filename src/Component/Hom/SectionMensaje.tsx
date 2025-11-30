@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SectionMensaje.css";
+import "../../styles/Hom/SectionMensaje.css";
 
 import icono from "../../assets/web/icono.webp"; // el iconito que aparece arriba
 

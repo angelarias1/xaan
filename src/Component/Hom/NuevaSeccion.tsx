@@ -1,4 +1,4 @@
-import "../../styles/NuevaSeccion.css";
+import "../../styles/Hom/NuevaSeccion.css";
 import contactImg from "../../assets/web/imagen9.webp";
 
 export default function NuevaSeccion() {

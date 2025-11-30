@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/QuienesSomos.css";
+import "../../styles/Hom/QuienesSomos.css";
 
 import imgGrande from "../../assets/web/imagen7.webp";
 import imgChica from "../../assets/web/imagen7.webp";

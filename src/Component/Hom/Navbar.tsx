@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../../styles/Navbar.css";
+import { useNavigate } from "react-router-dom";
+import "../../styles/Hom/Navbar.css";
 
 import menuIcon from "../../assets/menu.png";
 import xaanLogo from "../../assets/loogo.jfif";
@@ -11,14 +12,11 @@ import rightImg from "../../assets/Isotipo.svg";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // Scroll suave
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setOpen(false);
-    }
+  const navigateTo = (route: string) => {
+    navigate(route);
+    setOpen(false);
   };
 
   const socialLinks = {
@@ -40,15 +38,16 @@ const Navbar: React.FC = () => {
           <img src={menuIcon} alt="Abrir menú de navegación" className="menu-img" />
         </button>
 
+        {/* ⭐ LOGO QUE REDIRIGE A HOME */}
         <img 
           src={xaanLogo} 
           alt="Logo de XA'AN Skin Care" 
-          className="nav-logo-img" 
+          className="nav-logo-img"
+          onClick={() => navigateTo("/")}
+          style={{ cursor: "pointer" }}
         />
 
-        <a className="nav-link" href="#" aria-label="Abrir brochure">
-          Brochure
-        </a>
+        <a className="nav-link" href="#">Brochure</a>
       </nav>
 
       {/* OVERLAY */}
@@ -58,7 +57,6 @@ const Navbar: React.FC = () => {
         <button 
           className="close-btn" 
           onClick={() => setOpen(false)}
-          aria-label="Cerrar menú"
         >
           <img src={closeIcon} alt="Cerrar menú" className="close-img" />
         </button>
@@ -73,41 +71,45 @@ const Navbar: React.FC = () => {
               <p className="top-mini">XAAN SKIN CARE</p>
 
               <div className="center-links">
-                <a 
-                  role="button" 
+
+                <a
+                  onClick={() => navigateTo("/categorias")}
+                  role="button"
                   tabIndex={0}
-                  onClick={() => scrollTo("productos")}
+                  type="button"
                 >
                   PRODUCTOS
                 </a>
 
-                <a 
+                <a
+                  onClick={() => navigateTo("/acerca")}
                   role="button"
                   tabIndex={0}
-                  onClick={() => scrollTo("acerca")}
+                  type="button"
                 >
                   ACERCA DE XAAN
                 </a>
 
-                <a 
+                <a
+                  onClick={() => navigateTo("/proceso")}
                   role="button"
                   tabIndex={0}
-                  onClick={() => scrollTo("proceso")}
+                  type="button"
                 >
                   PROCESO
                 </a>
 
-                <a 
+                <a
+                  onClick={() => navigateTo("/contacto")}
                   role="button"
                   tabIndex={0}
-                  onClick={() => scrollTo("contacto")}
+                  type="button"
                 >
                   CONTACTO
                 </a>
               </div>
 
               <p className="bottom-mini">CUN · MX</p>
-
             </div>
           </div>
 
@@ -117,44 +119,35 @@ const Navbar: React.FC = () => {
 
               <img 
                 src={logoImg} 
-                alt="Isotipo de XA'AN Skin Care" 
+                alt="Isotipo" 
                 className="right-logo" 
               />
 
               <div className="right-info">
-                <p role="button" tabIndex={0}>Brochure</p>
-                <p role="button" tabIndex={0}>Catálogo de dispensadores</p>
+                <p>Brochure</p>
+                <p>Catálogo de dispensadores</p>
 
-                <p
-                  style={{ cursor: "pointer" }}
-                  onClick={() => window.open(socialLinks.whatsapp, "_blank")}
-                >
+                <p onClick={() => window.open(socialLinks.whatsapp, "_blank")}>
                   TEL. +52 998 240 3593
                 </p>
 
-                <p
-                  style={{ cursor: "pointer" }}
-                  onClick={() => (window.location.href = socialLinks.email)}
-                >
+                <p onClick={() => (window.location.href = socialLinks.email)}>
                   hola@xaan.mx
                 </p>
 
-                {/* REDES */}
                 <div className="right-socials">
                   <img
                     src={igIcon}
                     className="social-icon"
-                    alt="Instagram oficial de XA'AN Skin Care"
+                    alt="Instagram"
                     onClick={() => window.open(socialLinks.ig, "_blank")}
-                    loading="lazy"
                   />
 
                   <img
                     src={fbIcon}
                     className="social-icon"
-                    alt="Facebook oficial de XA'AN Skin Care"
+                    alt="Facebook"
                     onClick={() => window.open(socialLinks.fb, "_blank")}
-                    loading="lazy"
                   />
                 </div>
               </div>
@@ -166,10 +159,9 @@ const Navbar: React.FC = () => {
                 </p>
 
                 <img 
-                  src={rightImg} 
-                  alt="Elemento decorativo de XA'AN" 
-                  className="right-bottom-img" 
-                  loading="lazy"
+                  src={rightImg}
+                  className="right-bottom-img"
+                  alt="Decorativo"
                 />
               </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/WhoWeAre.css";
+import "../../styles/Hom/WhoWeAre.css";
 
 import imagen1 from "../../assets/web/imagen1.webp";
 import imagen2 from "../../assets/web/imagen2.webp";

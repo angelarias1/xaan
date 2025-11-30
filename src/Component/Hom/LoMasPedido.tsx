@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/LoMasPedido.css";
+import "../../styles/Hom/LoMasPedido.css";
 
 import img1 from "../../assets/web/imagen4.webp"; 
 import img2 from "../../assets/imagen5.jpg";

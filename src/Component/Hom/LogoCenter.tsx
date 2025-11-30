@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/LogoCenter.css";
+import "../../styles/Hom/LogoCenter.css";
 
 import logo from "../../assets/web/logo.webp"; // Cambia por tu archivo real
 

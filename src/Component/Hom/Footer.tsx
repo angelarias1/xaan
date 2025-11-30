@@ -1,4 +1,4 @@
-import "../../styles/Footer.css";
+import "../../styles/Hom/Footer.css";
 import logo from "../../assets/web/logo-xaan.webp";
 
 import icon1 from "../../assets/f.svg";   // Facebook

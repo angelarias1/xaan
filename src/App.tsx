@@ -1,65 +1,30 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
 
-// IMPORTAR COMPONENTES
-import Navbar from './Component/Hom/Navbar'
-import Hero from './Component/Hom/hero'
-import WhoWeAre from './Component/Hom/WhoWeAre'
-import LoMasPedido from './Component/Hom/LoMasPedido'
-import SectionMensaje from './Component/Hom/SectionMensaje'
-import ExperienciaSensorial from './Component/Hom/ExperienciaSensorial'
-import Aceites from './Component/Hom/Aceites'
-import LogoCenter from './Component/Hom/LogoCenter'
-import WhySection from './Component/Hom/WhySection'
-import QuienesSomos from './Component/Hom/QuienesSomos'
-import NuevaSeccion from './Component/Hom/NuevaSeccion'
-import Footer from './Component/Hom/Footer'
+import Navbar from "./Component/Hom/Navbar";
+import HomePage from "./Component/Hom/HomePages";
+import AcercaPage from "./Component/Acerca/AcercaPage";
+import CategoriasPage from "./Component/Categorias/CategoriasPage";
+import ProcesoPage from "./Component/Proceso/ProcesoPage";
+import ContactoPage from "./Component/Contacto/Contactate";
+import Footer from "./Component/Hom/Footer";
 
 function App() {
   return (
     <>
-      {/* NAVBAR */}
+      {/* ⭐ NAVBAR SE VE EN TODAS LAS PÁGINAS */}
       <Navbar />
 
-      {/* HERO */}
-      <Hero />
-
-      {/* ============================= */}
-      {/* ACERCA DE XAAN → WhoWeAre     */}
-      {/* ============================= */}
-      <section id="acerca">
-        <WhoWeAre />
-      </section>
-
-      {/* ============================= */}
-      {/* PRODUCTOS → Lo Más Pedido     */}
-      {/* ============================= */}
-      <section id="productos">
-        <LoMasPedido />
-      </section>
-      <SectionMensaje />
-
-      {/* ============================= */}
-      {/* PROCESO → ExperienciaSensorial */}
-      {/* ============================= */}
-      <section id="proceso">
-        <ExperienciaSensorial />
-      </section>
-
-      {/* Secciones sin IDs */}
-      <Aceites />
-      <LogoCenter />
-      <WhySection />
-      <QuienesSomos />
-      <NuevaSeccion />
-
-      {/* ============================= */}
-      {/* CONTACTO → FOOTER             */}
-      {/* ============================= */}
-      <section id="contacto">
-        <Footer />
-      </section>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/acerca" element={<AcercaPage />} />
+        <Route path="/categorias" element={<CategoriasPage />} />
+        <Route path="/proceso" element={<ProcesoPage />} />
+        <Route path="/contacto" element={<ContactoPage />} />
+      </Routes>
+    <Footer />   {/* ⭐ En TODAS las pág. */}
+</>
+    
+  );
 }
 
-export default App
+export default App;

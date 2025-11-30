@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
+
+.aceite-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.aceite-container {
+  width: 100%;
+  max-width: 1350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ========================= */
+/*          TEXTO            */
+/* ========================= */
+
+.aceite-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 30px;
+}
+
+.aceite-title {
+  font-family: "aviano-flare", serif;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  color: #805b4a;
+  max-width: 550px;
+}
+
+.aceite-right-mini {
+  margin-top: 10px;
+}
+
+.aceite-sub {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #7d5b46;
+}
+
+.aceite-desc {
+  margin-top: 14px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #805b4a;
+}
+
+.aceite-link {
+  margin-top: 18px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.95rem;
+  color: #805b4a;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* ========================= */
+/*       IMAGEN DERECHA      */
+/* ========================= */
+
+.aceite-right-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ========================= */
+/*        RESPONSIVE         */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .aceite-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .aceite-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .aceite-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .aceite-section {
+    padding: 70px 5%;
+  }
+
+  .aceite-title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .aceite-desc {
+    font-size: 0.9rem;
+  }
+
+  .aceite-right-img img {
+    border-radius: 4px;
+  }
+}

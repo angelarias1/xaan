@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/Aceites.css";
+import "../../styles/Hom/Aceites.css";
 
 import ArrowLeft from "../../assets/web/izquierda.webp";
 import ArrowRight from "../../assets/web/derecha.webp";

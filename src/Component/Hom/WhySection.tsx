@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/WhySection.css";
+import "../../styles/Hom/WhySection.css";
 
 const items = [
   {

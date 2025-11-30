@@ -5,7 +5,7 @@ import React from "react";
 // import Cuerpo from "./Cuerpo";
 // import Aromatizantes from "./Aromatizantes";
 
-const Contactate: React.FC = () => {
+const ProcesoPage: React.FC = () => {
   return (
     <>
       {/* <Aceite /> */}
@@ -19,4 +19,4 @@ const Contactate: React.FC = () => {
   );
 };
 
-export default Contactate;
+export default ProcesoPage;
