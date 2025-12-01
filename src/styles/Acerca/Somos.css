@@ -1,0 +1,118 @@
+.somos-section {
+  width: 100%;
+  background-color: #E2D9D2;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.somos-container {
+  width: 90%;
+  max-width: 1350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ===================== */
+/* IZQUIERDA */
+/* ===================== */
+
+.somos-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.somos-top-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  color: #805b4a;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.somos-title {
+  font-family: "aviano-flare", serif;
+  font-size: 2.2rem;
+  color: #805b4a;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.somos-description {
+  font-family: "Barlow", sans-serif;
+  max-width: 380px;
+  color: rgba(0,0,0,0.6);
+  line-height: 1.45;
+  margin-bottom: 28px;
+}
+
+/* BOTÓN */
+
+.somos-btn {
+  padding: 10px 26px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.somos-btn:hover {
+  background-color: rgba(128, 91, 74, 0.15);
+  transform: scale(1.02);
+}
+
+/* ===================== */
+/* DERECHA */
+/* ===================== */
+
+.somos-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.somos-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 1024px) {
+  .somos-container {
+    flex-direction: column;
+    text-align: left;
+    gap: 40px;
+  }
+
+  .somos-left,
+  .somos-right {
+    width: 100%;
+  }
+
+  .somos-img {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .somos-title {
+    font-size: 1.6rem;
+  }
+
+  .somos-description {
+    font-size: 0.92rem;
+  }
+}

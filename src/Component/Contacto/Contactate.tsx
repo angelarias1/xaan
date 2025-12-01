@@ -1,21 +1,34 @@
 import React from "react";
-
-// Ejemplo cuando importes tus secciones:
-// import Aceite from "./Aceite";
-// import Cuerpo from "./Cuerpo";
-// import Aromatizantes from "./Aromatizantes";
+import "../../styles/Contacto/Contactate.css";
 
 const Contactate: React.FC = () => {
   return (
-    <>
-      {/* <Aceite /> */}
-      {/* <Cuerpo /> */}
-      {/* <Aromatizantes /> */}
-      
-      <div style={{ padding: "100px 0", textAlign: "center" }}>
-        <p>Secciones de Categorías van aquí...</p>
+    <section className="contacto-section">
+      <div className="contacto-container">
+
+        {/* TÍTULO */}
+        <h2 className="contacto-title">
+          CONÉCTATE <br />
+          CON NOSOTROS: <br />
+          ESTAMOS A TU <br />
+          DISPOSICIÓN
+        </h2>
+
+        {/* TEXTO Y BOTÓN */}
+        <div className="contacto-right">
+          <p className="contacto-text">
+            ¡Estamos aquí para ti! Si tienes preguntas, sugerencias o simplemente deseas
+            conectarte, nuestro equipo espera con ansias escucharte. ¡Contáctanos hoy mismo
+            y comencemos esta conversación!
+          </p>
+
+          <button className="contacto-btn">
+            Quiero hacer un pedido
+          </button>
+        </div>
+
       </div>
-    </>
+    </section>
   );
 };
 

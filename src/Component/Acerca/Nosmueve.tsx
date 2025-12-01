@@ -1,32 +1,37 @@
 import React from "react";
+import "../../styles/Acerca/Nosmueve.css";
 
 const Nosmueve: React.FC = () => {
   return (
-    <section id="nosmueve" style={sectionStyle}>
-      <h2 style={titleStyle}>¿Qué Nos Mueve?</h2>
-      <p style={textStyle}>
-        Este espacio puede describir valores, filosofía y motivaciones detrás de XA’AN.
-      </p>
+    <section className="nosmueve-section">
+
+      {/* IZQUIERDA */}
+      <div className="nosmueve-left">
+        <p className="nosmueve-tag">LO QUE NOS MUEVE</p>
+
+        <p className="nosmueve-text">
+          Nuestra pasión reside en cuidar a nuestros
+          valiosos clientes de una manera que refleje
+          nuestro compromiso con el planeta.
+          <br /><br />
+          Cada producto que creamos es un testimonio de nuestra dedicación
+          a brindar una experiencia de cuidado excepcional, mientras abrazamos
+          prácticas amigables con el medio ambiente.
+        </p>
+      </div>
+
+      {/* DERECHA */}
+      <div className="nosmueve-right">
+        <h2 className="nosmueve-title">
+          EN CADA FRAGANCIA<br />
+          Y TEXTURA, CREAMOS<br />
+          EL ARTE DE CUIDAR<br />
+          EL SER.
+        </h2>
+      </div>
+
     </section>
   );
-};
-
-const sectionStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "80px 5%",
-  background: "#e2d9d2",
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: "2rem",
-  color: "#805b4a",
-  marginBottom: "12px",
-};
-
-const textStyle: React.CSSProperties = {
-  maxWidth: "600px",
-  fontSize: "1.1rem",
-  lineHeight: "1.5",
 };
 
 export default Nosmueve;

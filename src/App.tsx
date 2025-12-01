@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Component/Hom/Navbar";
 import HomePage from "./Component/Hom/HomePages";
 import AcercaPage from "./Component/Acerca/AcercaPage";
-import CategoriasPage from "./Component/Categorias/CategoriasPage";
+import CategoriasPage from "./Component/Productos/CategoriasPage";
 import ProcesoPage from "./Component/Proceso/ProcesoPage";
-import ContactoPage from "./Component/Contacto/Contactate";
+import ContactoPage from "./Component/Contacto/ContactoPage";
 import Footer from "./Component/Hom/Footer";
 
 function App() {

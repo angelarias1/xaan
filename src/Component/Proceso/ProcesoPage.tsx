@@ -1,20 +1,21 @@
 import React from "react";
 
-// Ejemplo cuando importes tus secciones:
-// import Aceite from "./Aceite";
-// import Cuerpo from "./Cuerpo";
-// import Aromatizantes from "./Aromatizantes";
+// IMPORTA AQUÍ TODAS LAS SECCIONES DEL PROCESO:
+import Ciencia from "./Ciencia";
+import NuestroProceso from "./NP";
+import Ballet from "./Ballet";
+import NosInspira from "./Inspira";
 
 const ProcesoPage: React.FC = () => {
   return (
     <>
-      {/* <Aceite /> */}
-      {/* <Cuerpo /> */}
-      {/* <Aromatizantes /> */}
-      
-      <div style={{ padding: "100px 0", textAlign: "center" }}>
-        <p>Secciones de Categorías van aquí...</p>
-      </div>
+      {/* SECCIONES DEL PROCESO EN ORDEN */}
+      <Ciencia />
+      <NuestroProceso />
+      <Ballet />
+      <NosInspira />
+
+      {/* Si necesitas agregar más secciones, lo haces aquí */}
     </>
   );
 };

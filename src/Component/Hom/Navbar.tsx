@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Hom/Navbar.css";
 
-import menuIcon from "../../assets/menu.png";
-import xaanLogo from "../../assets/loogo.jfif";
-import closeIcon from "../../assets/51e5d1d8-096f-4c57-90f2-8ba9af697072.jfif";
-import logoImg from "../../assets/48a38a8d-aa0e-4d91-8354-89cd1f210dd0.jfif";
+import menuIcon from "../../assets/web/menu.webp";
+import xaanLogo from "../../assets/web/loogo.webp";
+import closeIcon from "../../assets/web/51e5d1d8-096f-4c57-90f2-8ba9af697072.webp";
+import logoImg from "../../assets/web/48a38a8d-aa0e-4d91-8354-89cd1f210dd0.webp";
 import igIcon from "../../assets/Vector.svg";
 import fbIcon from "../../assets/face.svg";
 import rightImg from "../../assets/Isotipo.svg";

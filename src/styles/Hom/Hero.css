@@ -16,7 +16,7 @@
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  /* ✅ Centra todo el Hero */
   gap: 40px;
 }
 
@@ -137,7 +137,7 @@
     flex-direction: column;
     gap: 45px;
     padding: 0 6%;
-    align-items: flex-start;    /* 🔥 izquierda */
+    align-items: center;    /* 🔥 izquierda */
   }
 
   /* ============================= */
@@ -229,7 +229,7 @@
 
   .hero-inner {
     flex-direction: column;
-    align-items: flex-start;   /* 🔥 izquierda real */
+    align-items: center;   /* 🔥 izquierda real */
     gap: 32px;
     padding: 0 6%;
   }

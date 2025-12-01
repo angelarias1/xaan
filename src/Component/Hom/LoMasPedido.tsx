@@ -2,8 +2,8 @@ import React from "react";
 import "../../styles/Hom/LoMasPedido.css";
 
 import img1 from "../../assets/web/imagen4.webp"; 
-import img2 from "../../assets/imagen5.jpg";
-import img3 from "../../assets/imagen6.jpg";
+import img2 from "../../assets/web/imagen5.webp";
+import img3 from "../../assets/web/imagen6.webp";
 
 const LoMasPedido: React.FC = () => {
   return (

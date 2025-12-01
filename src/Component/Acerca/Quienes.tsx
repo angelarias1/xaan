@@ -1,32 +1,28 @@
 import React from "react";
+import "../../styles/Acerca/Quienes.css";
+
+// IMPORTA tus imágenes reales
+import imgCrema from "../../assets/web/Acerca/Captura de Pantalla 2023-07-20 a la(s) 12.18 3.webp";
+import imgLab from "../../assets/web/Acerca/iStock-1332654793 1 (1).webp";
 
 const Quienes: React.FC = () => {
   return (
-    <section id="quienes" style={sectionStyle}>
-      <h2 style={titleStyle}>¿Quiénes Somos?</h2>
-      <p style={textStyle}>
-        Esta es una sección de referencia para describir la esencia y propósito de la marca.
-      </p>
+    <section className="quienes-section">
+
+      {/* TÍTULO SUPERIOR IZQUIERDO */}
+      <p className="quienes-tag">QUIÉNES SOMOS</p>
+
+      {/* CONTENEDOR DE IMÁGENES */}
+      <div className="quienes-img-row">
+        <img src={imgCrema} alt="Producto XA'AN" className="quienes-img" />
+        <img src={imgLab} alt="Laboratorio natural" className="quienes-img" />
+      </div>
+
+      {/* LÍNEA DECORATIVA */}
+      <div className="quienes-line"></div>
+
     </section>
   );
-};
-
-const sectionStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "80px 5%",
-  background: "#e2d9d2",
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: "2rem",
-  color: "#805b4a",
-  marginBottom: "12px",
-};
-
-const textStyle: React.CSSProperties = {
-  maxWidth: "600px",
-  fontSize: "1.1rem",
-  lineHeight: "1.5",
 };
 
 export default Quienes;

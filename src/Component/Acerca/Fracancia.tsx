@@ -1,32 +1,28 @@
 import React from "react";
+import "../../styles/Acerca/Fragancia.css";
 
-const Nosmueve: React.FC = () => {
+const Fragancia: React.FC = () => {
   return (
-    <section id="nosmueve" style={sectionStyle}>
-      <h2 style={titleStyle}>¿Qué Nos Mueve?</h2>
-      <p style={textStyle}>
-        Este espacio puede describir valores, filosofía y motivaciones detrás de XA’AN.
-      </p>
+    <section className="fragancia-section">
+
+      <div className="fragancia-container">
+
+        <h2 className="fragancia-title">
+          EN CADA FRAGANCIA Y TEXTURA, CREAMOS<br />
+          EL ARTE DE CUIDAR EL SER.
+        </h2>
+
+        <p className="fragancia-text">
+          Nuestros productos son cultivados con amor desde la esencia misma de la naturaleza,  
+          utilizando ingredientes de origen vegetal que nutren cuerpo y mente. Somos apasionados  
+          guardianes del medio ambiente, comprometidos con prácticas eco-amigables en cada  
+          paso de nuestra producción.
+        </p>
+
+      </div>
+
     </section>
   );
 };
 
-const sectionStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "80px 5%",
-  background: "#e2d9d2",
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: "2rem",
-  color: "#805b4a",
-  marginBottom: "12px",
-};
-
-const textStyle: React.CSSProperties = {
-  maxWidth: "600px",
-  fontSize: "1.1rem",
-  lineHeight: "1.5",
-};
-
-export default Nosmueve;
+export default Fragancia;

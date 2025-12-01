@@ -1,0 +1,115 @@
+.ciencia-section {
+  width: 100%;
+  padding: 110px 0;
+  background-color: #E2D9D2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+/* ====================== */
+/* IZQUIERDA */
+/* ====================== */
+
+.ciencia-left {
+  width: 45%;
+  padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ciencia-small {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #805b4a;
+  opacity: 0.85;
+}
+
+.ciencia-title {
+  font-family: "aviano-flare", serif;
+  color: #805b4a;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ciencia-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 360px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.ciencia-btn {
+  width: fit-content;
+  padding: 10px 26px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ciencia-btn:hover {
+  background-color: #d8ccc4;
+}
+
+/* ====================== */
+/* DERECHA */
+/* ====================== */
+
+.ciencia-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.ciencia-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ====================== */
+/* RESPONSIVE */
+/* ====================== */
+
+@media (max-width: 1024px) {
+  .ciencia-section {
+    flex-direction: column-reverse;
+    padding: 90px 6%;
+    gap: 40px;
+  }
+
+  .ciencia-left,
+  .ciencia-right {
+    width: 100%;
+  }
+
+  .ciencia-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ciencia-title {
+    font-size: 1.55rem;
+  }
+
+  .ciencia-text {
+    font-size: 0.85rem;
+  }
+
+  .ciencia-img {
+    max-width: 100%;
+  }
+}

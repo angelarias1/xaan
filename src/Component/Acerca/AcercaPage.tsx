@@ -5,15 +5,19 @@ import Fracancia from "../../Component/Acerca/Fracancia";
 import Nosmueve from "../../Component/Acerca/Nosmueve";
 import Quienes from "../../Component/Acerca//Quienes";
 import Somos from "../../Component/Acerca//Somos";
+import NuevaSeccion from "../Hom/NuevaSeccion";
+
 
 const AcercaPage: React.FC = () => {
   return (
     <>
       {/* ORDEN: puedes acomodarlo como quieras */}
-      <Quienes />
       <Somos />
-      <Nosmueve />
       <Fracancia />
+      <Quienes />
+      <Nosmueve />
+      <NuevaSeccion />
+
     </>
   );
 };

@@ -1,0 +1,26 @@
+.inspira-section {
+  width: 100%;
+  background-color: #E2D9D2;
+  padding: 120px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.inspira-text {
+  font-family: "aviano-flare", serif;
+  font-size: 1.05rem;
+  color: #805b4a;
+  line-height: 1.5;
+  max-width: 850px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .inspira-text {
+    font-size: 0.95rem;
+    max-width: 95%;
+  }
+}

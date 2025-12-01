@@ -1,4 +1,4 @@
-.aceite-section {
+.aroma-section {
   width: 100%;
   padding: 130px 5%;
   background: #e2d9d2;
@@ -6,7 +6,7 @@
 }
 
 /* TÍTULO */
-.aceite-title {
+.aroma-title {
   font-family: "aviano-flare", serif;
   font-size: 2rem;
   color: #805b4a;
@@ -15,36 +15,24 @@
 }
 
 /* CONTENEDOR */
-.aceite-container {
+.aroma-container {
   max-width: 1350px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.4fr 0.9fr 1.2fr;
-  align-items: start;
-  gap: 50px;
-  position: relative;
-}
-
-/* SELLO DECORATIVO */
-.aceite-seal {
-  width: 60px;
-  opacity: 0.4;
-  margin-top: 60px;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 60px;
 }
 
 /* TEXTO */
-.aceite-text {
-  max-width: 420px;
-}
-
-.aceite-text p {
+.aroma-text p {
   font-family: "Barlow", sans-serif;
   color: #5a4d45;
   line-height: 1.6;
-  margin-bottom: 20px;
+  max-width: 420px;
+  margin-bottom: 18px;
 }
 
-.aceite-ver {
+.aroma-ver {
   display: inline-block;
   font-family: "Barlow", sans-serif;
   font-size: 0.9rem;
@@ -53,52 +41,76 @@
   margin-top: 10px;
 }
 
-/* IMAGEN DERECHA */
-.aceite-img-box {
-  width: 100%;
+/* IMÁGENES */
+.aroma-images {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
 }
 
-.aceite-img {
+.aroma-main {
   width: 100%;
-  height: 320px;
+  height: 360px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.aroma-small {
+  width: 70%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* SELLO DECORATIVO */
+.aroma-seal {
+  position: absolute;
+  bottom: 40px;
+  left: 5%;
+  width: 70px;
+  opacity: 0.4;
 }
 
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 900px) {
-  .aceite-container {
+  .aroma-container {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
-  .aceite-seal {
-    order: 3;
-    margin-top: 0;
+  .aroma-main {
+    height: 300px;
+  }
+
+  .aroma-small {
+    width: 100%;
+    height: 220px;
+  }
+
+  .aroma-seal {
     width: 55px;
-  }
-
-  .aceite-img {
-    height: 280px;
   }
 }
 
 @media (max-width: 480px) {
-  .aceite-section {
+  .aroma-section {
     padding: 100px 6%;
   }
 
-  .aceite-title {
+  .aroma-title {
     font-size: 1.6rem;
   }
 
-  .aceite-seal {
-    width: 48px;
+  .aroma-main {
+    height: 260px;
   }
 
-  .aceite-img {
-    height: 240px;
+  .aroma-small {
+    height: 180px;
+  }
+
+  .aroma-seal {
+    width: 48px;
   }
 }
