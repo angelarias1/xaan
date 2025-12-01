@@ -1,14 +1,12 @@
 import React from "react";
 import "../../styles/Acerca/Somos.css";
 
-import somosImg from "../../assets/web/Acerca/Captura de Pantalla 2023-07-20 a la(s) 12.18 4.webp"; // ⭐ Reemplaza con tu imagen real
+import somosImg from "../../assets/web/Acerca/Captura de Pantalla 2023-07-20 a la(s) 12.18 4.webp";
 
 const Somos: React.FC = () => {
   return (
-    <section className="somos-section">
-
-      {/* Contenedor principal */}
-      <div className="somos-container">
+    <section className="section somos-section">
+      <div className="section-wrapper somos-container">
 
         {/* COLUMNA IZQUIERDA */}
         <div className="somos-left">
@@ -16,17 +14,17 @@ const Somos: React.FC = () => {
           <p className="somos-top-text">LO QUE NOS MUEVE</p>
 
           <h2 className="somos-title">
-            SOMOS UNA<br />
-            COMUNIDAD DE<br />
-            INCLUSIÓN<br />
+            SOMOS UNA <br />
+            COMUNIDAD DE <br />
+            INCLUSIÓN <br />
             SOSTENIBLE
           </h2>
 
           <p className="somos-description">
             Aportamos parte de nuestras ventas a distintas causas sociales,
-            así como al medio ambiente y trabajamos en crear un consumo
+            así como al medio ambiente. Trabajamos en crear un consumo
             consciente en nuestros clientes, logrando un sistema de apoyo
-            al medio ambiente.
+            al medio ambiente a través de cada compra.
           </p>
 
           <button className="somos-btn">Quiero hacer un pedido</button>
@@ -36,8 +34,9 @@ const Somos: React.FC = () => {
         <div className="somos-right">
           <img
             src={somosImg}
-            alt="Somos XA'AN"
+            alt="Compromiso sostenible y social de XA'AN Skin Care"
             className="somos-img"
+            loading="lazy"
           />
         </div>
 

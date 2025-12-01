@@ -7,20 +7,33 @@ import imgLab from "../../assets/web/Acerca/iStock-1332654793 1 (1).webp";
 
 const Quienes: React.FC = () => {
   return (
-    <section className="quienes-section">
+    <section className="section quienes-section">
+      <div className="section-wrapper quienes-container">
 
-      {/* TÍTULO SUPERIOR IZQUIERDO */}
-      <p className="quienes-tag">QUIÉNES SOMOS</p>
+        {/* TÍTULO SUPERIOR IZQUIERDO */}
+        <p className="quienes-tag">QUIÉNES SOMOS</p>
 
-      {/* CONTENEDOR DE IMÁGENES */}
-      <div className="quienes-img-row">
-        <img src={imgCrema} alt="Producto XA'AN" className="quienes-img" />
-        <img src={imgLab} alt="Laboratorio natural" className="quienes-img" />
+        {/* IMÁGENES */}
+        <div className="quienes-img-row">
+          <img 
+            src={imgCrema} 
+            alt="Productos XA'AN elaborados con ingredientes naturales" 
+            className="quienes-img"
+            loading="lazy"
+          />
+
+          <img 
+            src={imgLab} 
+            alt="Proceso de elaboración en laboratorio eco amigable" 
+            className="quienes-img"
+            loading="lazy"
+          />
+        </div>
+
+        {/* LÍNEA DECORATIVA */}
+        <div className="quienes-line"></div>
+
       </div>
-
-      {/* LÍNEA DECORATIVA */}
-      <div className="quienes-line"></div>
-
     </section>
   );
 };

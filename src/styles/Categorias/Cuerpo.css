@@ -20,20 +20,36 @@
   gap: 60px;
 }
 
-/* IMÁGENES */
+/* ======================================================== */
+/* IMÁGENES — Primera queda igual, segunda rectangular      */
+/* ======================================================== */
+
 .cuerpo-images {
   display: flex;
   gap: 20px;
 }
 
-.cuerpo-images img {
-  width: 50%;
-  height: 360px;
+/* Primera imagen — NO SE TOCA */
+.cuerpo-images img:nth-child(1) {
+  width: 35%;
+  height: 35%;      /* Se mantiene */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: -1px;
 }
 
-/* TEXTO */
+/* Segunda imagen — ANCHA y rectangular */
+.cuerpo-images img:nth-child(2) {
+  width: 35%;
+  height: auto;       /* Deja que tome su forma real */
+  max-height: 420px;  /* Para que no se dispare */
+  object-fit: cover;
+  border-radius: -1px;
+}
+
+/* ======================================================== */
+/* TEXTO                                                    */
+/* ======================================================== */
+
 .cuerpo-text h2 {
   font-family: "aviano-flare", serif;
   font-size: 2.2rem;
@@ -59,7 +75,7 @@
   text-decoration: underline;
 }
 
-/* LISTA DE TIPOS */
+/* LISTA */
 .cuerpo-list {
   display: flex;
   flex-direction: column;
@@ -81,18 +97,17 @@
   opacity: 0.8;
 }
 
-/* RESPONSIVE */
+/* ======================================================== */
+/* RESPONSIVE                                               */
+/* ======================================================== */
+
 @media (max-width: 900px) {
   .cuerpo-container {
     grid-template-columns: 1fr;
   }
 
-  .cuerpo-images img {
+  .cuerpo-images img:nth-child(1) {
     height: 300px;
-  }
-
-  .cuerpo-text {
-    text-align: left;
   }
 }
 
@@ -101,8 +116,13 @@
     flex-direction: column;
   }
 
-  .cuerpo-images img {
+  .cuerpo-images img:nth-child(1) {
     width: 100%;
     height: 260px;
+  }
+
+  .cuerpo-images img:nth-child(2) {
+    width: 100%;
+    max-height: 260px;
   }
 }

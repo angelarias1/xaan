@@ -1,52 +1,50 @@
 import React from "react";
 import "../../styles/Categorias/Aromatizantes.css";
 
-// IMPORTA TUS IMÁGENES
-import aroma1 from "../../assets/web/Categoria/iStock-1233.webp";
-import aroma2 from "../../assets/web/Categoria/Captura de Pantalla 2023-07-20 a la(s) 12.18 1.webp";
+import saunaImg from "../../assets/web/Categoria/Captura de Pantalla 2023-07-20 a la(s) 12.18 3.webp";
+import velasImg from "../../assets/web/Categoria/iStock-1233.webp";
 
 const Aromatizantes: React.FC = () => {
   return (
-    <section className="aroma-section">
+    <section className="section aroma-section">
+      <div className="section-wrapper aroma-wrapper">
 
-      <h2 className="aroma-title">AROMATIZANTES</h2>
+        {/* IZQUIERDA */}
+        <div className="aroma-left">
 
-      <div className="aroma-container">
+          <h2 className="aroma-title">AROMATIZANTES</h2>
 
-        {/* TEXTO IZQUIERDA */}
-        <div className="aroma-text">
-          <p>
+          <p className="aroma-paragraph">
             Cada fragancia es un susurro de emociones, una melodía de sensaciones
             que transforma tu espacio.
           </p>
 
-          <p>
+          <p className="aroma-paragraph">
             Nuestros aromatizantes generan la atmósfera perfecta para tu espacio.
-            Deja que cada aroma cuente su propia historia, que cada exhalación
-            transporte a tus clientes a un lugar de serenidad y evocación.
-            Permítenos ser la firma aromática de tus momentos, tejiendo recuerdos
-            inolvidables en cada fragancia.
+            Cada aroma cuenta su propia historia, transportando a tus clientes
+            a un lugar de serenidad y evocación.
           </p>
 
-          <a href="#" className="aroma-ver">
+          <a href="#" className="aroma-link">
             VER PRODUCTOS →
           </a>
+
         </div>
 
-        {/* IMÁGENES */}
-        <div className="aroma-images">
-          <img src={aroma2} className="aroma-main" alt="Spa aromático" />
-          <img src={aroma1} className="aroma-small" alt="Aromatizantes" />
+        {/* DERECHA IMÁGENES */}
+        <div className="aroma-right">
+
+          <div className="aroma-small">
+            <img src={velasImg} alt="Aromaterapia y velas relajantes" />
+          </div>
+
+          <div className="aroma-big">
+            <img src={saunaImg} alt="Sauna aromática profesional" />
+          </div>
+
         </div>
 
       </div>
-
-      {/* SELLO / ICONO ABAJO IZQUIERDA */}
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Minimal_leaf_icon.svg/240px-Minimal_leaf_icon.svg.png"
-        alt="Sello decorativo"
-        className="aroma-seal"
-      />
     </section>
   );
 };

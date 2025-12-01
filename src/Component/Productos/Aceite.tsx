@@ -1,44 +1,51 @@
 import React from "react";
 import "../../styles/Categorias/Aceite.css";
 
-// IMPORTA TUS IMÁGENES
 import aceiteImg from "../../assets/web/Categoria/Rectangle 979.webp";
-import selloImg from "../../assets/web/icono.webp"; // ⭐ tu sello importado
+import selloImg from "../../assets/web/icono.webp"; // sello real importado
 
 const Aceites: React.FC = () => {
   return (
-    <section className="aceite-section">
+    <section className="section aceite-section">
 
-      {/* TÍTULO */}
-      <h2 className="aceite-title">ACEITES</h2>
+      <div className="section-wrapper">
 
-      <div className="aceite-container">
+        {/* TÍTULO */}
+        <h2 className="aceite-title">ACEITES</h2>
 
-        {/* SELLO IZQUIERDA */}
-        <img
-          src={selloImg}
-          alt="Decoración sello"
-          className="aceite-seal"
-        />
+        <div className="aceite-container">
 
-        {/* TEXTO */}
-        <div className="aceite-text">
-          <p>
-            Explora nuestros aceites corporales, el elixir de cuidado que toda piel
-            anhela. Creados para nutrir y rejuvenecer, cada gota es un abrazo
-            de hidratación. Desde revitalizantes mezclas hasta aromas relajantes,
-            nuestros aceites son indulgencia líquida. Regala a tu piel el lujo de un
-            toque suave y radiante.
-          </p>
+          {/* SELLO IZQUIERDA */}
+          <img
+            src={selloImg}
+            alt="Decoración sello de XA’AN"
+            className="aceite-seal"
+          />
 
-          <a href="#" className="aceite-ver">
-            VER PRODUCTOS →
-          </a>
-        </div>
+          {/* TEXTO */}
+          <div className="aceite-text">
+            <p>
+              Explora nuestros aceites corporales, el elixir de cuidado que toda piel
+              anhela. Creados para nutrir y rejuvenecer, cada gota es un abrazo
+              de hidratación. Desde revitalizantes mezclas hasta aromas relajantes,
+              nuestros aceites son indulgencia líquida. Regala a tu piel el lujo de un
+              toque suave y radiante.
+            </p>
 
-        {/* IMAGEN */}
-        <div className="aceite-img-box">
-          <img src={aceiteImg} alt="Aceites corporales" className="aceite-img" />
+            <a href="#" className="aceite-ver">
+              VER PRODUCTOS →
+            </a>
+          </div>
+
+          {/* IMAGEN */}
+          <div className="aceite-img-box">
+            <img
+              src={aceiteImg}
+              alt="Aceites corporales XA’AN"
+              className="aceite-img"
+            />
+          </div>
+
         </div>
 
       </div>

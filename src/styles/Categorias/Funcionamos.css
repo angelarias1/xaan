@@ -1,112 +1,129 @@
+/* ======================================== */
+/*                 SECCIÓN                 */
+/* ======================================== */
+
 .fun-section {
   width: 100%;
   background: #e2d9d2;
-  padding: 130px 5%;
 }
 
-/* ------------------ */
-/* TITULAR IZQUIERDO */
-/* ------------------ */
-.fun-title {
-  font-family: "aviano-flare", serif;
-  color: #805b4a;
-  font-size: 2.2rem;
-  line-height: 1.1;
-  margin-bottom: 40px;
-  max-width: 620px;
-}
-
-/* ------------------ */
-/* CONTENEDOR GENERAL */
-/* ------------------ */
-.fun-container {
+.fun-wrapper {
   max-width: 1350px;
   margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  align-items: start;
+  padding: 120px 5%;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
 }
 
-/* ------------------ */
-/* IMAGEN GRANDE */
-/* ------------------ */
-.fun-img-box {
+/* ======================================== */
+/*        BLOQUE SUPERIOR (TEXTO)          */
+/* ======================================== */
+
+.fun-top {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
 }
 
-.fun-img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* ------------------ */
-/* TEXTO LATERAL */
-/* ------------------ */
-.fun-side-text h4 {
-  font-family: "Barlow", sans-serif;
-  font-size: 0.85rem;
+/* -- TÍTULO PRINCIPAL -- */
+.fun-title {
+  font-family: "aviano-flare", serif;
   color: #805b4a;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  max-width: 520px;
 }
 
-.fun-side-text p {
+/* -- TEXTO DERECHA -- */
+.fun-side-text {
+  text-align: justify;
+  max-width: 350px;
+}
+
+.fun-side-title {
   font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  color: #805b4a;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.fun-side-desc {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.3rem;
   color: #5a4d45;
-  font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 20px;
-  max-width: 280px;
+  margin-bottom: 18px;
 }
 
 .fun-link {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   text-decoration: underline;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-/* ------------------ */
-/* RESPONSIVE */
-/* ------------------ */
-@media (max-width: 900px) {
-  .fun-container {
-    grid-template-columns: 1fr;
+/* ======================================== */
+/*                IMAGEN                    */
+/* ======================================== */
+
+.fun-img-box {
+  width: 100%;
+}
+
+.fun-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: -1px;
+}
+
+/* ======================================== */
+/*              RESPONSIVE 1024             */
+/* ======================================== */
+
+@media (max-width: 1024px) {
+  .fun-title {
+    font-size: 2rem;
+  }
+
+  .fun-img {
+    height: 360px;
+  }
+
+  .fun-top {
+    gap: 40px;
+  }
+}
+
+/* ======================================== */
+/*              RESPONSIVE 480              */
+/* ======================================== */
+
+@media (max-width: 480px) {
+  .fun-wrapper {
+    padding: 90px 6%;
     gap: 35px;
   }
 
+  .fun-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .fun-title {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+
   .fun-side-text {
-    order: 2;
+    max-width: 100%;
   }
 
   .fun-img {
-    height: 300px;
-  }
-
-  .fun-title {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .fun-section {
-    padding: 95px 6%;
-  }
-
-  .fun-title {
-    font-size: 1.45rem;
-    line-height: 1.15;
-  }
-
-  .fun-img {
-    height: 240px;
-  }
-
-  .fun-side-text p {
-    font-size: 0.9rem;
+    height: 260px;
   }
 }

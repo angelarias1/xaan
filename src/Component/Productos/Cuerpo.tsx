@@ -2,43 +2,57 @@ import React from "react";
 import "../../styles/Categorias/Cuerpo.css";
 
 // IMPORTA TUS IMÁGENES
-import img1 from "../../assets/web/Categoria/iStock-1233.webp";
-import img2 from "../../assets/web/Categoria/iStock-1332654793 1.webp";
+import img1 from "../../assets/web/Categoria/iStock-1332654793 1.webp";
+import img2 from "../../assets/web/Categoria/Captura de Pantalla 2023-07-20 a la(s) 12.18 1.webp";
 
 const Cuerpo: React.FC = () => {
   return (
-    <section className="cuerpo-section">
+    <section className="section cuerpo-section">
 
-      <p className="cuerpo-mini">¿QUIÉNES SOMOS?</p>
+      <div className="section-wrapper">
 
-      <div className="cuerpo-container">
+        {/* MINI-TÍTULO SUPERIOR */}
+        <p className="cuerpo-mini">¿QUIÉNES SOMOS?</p>
 
-        {/* IMÁGENES IZQUIERDA */}
-        <div className="cuerpo-images">
-          <img src={img1} alt="Exfoliante corporal natural" />
-          <img src={img2} alt="Masaje relajante spa" />
-        </div>
+        <div className="cuerpo-container">
 
-        {/* TEXTO DERECHA */}
-        <div className="cuerpo-text">
-          <h2>CUERPO</h2>
+          {/* IMÁGENES IZQUIERDA */}
+          <div className="cuerpo-images">
+            <img 
+              src={img1} 
+              alt="Productos naturales para el cuidado corporal – exfoliantes y aceites XA’AN"
+              loading="lazy"
+            />
+            <img 
+              src={img2} 
+              alt="Tratamientos corporales relajantes para spa – XA’AN Skin Care"
+              loading="lazy"
+            />
+          </div>
 
-          <p>
-            Embarca a tus clientes en un viaje sensorial a través de nuestra gama de
-            productos para el cuidado corporal. Desde la frescura de la ducha hasta la
-            caricia de las cremas hidratantes, cada uno de nuestros productos es un
-            poema de bienestar. El cuerpo es un lienzo, y nuestros productos, las
-            pinceladas de indulgencia que lo cuidan.
-          </p>
+          {/* TEXTO DERECHA */}
+          <div className="cuerpo-text">
 
-          <a className="cuerpo-ver" href="#">
-            VER PRODUCTOS →
-          </a>
+            <h2 className="cuerpo-title">CUERPO</h2>
 
-          <div className="cuerpo-list">
-            <a href="#">FACIAL →</a>
-            <a href="#">CORPORAL →</a>
-            <a href="#">DUCHA →</a>
+            <p>
+              Embarca a tus clientes en un viaje sensorial a través de nuestra gama
+              de productos para el cuidado corporal. Desde la frescura de la ducha
+              hasta la caricia de las cremas hidratantes, cada uno de nuestros
+              productos es un poema de bienestar. El cuerpo es un lienzo, y nuestros
+              productos, las pinceladas de indulgencia que lo cuidan.
+            </p>
+
+            <a className="cuerpo-ver" href="#">
+              VER PRODUCTOS →
+            </a>
+
+            <div className="cuerpo-list">
+              <a href="#">FACIAL →</a>
+              <a href="#">CORPORAL →</a>
+              <a href="#">DUCHA →</a>
+            </div>
+
           </div>
         </div>
       </div>
