@@ -5,6 +5,7 @@ import Ciencia from "./Ciencia";
 import NuestroProceso from "./NP";
 import Ballet from "./Ballet";
 import NosInspira from "./Inspira";
+import NuevaSeccion from "../Hom/NuevaSeccion";
 
 const ProcesoPage: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const ProcesoPage: React.FC = () => {
       <NuestroProceso />
       <Ballet />
       <NosInspira />
+      <NuevaSeccion />
 
       {/* Si necesitas agregar más secciones, lo haces aquí */}
     </>

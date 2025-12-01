@@ -1,57 +1,72 @@
+/* ========================================= */
+/* SECCIÓN COMPLETAMENTE CENTRADA */
+/* ========================================= */
+
 .dedica-section {
   width: 100%;
+  height: 100vh;                      /* 🔥 Ocupa toda la pantalla */
   background: #e2d9d2;
-  padding: 140px 5% 160px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;                /* 🔥 CENTRADO VERTICAL REAL */
+  text-align: center;
+}
+
+/* Contenedor interno */
+.dedica-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 /* TEXTO PRINCIPAL */
 .dedica-text {
   font-family: "aviano-flare", serif;
-  font-size: 1.15rem;
-  line-height: 1.55;
+  font-size: 1.45rem;                 /* Más grande, estilo elegante */
+  letter-spacing: 3px;
+  line-height: 1.5;
   color: #805b4a;
-  max-width: 750px;
+  max-width: 1000px;                  /* Centrado ancho como ejemplo */
   margin-bottom: 55px;
-  letter-spacing: 0.5px;
 }
 
 /* LOGO */
 .dedica-logo {
   width: 70px;
-  margin-bottom: 18px;
   opacity: 0.95;
+  margin-bottom: 20px;
 }
 
-/* TEXTO BAJO LOGO */
+/* TEXTO INFERIOR */
 .dedica-brand {
   font-family: "aviano-flare", serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #805b4a;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   line-height: 1.25;
   opacity: 0.9;
 }
 
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
+
 @media (max-width: 600px) {
   .dedica-section {
-    padding: 110px 6% 130px;
+    height: auto;          /* No forzar pantalla completa en móvil */
+    padding: 120px 6% 140px;
   }
 
   .dedica-text {
-    font-size: 1rem;
-    line-height: 1.45;
-  }
-
-  .dedica-logo {
-    width: 58px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
   }
 
   .dedica-brand {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+  }
+
+  .dedica-logo {
+    width: 60px;
   }
 }

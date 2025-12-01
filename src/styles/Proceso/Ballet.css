@@ -25,7 +25,7 @@
 }
 
 .ballet-title {
-  font-family: "aviano-flare", serif;
+  font-family: "Barlow", sans-serif;
   color: #805b4a;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -33,14 +33,22 @@
 }
 
 .ballet-right {
-  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 🔥 Centro vertical verdadero */
+  align-items: center;       /* 🔥 Centro horizontal */
+  height: 100%;              /* Necesario para que el centrado funcione */
 }
 
+/* PÁRRAFO */
 .ballet-paragraph {
   font-family: "Barlow", sans-serif;
   font-size: 0.95rem;
   line-height: 1.45;
   color: #4f463f;
+  text-align: left;        /* 🔥 Centra el texto */
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 /* =============================== */

@@ -1,77 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Barlow:wght@300;400&display=swap');
+/* ========================================= */
+/* SECCIÓN CONTACTO — VERSIÓN PREMIUM */
+/* ========================================= */
 
 .contacto-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 120px 5%;
+  padding: 160px 0;                 /* 🔥 Espaciado lujoso */
   display: flex;
-  justify-content: center;
+  justify-content: center;          /* Centra el wrapper */
 }
 
-.contacto-container {
-  max-width: 1400px;
+.contacto-wrapper {
   width: 100%;
+  max-width: 1350px;                /* Como todas tus secciones */
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 0.9fr; /* Título amplio / Texto cómodo */
+  gap: 90px;
   align-items: center;
-  gap: 60px;
+  margin: 0 auto;
 }
 
-/* TÍTULO */
+/* ----------------------------------------- */
+/* TÍTULO IZQUIERDA */
+/* ----------------------------------------- */
+
 .contacto-title {
-  font-family: "Marcellus", serif;
+  font-family: "aviano-flare", serif;
   color: #7b4e38;
-  font-size: 2.7rem;
-  line-height: 1.2;
+  font-size: 2.5rem;                /* 🔥 Tamaño elegante y grande */
+  line-height: 1.05;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
-/* TEXTO */
+/* ----------------------------------------- */
+/* TEXTO DERECHA */
+/* ----------------------------------------- */
+
 .contacto-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .contacto-text {
   font-family: "Barlow", sans-serif;
-  font-size: 0.9rem;
-  color: #3a2b23;
-  width: 330px;
-  margin-bottom: 22px;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 380px;
+  margin-bottom: 28px;
+  color: #4a3a32;
 }
 
+/* ----------------------------------------- */
 /* BOTÓN */
+/* ----------------------------------------- */
+
 .contacto-btn {
-  padding: 10px 26px;
+  padding: 12px 15px;
   font-family: "Barlow", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   background: transparent;
   border: 1px solid #7b4e38;
   color: #7b4e38;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .contacto-btn:hover {
-  background: #7b4e38;
+  background-color: #7b4e38;
   color: #e2d9d2;
 }
 
+/* ----------------------------------------- */
 /* RESPONSIVE */
+/* ----------------------------------------- */
+
 @media (max-width: 900px) {
-  .contacto-container {
+  .contacto-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
+    text-align: left;
+    padding: 0 6%;
+    gap: 60px;
   }
 
   .contacto-title {
-    text-align: left;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .contacto-text {
-    width: 100%;
+    max-width: 100%;
   }
 }

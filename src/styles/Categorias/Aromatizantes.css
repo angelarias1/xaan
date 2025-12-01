@@ -12,8 +12,8 @@
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr; /* 🔥 Texto estrecho / Imágenes amplias */
-  gap: 50px;
+  grid-template-columns: 0.30fr 0.70fr;  /* 🔥 TEXTO MUCHO MÁS ESTRECHO */
+  gap: 60px;
   align-items: center;
 }
 
@@ -34,7 +34,7 @@
   color: #5a4d45;
   font-size: 1rem;
   line-height: 1.55;
-  max-width: 95%;
+  max-width: 85%;     /* 🔥 un texto más delgado visualmente */
   margin-bottom: 16px;
 }
 
@@ -45,32 +45,36 @@
   font-size: 0.9rem;
 }
 
+
 /* ====================================== */
-/* IMÁGENES DERECHA (más pequeñas) */
+/* IMÁGENES DERECHA */
 /* ====================================== */
 
 .aroma-right {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 18px;
+  gap: 22px;
 }
 
 /* Imagen pequeña */
 .aroma-small img {
-  width: 240px;       /* 🔥 Más pequeña */
-  height: 240px;
+  width: 380px;      
+  height: 260px;
   object-fit: cover;
-  border-radius: -6px;
+  margin-top: 410px;
+  border-radius: 6px;
 }
 
 /* Imagen grande */
 .aroma-big img {
-  width: 310px;       /* 🔥 Mucho más moderada */
-  height: 380px;
+  width: 550px;     /* 🔥 MÁS ANCHA PERO PROPORCIONAL */
+  height: 675px;
   object-fit: cover;
-  border-radius: -6px;
+  margin-right: 300px;
+  border-radius: 6px;
 }
+
 
 /* ====================================== */
 /* RESPONSIVE */
@@ -96,5 +100,6 @@
   .aroma-big img {
     width: 100%;
     height: auto;
+    margin-top: 0;
   }
 }
