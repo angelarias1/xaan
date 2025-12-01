@@ -37,45 +37,48 @@ const WhySection: React.FC = () => {
   };
 
   return (
-    <section className="why-section">
-      <div className="why-container">
+    <section className="section why-section">
+      <div className="section-wrapper">
 
-        {/* IZQUIERDA */}
-        <div className="why-left">
-          <h3 className="why-title">
-            ¿POR QUÉ COMPRAR LOS
-            <br />
-            PRODUCTOS DE XA’AN
-            <br />
-            SKIN CARE?
-          </h3>
-        </div>
+        <div className="why-container">
 
-        {/* DERECHA — ACCORDION */}
-        <div className="why-right">
-          {items.map((item, index) => (
-            <div key={index} className="why-item">
+          {/* IZQUIERDA */}
+          <div className="why-left">
+            <h3 className="why-title">
+              ¿POR QUÉ COMPRAR LOS
+              <br />
+              PRODUCTOS DE XA’AN
+              <br />
+              SKIN CARE?
+            </h3>
+          </div>
 
-              <button className="why-button" onClick={() => toggle(index)}>
-                <span>{item.title}</span>
+          {/* DERECHA — ACCORDION */}
+          <div className="why-right">
+            {items.map((item, index) => (
+              <div key={index} className="why-item">
 
-                <span
-                  className={`arrow ${openIndex === index ? "open" : ""}`}
+                <button className="why-button" onClick={() => toggle(index)}>
+                  <span>{item.title}</span>
+
+                  {/* flecha */}
+                  <span className={`arrow ${openIndex === index ? "open" : ""}`}>
+                    ▾
+                  </span>
+                </button>
+
+                <div
+                  className={`why-content ${openIndex === index ? "show" : ""}`}
                 >
-                  ▾
-                </span>
-              </button>
+                  <p>{item.content}</p>
+                </div>
 
-              <div
-                className={`why-content ${openIndex === index ? "show" : ""}`}
-              >
-                <p>{item.content}</p>
+                {/* línea separadora */}
+                <span className="why-line"></span>
               </div>
+            ))}
+          </div>
 
-              {/* Línea estilo Figma */}
-              <span className="why-line"></span>
-            </div>
-          ))}
         </div>
 
       </div>

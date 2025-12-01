@@ -6,9 +6,9 @@ import imgChica from "../../assets/web/imagen7.webp";
 
 const QuienesSomos: React.FC = () => {
   return (
-    <section className="qs-section">
+    <section className="section qs-section">
 
-      <div className="qs-container">
+      <div className="section-wrapper qs-container">
 
         {/* TEXTO */}
         <div className="qs-left">
@@ -36,14 +36,14 @@ const QuienesSomos: React.FC = () => {
           <img 
             src={imgGrande} 
             className="qs-img img-up"
-            alt="Productos de XA'AN Skin Care presentados en formato profesional"
+            alt="Productos de XA'AN Skin Care en presentación profesional"
             loading="lazy"
           />
 
           <img 
             src={imgChica} 
             className="qs-img img-down"
-            alt="Botellas y envases de cuidado de la piel de XA'AN"
+            alt="Botellas y envases para el cuidado de la piel de XA'AN"
             loading="lazy"
           />
           

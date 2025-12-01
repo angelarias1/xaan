@@ -31,8 +31,9 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero" id="inicio">
-      <div className="hero-inner">
+    <section className="section hero" id="inicio">
+      {/* 🌟 NUEVO: contenedor consistente */}
+      <div className="section-wrapper hero-inner">
 
         {/* IZQUIERDA */}
         <div className="hero-left">
@@ -58,21 +59,20 @@ const Hero: React.FC = () => {
         </div>
 
         {/* DERECHA */}
-   <div className="hero-manual-img-container">
-  <img
-    src={images[index].src}
-    key={index}
-    className="hero-manual-img"
-    alt={images[index].alt}
-    loading="lazy"
-  />
+        <div className="hero-manual-img-container">
+          <img
+            src={images[index].src}
+            key={index}
+            className="hero-manual-img"
+            alt={images[index].alt}
+            loading="lazy"
+          />
 
-  {/* 🔥 Numerador estilo de referencia */}
-  <div className="hero-counter-vertical">
-    {index + 1}/{images.length}
-  </div>
-</div>
-
+          {/* Numerador vertical */}
+          <div className="hero-counter-vertical">
+            {index + 1}/{images.length}
+          </div>
+        </div>
 
       </div>
     </section>

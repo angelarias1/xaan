@@ -3,8 +3,8 @@ import contactImg from "../../assets/web/imagen9.webp";
 
 export default function NuevaSeccion() {
   return (
-    <section className="contact-section">
-      <div className="contact-wrapper">
+    <section className="section contact-section">
+      <div className="section-wrapper contact-wrapper">
 
         {/* BLOQUE DE IMAGEN */}
         <div className="image-box">
@@ -21,9 +21,8 @@ export default function NuevaSeccion() {
           <p className="contact-label">CONTACTA A UN ASESOR</p>
 
           <p className="contact-address">
-            Colima 392, 2do. Piso Colonia Roma, Delegación 
-            Cuauhtémoc C.P. 06700, Ciudad de México.
-            <br />
+            Colima 392, 2do. Piso Colonia Roma, Delegación Cuauhtémoc  
+            C.P. 06700, Ciudad de México.
           </p>
 
           <p className="contact-info">

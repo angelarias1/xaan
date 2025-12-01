@@ -1,12 +1,12 @@
 import React from "react";
 import "../../styles/Hom/Sensorial.css";
-import imagen from "../../assets/web/imagen.webp"; // 👈 IMPORTA LA IMAGEN
+import imagen from "../../assets/web/imagen.webp";
 
 const Sensorial: React.FC = () => {
   return (
-    <section className="sensorial-section">
-
-      <div className="sensorial-container">
+    <section className="section sensorial-section">
+      {/* 🌟 NUEVO: section-wrapper para centrar y limitar ancho */}
+      <div className="section-wrapper sensorial-container">
 
         {/* IZQUIERDA CON IMAGEN */}
         <div className="sensorial-left">
@@ -15,6 +15,7 @@ const Sensorial: React.FC = () => {
               src={imagen}
               alt="Persona disfrutando una experiencia sensorial con productos XA’AN"
               className="sensorial-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -23,7 +24,7 @@ const Sensorial: React.FC = () => {
         <div className="sensorial-right">
 
           <h3 className="sensorial-title">
-            CREAMOS EN 
+            CREAMOS EN <br />
             TUS CLIENTES <br />
             UNA EXPERIENCIA <br />
             SENSORIAL
@@ -44,7 +45,6 @@ y con los más altos estándares de calidad.`}
         </div>
 
       </div>
-
     </section>
   );
 };
