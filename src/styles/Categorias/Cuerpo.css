@@ -1,60 +1,81 @@
+/* ========================================== */
+/* SECCIÓN CUERPO — BASE                      */
+/* ========================================== */
+
 .cuerpo-section {
   width: 100%;
-  padding: 120px 5%;
   background: #e2d9d2;
+  display: flex;
+  justify-content: center;
+  padding: 120px 0; /* solo vertical */
 }
+
+/* CONTENEDOR OFICIAL */
+.cuerpo-container-main {
+  width: 100%;
+  max-width: 1350px;   /* 🔥 MISMO ANCHO QUE HERO */
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ========================================== */
+/* MINI TÍTULO */
+/* ========================================== */
 
 .cuerpo-mini {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   font-size: 0.85rem;
-  margin-bottom: 16px;
   letter-spacing: 1px;
 }
 
+/* ========================================== */
+/* CONTENIDO PRINCIPAL */
+/* ========================================== */
+
 .cuerpo-container {
-  max-width: 1300px;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 0.65fr 1fr;
+  gap: 50px;
   align-items: start;
-  gap: 60px;
 }
 
-/* ======================================================== */
-/* IMÁGENES — Primera queda igual, segunda rectangular      */
-/* ======================================================== */
+/* ========================================== */
+/* IMÁGENES IZQUIERDA */
+/* ========================================== */
 
 .cuerpo-images {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-/* Primera imagen — NO SE TOCA */
 .cuerpo-images img:nth-child(1) {
-  width: 35%;
-  height: 35%;      /* Se mantiene */
+  width: 100%;
+  height: 330px;
   object-fit: cover;
-  border-radius: -1px;
+  border-radius: 6px;
 }
 
-/* Segunda imagen — ANCHA y rectangular */
 .cuerpo-images img:nth-child(2) {
-  width: 35%;
-  height: auto;       /* Deja que tome su forma real */
-  max-height: 420px;  /* Para que no se dispare */
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: -1px;
+  border-radius: 6px;
 }
 
-/* ======================================================== */
-/* TEXTO                                                    */
-/* ======================================================== */
+/* ========================================== */
+/* TEXTO DERECHA */
+/* ========================================== */
 
 .cuerpo-text h2 {
   font-family: "aviano-flare", serif;
   font-size: 2.2rem;
   color: #805b4a;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .cuerpo-text p {
@@ -67,12 +88,12 @@
 
 /* LINK PRINCIPAL */
 .cuerpo-ver {
-  display: inline-block;
   font-family: "Barlow", sans-serif;
   font-size: 0.9rem;
   color: #805b4a;
-  margin-bottom: 24px;
   text-decoration: underline;
+  margin-bottom: 24px;
+  display: inline-block;
 }
 
 /* LISTA */
@@ -93,13 +114,9 @@
   justify-content: space-between;
 }
 
-.cuerpo-list a:hover {
-  opacity: 0.8;
-}
-
-/* ======================================================== */
-/* RESPONSIVE                                               */
-/* ======================================================== */
+/* ========================================== */
+/* RESPONSIVE */
+/* ========================================== */
 
 @media (max-width: 900px) {
   .cuerpo-container {
@@ -109,20 +126,18 @@
   .cuerpo-images img:nth-child(1) {
     height: 300px;
   }
+
+  .cuerpo-images img:nth-child(2) {
+    height: 220px;
+  }
 }
 
-@media (max-width: 480px) {
-  .cuerpo-images {
-    flex-direction: column;
-  }
-
+@media (max-width: 600px) {
   .cuerpo-images img:nth-child(1) {
-    width: 100%;
     height: 260px;
   }
 
   .cuerpo-images img:nth-child(2) {
-    width: 100%;
-    max-height: 260px;
+    height: 200px;
   }
 }

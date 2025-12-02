@@ -3,8 +3,8 @@ import "../../styles/Contacto/Contactate.css";
 
 const Contactate: React.FC = () => {
   return (
-    <section className="section contacto-section">
-      <div className="section-wrapper contacto-wrapper">
+    <section className="contacto-section">
+      <div className="contacto-container">
 
         {/* IZQUIERDA */}
         <div className="contacto-left">

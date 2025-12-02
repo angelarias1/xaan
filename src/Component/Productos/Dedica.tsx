@@ -5,8 +5,9 @@ import logo from "../../assets/web/icono.webp";
 
 const Dedica: React.FC = () => {
   return (
-    <section className="section dedica-section">
-      <div className="section-wrapper dedica-wrapper">
+    <section className="dedica-section">
+
+      <div className="dedica-wrapper">
 
         {/* TEXTO PRINCIPAL */}
         <p className="dedica-text">

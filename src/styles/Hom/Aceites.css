@@ -10,9 +10,15 @@
   justify-content: center;
 }
 
+/* CONTENEDOR CENTRAL — 1350px */
+.section-wrapper,
 .aceites-container {
-  width: 90%;
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1350px;      /* 🔥 Se corrige a 1350px */
+  margin: 0 auto;
+}
+
+.aceites-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -127,10 +133,12 @@
   align-items: center;
 }
 
+/* 🔥 LAS IMÁGENES YA NO SE CORTAN */
 .aceite-img {
-  width: 360px;
-  height: 440px;
-  object-fit: contain;
+  width: 100%;          
+  max-width: 480px;      /* antes era fijo → AHORA mantiene proporción */
+  height: auto;          /* 🔥 NO se recorta NUNCA */
+  object-fit: contain;   /* 🔥 se muestra COMPLETA */
   opacity: 0;
   transform: scale(0.92);
   animation: fadePop 0.6s ease forwards;
@@ -155,50 +163,43 @@
   .aceites-container {
     grid-template-columns: 1fr;
     gap: 50px;
-    justify-items: center;   /* mantiene el grid centrado */
+    justify-items: center;
   }
 
   .aceites-left {
     width: 100%;
-    max-width: 600px;        /* ⭐ ancho controlado */
+    max-width: 600px;
     margin: 0 auto;
-    text-align: left;        /* ⭐ fuerza alineación izquierda */
-    align-items: flex-start; /* ⭐ evita centrado vertical */
+    text-align: left;
+    align-items: flex-start;
   }
 
-  /* TAG */
   .aceites-tag {
-    width: 100%;             /* ⭐ para que respete el alineado */
-    text-align: left;        /* ya funciona */
+    width: 100%;
     margin-bottom: 25px;
     margin-top: 0;
   }
 
-  /* TÍTULO */
   .aceites-title {
-    text-align: left;
     font-size: 2.2rem;
-    width: 100%;
   }
 
-  /* TEXTO */
   .aceites-text {
     max-width: 100%;
     font-size: 1.3rem;
-    text-align: left;
-    width: 100%;
   }
+
   .aceites-btn {
     font-size: 1rem;
     padding: 10px 170px;
   }
-  /* IMAGEN */
+
+  /* 🔥 Mantener imagen completa */
   .aceite-img {
-    width: 300px;
-    height: 380px;
+    max-width: 360px;
+    height: auto;
   }
 }
-
 
 /* =============================== */
 /*           MÓVIL 480px           */
@@ -218,7 +219,6 @@
   .aceites-left {
     max-width: 300px;
     align-items: flex-start;
-    text-align: left;
     margin: 0 auto;
   }
 
@@ -238,9 +238,10 @@
     max-width: 300px;
   }
 
+  /* 🔥 Mantener imagen completa */
   .aceite-img {
-    width: 240px;
-    height: 300px;
+    max-width: 260px;
+    height: auto;
   }
 
   .aceites-btn {

@@ -1,26 +1,51 @@
+/* ========================================= */
+/* SECCIÓN INSPIRA */
+/* ========================================= */
+
 .inspira-section {
   width: 100%;
   background-color: #E2D9D2;
-  padding: 120px 5%;
+  padding: 120px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* CONTENEDOR OFICIAL */
+.inspira-container {
+  width: 100%;
+  max-width: 1350px;    /* 🔥 ANCHO OFICIAL */
+  padding: 0 5%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
+/* TEXTO PRINCIPAL */
 .inspira-text {
   font-family: "aviano-flare", serif;
-  font-size: 1.05rem;
-  color: #805b4a;
-  line-height: 1.5;
-  max-width: 850px;
+  font-size: 1.8rem;
+  line-height: 1.4;
   letter-spacing: 1px;
+  color: #805b4a;
+  max-width: 1000px; /* Mantengo su estética editorial */
 }
 
+/* ======================= */
 /* RESPONSIVE */
+/* ======================= */
+
 @media (max-width: 768px) {
   .inspira-text {
-    font-size: 0.95rem;
-    max-width: 95%;
+    font-size: 1.35rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .inspira-text {
+    font-size: 1.15rem;
   }
 }

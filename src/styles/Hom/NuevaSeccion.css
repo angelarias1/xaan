@@ -1,55 +1,29 @@
-/* ============================= */
-/*      SECCIÓN GENERAL          */
-/* ============================= */
+/* ========================================= */
+/* SECCIÓN GENERAL */
+/* ========================================= */
 
 .contact-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 90px 5%;
+  padding: 90px 0;
   display: flex;
   justify-content: center;
 }
 
-/* ============================= */
-/*      WRAPPER PRINCIPAL        */
-/* ============================= */
-
-.contact-wrapper {
+/* CONTENEDOR PRINCIPAL */
+.contact-container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1350px;         /* 🔥 ANCHO OFICIAL */
+  padding: 0 5%;
+  margin: 0 auto;
+
   display: flex;
-  gap: 0;
   align-items: stretch;
 }
 
-/* ============================= */
-/*        BLOQUE CONTACTO        */
-/* ============================= */
-
-.contact-box {
-  width: 50%;
-  background-color: #e2d9d2;
-  border: 1px solid #c7b8ac;
-
-  display: flex;
-  flex-direction: column;
-
-  /* ⭐ BLOQUE TOTALMENTE CENTRADO ⭐ */
-  justify-content: center;     /* centra verticalmente */
-  align-items: center;         /* centra horizontalmente */
-
-  padding: 55px 40px;
-}
-
-/* ⭐ ALINEA TODO EL CONTENIDO A LA IZQUIERDA ⭐ */
-.contact-box > * {
-  width: 100%;
-  text-align: left;
-}
-
-/* ============================= */
-/*         BLOQUE IMAGEN         */
-/* ============================= */
+/* ========================================= */
+/* BLOQUE IMAGEN */
+/* ========================================= */
 
 .image-box {
   width: 50%;
@@ -64,57 +38,66 @@
   filter: brightness(0.97);
 }
 
-/* ============================= */
-/*            TEXTOS             */
-/* ============================= */
+/* ========================================= */
+/* BLOQUE FORMULARIO */
+/* ========================================= */
+
+.contact-box {
+  width: 50%;
+  border: 1px solid #c7b8ac;
+  background-color: #e2d9d2;
+
+  padding: 55px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Todos los elementos alineados sin trucos raros */
+.contact-box > * {
+  width: 100%;
+  text-align: left;
+}
+
+/* ========================================= */
+/* TEXTOS */
+/* ========================================= */
 
 .contact-label {
   font-family: "Barlow", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 2px;
   color: #9f7a63;
-  margin-bottom: 8px;
-  text-align: left;
-      margin-left: 180px;   /* 🔥 AJUSTA AQUÍ */
-
+  margin-bottom: 12px;
 }
 
 .contact-address {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   line-height: 1.4;
-  font-size: .8rem;
-  margin-bottom: 10px;
-  text-align: left;
+  font-size: 0.85rem;
   max-width: 270px;
-      margin-left: -18px;   /* 🔥 AJUSTA AQUÍ */
-
+  margin-bottom: 12px;
 }
 
 .contact-info {
   font-family: "Barlow", sans-serif;
   color: #8b6a55;
-  font-size: 0.78rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  text-align: left;
-    margin-left: 180px;   /* 🔥 AJUSTA AQUÍ */
-
+  font-size: 0.8rem;
+  margin-bottom: 20px;
 }
 
-/* ============================= */
-/*          FORMULARIO           */
-/* ============================= */
+/* ========================================= */
+/* FORMULARIO */
+/* ========================================= */
 
 .contact-form {
-  width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-
-  align-items: flex-start;
-  text-align: left;
 }
 
 .contact-form input,
@@ -123,7 +106,7 @@
   border: none;
   border-bottom: 1px solid #c7b8ac;
   background: transparent;
-  padding: 5px 0;
+  padding: 6px 0;
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   font-size: 0.85rem;
@@ -136,10 +119,7 @@
   padding: 8px;
 }
 
-/* ============================= */
-/*             BOTÓN             */
-/* ============================= */
-
+/* BOTÓN */
 .contact-btn {
   width: 100%;
   padding: 12px 0;
@@ -151,134 +131,62 @@
   font-family: "Barlow", sans-serif;
   margin-top: 8px;
   letter-spacing: 1px;
-  border-radius: 0;
   transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-  opacity: 0.92;
+  opacity: 0.9;
 }
 
-/* ============================= */
-/*           RESPONSIVO          */
-/* ============================= */
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
 
 @media (max-width: 1024px) {
-
-  .contact-section {
-    padding: 0; /* igual que móvil, sin espacios */
-  }
-
-  .contact-wrapper {
-    flex-direction: column;  /* imagen arriba, texto abajo */
-    gap: 0;                  /* sin separación */
-    align-items: center;
-  }
-
-  /* ================ IMAGEN ARRIBA ================ */
-  .image-box {
-    width: 100%;
-    height: 420px;   /* un poco más grande para tablet */
-    margin: 0;
-    padding: 0;
-  }
-
-  /* ================ BLOQUE DE TEXTO ================ */
-  .contact-box {
-    width: 100%;
-    padding: 50px 30px;   /* más aire porque es tablet */
-    margin: 0;
-    border-top: none;     /* pegado a la imagen */
-  }
-
-  /* textos */
-  .contact-label {
-    font-size: 0.85rem;
-    margin-left: 0;
-  }
-
-  .contact-address {
-    font-size: 1.5rem;
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .contact-info {
-    display: block;
-    font-size: 1.3rem;
-    margin-left: 0;
-    max-width: 100%;       /* aquí sí funciona */
-  }
-
-  /* formulario */
-  .contact-form {
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 1rem;
-  }
-
-  .contact-btn {
-    font-size: 1rem;
-    padding: 14px 0;
-  }
-}
-
-
-@media (max-width: 480px) {
-
-  .contact-section {
-    padding: 0; /* SIN espacio arriba/abajo */
-  }
-
-  .contact-wrapper {
+  .contact-container {
     flex-direction: column;
-    gap: 0;  /* SIN separación entre imagen y texto */
   }
 
   .image-box {
     width: 100%;
-    height: 350px;
-    margin: 0;
-    padding: 0;
+    height: 420px;
   }
 
   .contact-box {
     width: 100%;
-    padding: 35px 18px;
-    margin: 0; /* 🔥 pegado totalmente */
+    padding: 45px 28px;
     border-top: none;
   }
 
-  /* textos */
-  .contact-label {
-    font-size: 0.75rem;
-    margin-left: 0;
-  }
-
-  .contact-address {
-    font-size: 1rem;
-    margin-left: 0;
-    max-width: 100%;
-  }
-
- .contact-info {
-  display: block;        /* 🔥 ahora SÍ respeta width/max-width */
-  font-size: .8rem;
-  margin-left: 0;
-  max-width: 110%;
-}
-
-
   .contact-form {
     max-width: 100%;
   }
 
-  .contact-btn {
+  .contact-info,
+  .contact-address {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .image-box {
+    height: 350px;
+  }
+
+  .contact-box {
+    padding: 35px 18px;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+  }
+
+  .contact-address {
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
     font-size: 0.85rem;
-    padding: 10px 0;
   }
 }

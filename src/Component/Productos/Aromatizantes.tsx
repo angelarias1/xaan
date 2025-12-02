@@ -6,46 +6,47 @@ import velasImg from "../../assets/web/Categoria/iStock-1233.webp";
 
 const Aromatizantes: React.FC = () => {
   return (
-    <section className="section aroma-section">
-      <div className="section-wrapper aroma-wrapper">
+    <section className="aroma-section">
+  <div className="aroma-container">
 
-        {/* IZQUIERDA */}
-        <div className="aroma-left">
+    {/* IZQUIERDA */}
+    <div className="aroma-left">
 
-          <h2 className="aroma-title">AROMATIZANTES</h2>
+      <h2 className="aroma-title">AROMATIZANTES</h2>
 
-          <p className="aroma-paragraph">
-            Cada fragancia es un susurro de emociones, una melodía de sensaciones
-            que transforma tu espacio.
-          </p>
+      <p className="aroma-paragraph">
+        Cada fragancia es un susurro de emociones, una melodía de sensaciones
+        que transforma tu espacio.
+      </p>
 
-          <p className="aroma-paragraph">
-            Nuestros aromatizantes generan la atmósfera perfecta para tu espacio.
-            Cada aroma cuenta su propia historia, transportando a tus clientes
-            a un lugar de serenidad y evocación.
-          </p>
+      <p className="aroma-paragraph">
+        Nuestros aromatizantes generan la atmósfera perfecta para tu espacio.
+        Cada aroma cuenta su propia historia, transportando a tus clientes
+        a un lugar de serenidad y evocación.
+      </p>
 
-          <a href="#" className="aroma-link">
-            VER PRODUCTOS →
-          </a>
+      <a href="#" className="aroma-link">
+        VER PRODUCTOS →
+      </a>
 
-        </div>
+    </div>
 
-        {/* DERECHA IMÁGENES */}
-        <div className="aroma-right">
+    {/* DERECHA IMÁGENES */}
+    <div className="aroma-right">
 
-          <div className="aroma-small">
-            <img src={velasImg} alt="Aromaterapia y velas relajantes" />
-          </div>
-
-          <div className="aroma-big">
-            <img src={saunaImg} alt="Sauna aromática profesional" />
-          </div>
-
-        </div>
-
+      <div className="aroma-small">
+        <img src={velasImg} alt="Aromaterapia y velas relajantes" />
       </div>
-    </section>
+
+      <div className="aroma-big">
+        <img src={saunaImg} alt="Sauna aromática profesional" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
   );
 };
 

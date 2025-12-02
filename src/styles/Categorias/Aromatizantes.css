@@ -1,32 +1,40 @@
 /* ====================================== */
-/* SECCIÓN AROMATIZANTES */
+/* SECCIÓN AROMATIZANTES — PREMIUM        */
 /* ====================================== */
 
 .aroma-section {
-  background: #E2D9D2;
+  width: 100%;
+  background-color: #E2D9D2;
+  padding: 130px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* CONTENEDOR GENERAL */
-.aroma-wrapper {
-  max-width: 1350px;
+/* CONTENEDOR OFICIAL */
+.aroma-container {
+  width: 100%;
+  max-width: 1350px;    /* 🔥 MISMO ANCHO QUE HERO */
+  padding: 0 5%;
   margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 0.30fr 0.70fr;  /* 🔥 TEXTO MUCHO MÁS ESTRECHO */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 60px;
-  align-items: center;
 }
 
+/* ====================================== */
+/* IZQUIERDA */
+/* ====================================== */
 
-/* ====================================== */
-/* TEXTO IZQUIERDO */
-/* ====================================== */
+.aroma-left {
+  width: 40%;
+}
 
 .aroma-title {
   font-family: "aviano-flare", serif;
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: #805b4a;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .aroma-paragraph {
@@ -34,55 +42,60 @@
   color: #5a4d45;
   font-size: 1rem;
   line-height: 1.55;
-  max-width: 85%;     /* 🔥 un texto más delgado visualmente */
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  max-width: 400px;
 }
 
 .aroma-link {
   font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
   color: #805b4a;
   text-decoration: underline;
-  font-size: 0.9rem;
 }
 
-
 /* ====================================== */
-/* IMÁGENES DERECHA */
+/* DERECHA — IMÁGENES */
 /* ====================================== */
 
 .aroma-right {
+  width: 60%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
   gap: 22px;
-}
-
-/* Imagen pequeña */
-.aroma-small img {
-  width: 380px;      
-  height: 260px;
-  object-fit: cover;
-  margin-top: 410px;
-  border-radius: 6px;
+  align-items: flex-start;
 }
 
 /* Imagen grande */
 .aroma-big img {
-  width: 550px;     /* 🔥 MÁS ANCHA PERO PROPORCIONAL */
-  height: 675px;
+  width: 100%;
+  max-width: 420px;
+  height: 580px;
   object-fit: cover;
-  margin-right: 300px;
   border-radius: 6px;
 }
 
+/* Imagen pequeña */
+.aroma-small img {
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  align-self: flex-end;
+}
 
 /* ====================================== */
 /* RESPONSIVE */
 /* ====================================== */
 
 @media (max-width: 1024px) {
-  .aroma-wrapper {
-    grid-template-columns: 1fr;
+  .aroma-container {
+    flex-direction: column;
+  }
+
+  .aroma-left,
+  .aroma-right {
+    width: 100%;
   }
 
   .aroma-right {
@@ -90,16 +103,15 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .aroma-right {
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
   }
 
-  .aroma-small img,
-  .aroma-big img {
-    width: 100%;
+  .aroma-big img,
+  .aroma-small img {
+    max-width: 100%;
     height: auto;
-    margin-top: 0;
   }
 }

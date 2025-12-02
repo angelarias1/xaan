@@ -1,5 +1,5 @@
 /* ========================================== */
-/*         RESET + NORMALIZE PROFESIONAL      */
+/* RESET PROFESIONAL                          */
 /* ========================================== */
 *,
 *::before,
@@ -25,7 +25,7 @@ body {
 }
 
 /* ========================================== */
-/*           SISTEMA GLOBAL DE TIPOGRAFÍA     */
+/* TIPOGRAFÍA GLOBAL                           */
 /* ========================================== */
 
 h1, h2, h3, h4 {
@@ -42,7 +42,7 @@ p, span, a, button {
 }
 
 /* ========================================== */
-/*                PALETA DE COLOR             */
+/* PALETA DE COLOR Y MEDIDAS GLOBALES         */
 /* ========================================== */
 
 :root {
@@ -53,7 +53,7 @@ p, span, a, button {
   --brand-text: #3a3a3a;
   --brand-text-soft: rgba(0,0,0,0.55);
 
-  /* Nuevo: sistema de tamaños */
+  /* Sistema global de tamaños */
   --section-max-width: 1350px;
   --section-padding-desktop: 100px;
   --section-padding-tablet: 80px;
@@ -61,7 +61,7 @@ p, span, a, button {
 }
 
 /* ========================================== */
-/*           SISTEMA GLOBAL DE SECCIONES      */
+/* SISTEMA GLOBAL DE SECCIONES                */
 /* ========================================== */
 
 .section {
@@ -72,22 +72,30 @@ p, span, a, button {
 
 .section-wrapper {
   width: 90%;
-  max-width: var(--section-max-width);
+  max-width: 1350px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
+
 /* ========================================== */
-/*                 CONTENEDORES               */
+/* CONTENEDORES ADICIONALES (Opcionales)      */
+/* ========================================== */
+
+/* ========================================== */
+/*   NUEVO: CONTENEDOR GLOBAL PROFESIONAL     */
 /* ========================================== */
 
 .container {
-  width: 90%;
-  max-width: var(--section-max-width);
+  width: 100%;
+  max-width: 1280px;     /* Tamaño ideal para tu diseño */
   margin: 0 auto;
+  padding: 0 32px;       /* Evita que pegue a los bordes */
 }
 
+
 /* ========================================== */
-/*                 BOTÓN BASE                 */
+/* BOTÓN GLOBAL                               */
 /* ========================================== */
 
 .btn {
@@ -111,7 +119,7 @@ p, span, a, button {
 }
 
 /* ========================================== */
-/*                IMÁGENES BASE               */
+/* IMÁGENES                                   */
 /* ========================================== */
 
 img {
@@ -121,7 +129,7 @@ img {
 }
 
 /* ========================================== */
-/*                 LINKS BASE                 */
+/* LINKS                                      */
 /* ========================================== */
 
 a {
@@ -136,7 +144,7 @@ a:hover {
 }
 
 /* ========================================== */
-/*           FOOTER SIEMPRE AL FONDO          */
+/* FOOTER PEGADO ABAJO                        */
 /* ========================================== */
 
 #root {
@@ -150,7 +158,7 @@ footer {
 }
 
 /* ========================================== */
-/*                RESPONSIVE 1024px           */
+/* RESPONSIVE — TABLET 1024px                 */
 /* ========================================== */
 
 @media (max-width: 1024px) {
@@ -164,7 +172,7 @@ footer {
 }
 
 /* ========================================== */
-/*                RESPONSIVE 480px            */
+/* RESPONSIVE — MÓVIL 480px                   */
 /* ========================================== */
 
 @media (max-width: 480px) {

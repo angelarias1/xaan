@@ -3,15 +3,15 @@ import contactImg from "../../assets/web/imagen9.webp";
 
 export default function NuevaSeccion() {
   return (
-    <section className="section contact-section">
-      <div className="section-wrapper contact-wrapper">
+    <section className="contact-section">
+      <div className="contact-container">
 
         {/* BLOQUE DE IMAGEN */}
         <div className="image-box">
-          <img 
-            src={contactImg} 
-            className="contact-side-img" 
-            alt="Asesoría personalizada y contacto de XA'AN Skin Care" 
+          <img
+            src={contactImg}
+            className="contact-side-img"
+            alt="Asesoría personalizada y contacto de XA'AN Skin Care"
             loading="lazy"
           />
         </div>
@@ -26,7 +26,7 @@ export default function NuevaSeccion() {
           </p>
 
           <p className="contact-info">
-            Tel. +52 998 87 7665 &nbsp; | &nbsp; email: hola@xaan.mx
+            Tel. +52 998 87 7665 | email: hola@xaan.mx
           </p>
 
           <form className="contact-form">

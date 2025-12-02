@@ -6,20 +6,21 @@ import imgLab from "../../assets/web/Acerca/iStock-1332654793 1 (1).webp";
 
 const Quienes: React.FC = () => {
   return (
-    <section className="section quienes-section">
-      <div className="section-wrapper quienes-wrapper">
+<section className="quienes-section">
+  <div className="quienes-container">
 
-        <p className="quienes-tag">QUIÉNES SOMOS</p>
+    <p className="quienes-tag">QUIÉNES SOMOS</p>
 
-        <div className="quienes-img-row">
-          <img src={imgCrema} alt="Producto XA'AN" className="quienes-img" />
-          <img src={imgLab} alt="Laboratorio natural" className="quienes-img" />
-        </div>
+    <div className="quienes-img-row">
+      <img src={imgCrema} alt="Producto XA'AN" className="quienes-img" />
+      <img src={imgLab} alt="Laboratorio natural" className="quienes-img" />
+    </div>
 
-        <div className="quienes-line"></div>
+    <div className="quienes-line"></div>
 
-      </div>
-    </section>
+  </div>
+</section>
+
   );
 };
 

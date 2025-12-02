@@ -13,7 +13,7 @@ const images = [
   { src: Img1, alt: "Aceites naturales para hoteles y spas XA'AN" },
   { src: Img2, alt: "Productos corporales y amenidades premium XA'AN" },
   { src: Img3, alt: "Aceites corporales para masaje de alta calidad XA'AN" },
-  { src: Img4, alt: "Productos de cuidado de la piel de XA'AN Skin Care" }
+  { src: Img4, alt: "Productos de cuidado de la piel de XA'AN Skin Care" },
 ];
 
 const Hero: React.FC = () => {
@@ -32,10 +32,11 @@ const Hero: React.FC = () => {
 
   return (
     <section className="section hero" id="inicio">
-      {/* 🌟 NUEVO: contenedor consistente */}
       <div className="section-wrapper hero-inner">
 
-        {/* IZQUIERDA */}
+        {/* ---------------------- */}
+        {/*      TEXTO IZQUIERDA   */}
+        {/* ---------------------- */}
         <div className="hero-left">
           <h1>
             TU NUEVO <br />
@@ -58,7 +59,9 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* DERECHA */}
+        {/* ---------------------- */}
+        {/*      IMAGEN DERECHA    */}
+        {/* ---------------------- */}
         <div className="hero-manual-img-container">
           <img
             src={images[index].src}
@@ -68,7 +71,7 @@ const Hero: React.FC = () => {
             loading="lazy"
           />
 
-          {/* Numerador vertical */}
+          {/* Contador */}
           <div className="hero-counter-vertical">
             {index + 1}/{images.length}
           </div>

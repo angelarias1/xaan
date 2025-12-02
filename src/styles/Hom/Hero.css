@@ -1,6 +1,6 @@
-/* ============================= */
-/* HERO BASE */
-/* ============================= */
+/* ========================================= */
+/*                  HERO BASE                */
+/* ========================================= */
 
 .hero {
   width: 100%;
@@ -12,25 +12,18 @@
 
 .hero-inner {
   width: 100%;
-  max-width: 1350px;
+  max-width: 1350px;       /* 🔥 mismo ancho que todas */
+  margin: 0 auto;          /* 🔥 centrar contenedor */
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
-  align-items: center;  /* ✅ Centra todo el Hero */
+  align-items: center;
   gap: 40px;
 }
 
-/* ============================= */
-/* IMAGEN MANUAL */
-/* ============================= */
-
-.hero-right {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 180px; 
-}
+/* ========================================= */
+/*              IMAGEN MANUAL                */
+/* ========================================= */
 
 .hero-manual-img-container {
   width: 430px;
@@ -38,8 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    position: relative;  /* necesario para colocar el numerador */
-
+  position: relative;
 }
 
 .hero-manual-img {
@@ -49,28 +41,7 @@
   border-radius: 10px;
 }
 
-/* ============================= */
-/* TEXTO IZQUIERDO */
-/* ============================= */
-
-.hero-left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;   /* 🔥 SIEMPRE A LA IZQUIERDA */
-  text-align: left;          /* 🔥 SIEMPRE A LA IZQUIERDA */
-}
-
-.hero-left h1 {
-  font-family: "aviano-flare", serif;
-  font-size: 2.4rem;
-  color: #805b4a;
-  font-weight: 400;
-  line-height: 1.05;
-  margin-bottom: 10px;
-  text-align: left;
-  margin-top: 0;
-}
+/* NUMERADOR VERTICAL */
 .hero-counter-vertical {
   position: absolute;
   bottom: 15px;
@@ -82,7 +53,27 @@
   letter-spacing: 1px;
   opacity: 0.9;
   pointer-events: none;
-  transition: all 0.3s ease;
+}
+
+/* ========================================= */
+/*              TEXTO IZQUIERDO              */
+/* ========================================= */
+
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-left h1 {
+  font-family: "aviano-flare", serif;
+  font-size: 2.4rem;
+  color: #805b4a;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0 0 10px 0;
 }
 
 .link {
@@ -93,7 +84,7 @@
   font-size: 1rem;
 }
 
-/* BOTONES */
+/* BOTONES CARRUSEL */
 .hero-buttons {
   display: flex;
   gap: 14px;
@@ -106,159 +97,98 @@
   border: 1px solid #805b4a;
   background: transparent;
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: transform 0.2s ease;
 }
 
 .icon-btn img {
-  width: 18px !important;
-  height: 18px !important;
-  object-fit: contain !important;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-@media (max-width: 1024px) {
+/* ========================================= */
+/*                RESPONSIVE 1024            */
+/* ========================================= */
 
-  /* HERO GENERAL */
+@media (max-width: 1024px) {
   .hero {
     height: auto;
     padding: 80px 0;
-    display: flex;
-    justify-content: center;
   }
 
   .hero-inner {
     flex-direction: column;
     gap: 45px;
     padding: 0 6%;
-    align-items: center;    /* 🔥 izquierda */
+    align-items: flex-start; /* 🔥 mantiene alineación izquierda */
   }
-
-  /* ============================= */
-  /* TEXTO IZQUIERDO — TABLET      */
-  /* ============================= */
 
   .hero-left {
     width: 100%;
-    align-items: flex-start;   /* 🔥 izquierda real */
-    text-align: left;
   }
 
   .hero-left h1 {
-    font-size: 2rem;           /* tamaño elegante tablet */
+    font-size: 2rem;
     line-height: 1.1;
     max-width: 360px;
-    text-align: left;
   }
 
-  .link {
-    font-size: 1rem;
-    margin-top: 12px;
+  .hero-manual-img-container {
+    width: 75vw;
+    max-width: 420px;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
   }
 
-  .hero-buttons {
-    margin-top: 22px;
-    gap: 14px;
+  .hero-counter-vertical {
+    top: -22px;
+    left: 8px;
+    transform: rotate(0deg);
+    font-size: 0.85rem;
   }
 
   .icon-btn {
     width: 54px;
     height: 28px;
   }
-
-  .icon-btn img {
-    width: 17px !important;
-    height: 17px !important;
-  }
-
-  /* ============================= */
-  /* IMAGEN — TABLET GRANDE        */
-  /* ============================= */
-
-  .hero-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-  }
-
-  .hero-manual-img-container {
-    width: 75vw;               /* 🔥 más grande que móvil */
-    max-width: 420px;          /* límite elegante tablet */
-    aspect-ratio: 3/4;
-    position: relative;
-    margin: 0 auto;            /* centro de la pantalla */
-  }
-
-  .hero-manual-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* ============================= */
-  /* NUMERADOR EN TABLET           */
-  /* ============================= */
-
-  .hero-counter-vertical {
-    position: absolute;
-    top: -22px;        /* arriba de la imagen */
-    left: 8px;         /* pegado al borde izquierdo */
-    transform: rotate(0deg); /* ya no vertical */
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
 }
 
+/* ========================================= */
+/*                RESPONSIVE 480             */
+/* ========================================= */
 
 @media (max-width: 480px) {
-
-  /* HERO BASE */
   .hero {
     height: auto;
     padding: 60px 0;
-    display: flex;
-    justify-content: center;
   }
 
   .hero-inner {
     flex-direction: column;
-    align-items: center;   /* 🔥 izquierda real */
+    align-items: flex-start;
     gap: 32px;
     padding: 0 6%;
   }
 
-  /* ============================= */
-  /* TEXTO IZQUIERDO — LEFT FIXED */
-  /* ============================= */
-
-  .hero-left {
-    width: 100%;
-    align-items: flex-start;     /* 🔥 izquierda */
-    text-align: left;            /* 🔥 izquierda */
-  }
-
   .hero-left h1 {
     font-size: 1.35rem;
-    line-height: 1.12;
-    max-width: 260px;            /* 🔥 visible y equilibrado */
-    text-align: left;
+    max-width: 260px;
   }
 
-  .link {
-    font-size: .92rem;
-    text-align: left;
+  .hero-manual-img-container {
+    width: 85vw;
+    max-width: 300px;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
   }
 
-  /* BOTONES */
-  .hero-buttons {
-    gap: 12px;
+  .hero-counter-vertical {
+    top: -18px;
+    left: 4px;
+    transform: rotate(0deg);
+    font-size: 0.72rem;
   }
 
   .icon-btn {
@@ -267,47 +197,7 @@
   }
 
   .icon-btn img {
-    width: 16px !important;
-    height: 16px !important;
-  }
-
-  /* ============================= */
-  /* IMAGEN – CENTRADA SIEMPRE     */
-  /* ============================= */
-
-  .hero-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;  /* ✔ la imagen se centra */
-    margin-bottom: 0;
-  }
-
-  .hero-manual-img-container {
-    width: 85vw;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 3/4;         /* 🔥 mantiene forma elegante */
-    margin: 0 auto;            /* ✔ centrado */
-    position: relative;
-  }
-
-  .hero-manual-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* ============================= */
-  /* NUMERADOR — POSICIÓN MÓVIL    */
-  /* ============================= */
-
-  .hero-counter-vertical {
-    position: absolute;
-    top: -18px;               /* 🔥 arriba de la imagen */
-    left: 4px;                /* 🔥 alineado a la izquierda real */
-    transform: rotate(0deg);  /* ya no vertical */
-    font-size: 0.72rem;
-    opacity: 0.9;
+    width: 16px;
+    height: 16px;
   }
 }
-

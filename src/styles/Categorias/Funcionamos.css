@@ -1,24 +1,28 @@
-/* ======================================== */
-/*                 SECCIÓN                 */
-/* ======================================== */
+/* ========================================= */
+/*                 SECCIÓN BASE              */
+/* ========================================= */
 
 .fun-section {
   width: 100%;
   background: #e2d9d2;
+  display: flex;
+  justify-content: center;
 }
 
-.fun-wrapper {
-  max-width: 1350px;
+/* Contenedor oficial (como HERO) */
+.fun-container {
+  width: 100%;
+  max-width: 1350px;   /* 🔥 MISMO ANCHO QUE HERO */
+  padding: 120px 5%;   /* solo padding vertical, contenido centrado */
   margin: 0 auto;
-  padding: 120px 5%;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-/* ======================================== */
-/*        BLOQUE SUPERIOR (TEXTO)          */
-/* ======================================== */
+/* ========================================= */
+/*                BLOQUE SUPERIOR            */
+/* ========================================= */
 
 .fun-top {
   width: 100%;
@@ -28,7 +32,7 @@
   gap: 60px;
 }
 
-/* -- TÍTULO PRINCIPAL -- */
+/* TÍTULO */
 .fun-title {
   font-family: "aviano-flare", serif;
   color: #805b4a;
@@ -37,38 +41,15 @@
   max-width: 520px;
 }
 
-/* -- TEXTO DERECHA -- */
+/* TEXTO DERECHA */
 .fun-side-text {
   text-align: justify;
   max-width: 350px;
 }
 
-.fun-side-title {
-  font-family: "Barlow", sans-serif;
-  font-size: 0.9rem;
-  color: #805b4a;
-  margin-bottom: 14px;
-  letter-spacing: 1px;
-}
-
-.fun-side-desc {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.3rem;
-  color: #5a4d45;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.fun-link {
-  font-family: "Barlow", sans-serif;
-  color: #805b4a;
-  text-decoration: underline;
-  font-size: 0.95rem;
-}
-
-/* ======================================== */
-/*                IMAGEN                    */
-/* ======================================== */
+/* ========================================= */
+/*                IMAGEN                     */
+/* ========================================= */
 
 .fun-img-box {
   width: 100%;
@@ -78,33 +59,33 @@
   width: 100%;
   height: 420px;
   object-fit: cover;
-  border-radius: -1px;
+  border-radius: 0;
 }
 
-/* ======================================== */
-/*              RESPONSIVE 1024             */
-/* ======================================== */
+/* ========================================= */
+/*                RESPONSIVE 1024            */
+/* ========================================= */
 
 @media (max-width: 1024px) {
-  .fun-title {
-    font-size: 2rem;
-  }
-
-  .fun-img {
-    height: 360px;
+  .fun-container {
+    padding: 100px 6%;
   }
 
   .fun-top {
     gap: 40px;
   }
+
+  .fun-img {
+    height: 360px;
+  }
 }
 
-/* ======================================== */
-/*              RESPONSIVE 480              */
-/* ======================================== */
+/* ========================================= */
+/*                RESPONSIVE 480             */
+/* ========================================= */
 
 @media (max-width: 480px) {
-  .fun-wrapper {
+  .fun-container {
     padding: 90px 6%;
     gap: 35px;
   }

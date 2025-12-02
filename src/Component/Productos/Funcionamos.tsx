@@ -5,46 +5,49 @@ import funcionamosImg from "../../assets/web/Categoria/Rectangle 976.webp";
 
 const Funcionamos: React.FC = () => {
   return (
-    <section className="section fun-section">
-      <div className="section-wrapper fun-wrapper">
+    <section className="fun-section">
+  <div className="fun-container">
 
-        {/* BLOQUE SUPERIOR: TÍTULO IZQUIERDA + TEXTO DERECHA */}
-        <div className="fun-top">
-          {/* TÍTULO */}
-          <h2 className="fun-title">
-            FUSIONAMOS LA <br />
-            BELLEZA NATURAL CON <br />
-            LA RESPONSABILIDAD <br />
-            ECOLÓGICA
-          </h2>
+    {/* BLOQUE SUPERIOR */}
+    <div className="fun-top">
 
-          {/* TEXTO DERECHA */}
-          <div className="fun-side-text">
-            <h4 className="fun-side-title">¿QUÉ NOS INSPIRA?</h4>
+      <h2 className="fun-title">
+        FUSIONAMOS LA <br />
+        BELLEZA NATURAL CON <br />
+        LA RESPONSABILIDAD <br />
+        ECOLÓGICA
+      </h2>
 
-            <p className="fun-side-desc">
-              Nos aseguramos de que cada paso que damos en este viaje esté en armonía con la tierra que compartimos,
-              y con el bienestar que deseamos para ti y tus clientes.
-            </p>
+      <div className="fun-side-text">
+        <h4 className="fun-side-title">¿QUÉ NOS INSPIRA?</h4>
 
-            <a href="#" className="fun-link">
-              VER PRODUCTOS →
-            </a>
-          </div>
-        </div>
+        <p className="fun-side-desc">
+          Nos aseguramos de que cada paso que damos en este viaje esté en armonía
+          con la tierra que compartimos, y con el bienestar que deseamos para ti
+          y tus clientes.
+        </p>
 
-        {/* IMAGEN FULL WIDTH */}
-        <div className="fun-img-box">
-          <img
-            src={funcionamosImg}
-            className="fun-img"
-            alt="Productos naturales y ecológicos de XA'AN Skin Care"
-            loading="lazy"
-          />
-        </div>
-
+        <a href="#" className="fun-link">
+          VER PRODUCTOS →
+        </a>
       </div>
-    </section>
+
+    </div>
+
+    {/* IMAGEN */}
+    <div className="fun-img-box">
+      <img
+        src={funcionamosImg}
+        className="fun-img"
+        alt="Productos naturales y ecológicos de XA'AN Skin Care"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+</section>
+
+
   );
 };
 
