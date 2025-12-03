@@ -1,0 +1,85 @@
+/* ============================ */
+/* SECCIÓN GENERAL              */
+/* ============================ */
+
+.fd-section {
+  width: 100%;
+  background: #e2d9d2;
+  padding: 90px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fd-container {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================ */
+/* TÍTULO                       */
+/* ============================ */
+
+.fd-title {
+  font-family: "aviano-flare", serif;
+  color: #805b4a;
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* ============================ */
+/* COLUMNAS                     */
+/* ============================ */
+
+.fd-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* LISTAS */
+
+.fd-col {
+  list-style: none;
+  padding: 0;
+}
+
+.fd-col li {
+  font-family: "Barlow", sans-serif;
+  color: #805b4a;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* ============================ */
+/* RESPONSIVE 1024px            */
+/* ============================ */
+
+@media (max-width: 1024px) {
+  .fd-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ============================ */
+/* RESPONSIVE 480px             */
+/* ============================ */
+
+@media (max-width: 480px) {
+  .fd-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .fd-title {
+    font-size: 1.4rem;
+  }
+
+  .fd-col li {
+    font-size: 0.9rem;
+  }
+}

@@ -25,7 +25,7 @@ const Aromatizantes: React.FC = () => {
         a un lugar de serenidad y evocación.
       </p>
 
-      <a href="#" className="aroma-link">
+      <a href="aromatizantes" className="aroma-link">
         VER PRODUCTOS →
       </a>
 

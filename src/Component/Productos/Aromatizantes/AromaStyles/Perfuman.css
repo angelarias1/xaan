@@ -1,0 +1,140 @@
+/* ===================================== */
+/*   SECCIÓN PERFUMAN — XA'AN STYLE     */
+/* ===================================== */
+
+.pf-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 110px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor oficial 1350px */
+.pf-container {
+  width: 84%;
+  max-width: 1350px;
+  padding: 0 5%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ===================================== */
+/*                 IZQUIERDA             */
+/* ===================================== */
+
+.pf-left { }
+
+.pf-title {
+  font-family: "aviano-flare", serif;
+  font-size: 2.6rem;
+  color: #805b4a;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+/* ===================================== */
+/*                 DERECHA               */
+/* ===================================== */
+
+.pf-text {
+  font-family: "Barlow", sans-serif;
+  color: rgba(0,0,0,0.65);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.pf-btn {
+  padding: 14px 32px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  cursor: pointer;
+
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  
+  transition: 0.25s ease;
+}
+
+.pf-btn:hover {
+  background-color: #d9cdc5;
+}
+
+/* ===================================== */
+/*           LINKS — CON FLECHITA        */
+/* ===================================== */
+
+.pf-links {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pf-links a {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  color: #805b4a;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid #805b4a;
+  padding-bottom: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.25s ease;
+}
+
+.pf-links a:hover {
+  opacity: 0.75;
+  padding-left: 4px;
+}
+
+.pf-links span {
+  font-size: 1rem;
+}
+
+/* ===================================== */
+/*              RESPONSIVE               */
+/* ===================================== */
+
+@media (max-width: 1024px) {
+  .pf-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .pf-title {
+    font-size: 2.2rem;
+  }
+
+  .pf-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-title {
+    font-size: 1.7rem;
+  }
+
+  .pf-text {
+    font-size: 0.85rem;
+  }
+
+  .pf-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

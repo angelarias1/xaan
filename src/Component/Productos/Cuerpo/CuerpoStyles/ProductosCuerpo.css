@@ -1,0 +1,99 @@
+/* ================================ */
+/* SECCIÓN GENERAL */
+/* ================================ */
+
+.cuer-section {
+  width: 100%;
+  background-color: #e2d9d2;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cuer-container {
+  width: 83%;
+  max-width: 1350px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ================================ */
+/* TARJETA */
+/* ================================ */
+
+.cuer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #805b4a;
+}
+
+.cuer-img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+/* CATEGORÍA */
+.cuer-cat {
+  font-size: 0.7rem;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1.8px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+/* NOMBRE */
+.cuer-name {
+  font-family: "Marcellus", serif;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+/* SUBTÍTULO */
+.cuer-sub {
+  font-size: 0.7rem;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+/* BOTONES */
+.cuer-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.cuer-options button {
+  padding: 6px 14px;
+  border: 1px solid #805b4a;
+  background: transparent;
+  color: #805b4a;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+/* CTA PRINCIPAL */
+.cuer-order {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #805b4a;
+  color: #805b4a;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+.cuer-card a {
+  display: block;
+}
