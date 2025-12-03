@@ -9,77 +9,75 @@ import Img2 from "../../assets/web/imagen2.webp";
 import Img3 from "../../assets/web/Rectangle 954.webp";
 import Img4 from "../../assets/web/imagen8.webp";
 
-const images = [
-  { src: Img1, alt: "Aceites naturales para hoteles y spas XA'AN" },
-  { src: Img2, alt: "Productos corporales y amenidades premium XA'AN" },
-  { src: Img3, alt: "Aceites corporales para masaje de alta calidad XA'AN" },
-  { src: Img4, alt: "Productos de cuidado de la piel de XA'AN Skin Care" },
+const slides = [
+  { src: Img1, alt: "Aceites naturales XA’AN" },
+  { src: Img2, alt: "Amenidades premium XA’AN" },
+  { src: Img3, alt: "Aceites corporales XA’AN" },
+  { src: Img4, alt: "Cuidado de la piel XA’AN" }
 ];
 
-const Hero: React.FC = () => {
-  const [index, setIndex] = useState(0);
+const NewHero: React.FC = () => {
+  const [current, setCurrent] = useState(0);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const prevSlide = () =>
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      next();
+    const auto = setInterval(() => {
+      nextSlide();
     }, 3500);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(auto);
   }, []);
 
   return (
-    <section className="section hero" id="inicio">
-      <div className="section-wrapper hero-inner">
+    <section className="nh-hero">
 
-        {/* ---------------------- */}
-        {/*      TEXTO IZQUIERDA   */}
-        {/* ---------------------- */}
-        <div className="hero-left">
-          <h1>
+      {/* CONTENEDOR OFICIAL 1350PX */}
+      <div className="nh-hero-inner">
+
+        {/* IZQUIERDA TEXTO */}
+        <div className="nh-left">
+          <h1 className="nh-title">
             TU NUEVO <br />
             PROVEEDOR DE <br />
             AMENIDADES
           </h1>
 
-          <a className="link" href="#productos">
+          <a href="#productos" className="nh-link">
             Conoce nuestros productos
           </a>
 
-          <div className="hero-buttons">
-            <button className="icon-btn" onClick={prev}>
-              <img src={ArrowLeft} alt="Imagen anterior" />
+          <div className="nh-controls">
+            <button className="nh-arrow-btn" onClick={prevSlide}>
+              <img src={ArrowLeft} alt="Anterior" />
             </button>
-
-            <button className="icon-btn" onClick={next}>
-              <img src={ArrowRight} alt="Imagen siguiente" />
+            <button className="nh-arrow-btn" onClick={nextSlide}>
+              <img src={ArrowRight} alt="Siguiente" />
             </button>
           </div>
         </div>
 
-        {/* ---------------------- */}
-        {/*      IMAGEN DERECHA    */}
-        {/* ---------------------- */}
-        <div className="hero-manual-img-container">
+        {/* DERECHA IMAGEN */}
+        <div className="nh-image-box">
           <img
-            src={images[index].src}
-            key={index}
-            className="hero-manual-img"
-            alt={images[index].alt}
+            key={current}
+            src={slides[current].src}
+            alt={slides[current].alt}
+            className="nh-image"
             loading="lazy"
           />
 
-          {/* Contador */}
-          <div className="hero-counter-vertical">
-            {index + 1}/{images.length}
+          <div className="nh-counter">
+            {current + 1}/{slides.length}
           </div>
         </div>
 
       </div>
+
     </section>
   );
 };
 
-export default Hero;
+export default NewHero;

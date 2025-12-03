@@ -1,265 +1,136 @@
-/* ===================================== */
-/*         SECCIÓN GENERAL                */
-/* ===================================== */
+/* ========================================= */
+/*             SECCIÓN SENSORIAL             */
+/* ========================================= */
 
-.sensorial-section {
+.sn-section {
   width: 100%;
-  background-color: #e2d9d2;
-  padding: 130px 0;
+  background: #e2d9d2;
+  padding: 120px 0;
   display: flex;
   justify-content: center;
 }
 
-/* CONTENEDOR */
-.sensorial-container {
+/* CONTENEDOR AJUSTADO & MITAD - MITAD */
+.sn-container {
   width: 90%;
-  max-width: 1300px;
-  background-color: #e2d9d2;
-  border: 1px solid #c7b8ac;
+  max-width: 1150px; /* se mantiene reducido */
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 80px 70px;
+  grid-template-columns: 1fr 1fr;  /* ⭐ MITAD Y MITAD */
+  gap: 60px;
+
+  border: 1px solid #c7b8ac;
+  padding: 40px 34px;
   position: relative;
 }
 
-/* LÍNEA CENTRAL */
-.sensorial-container::before {
+/* LÍNEA DIVISORIA AL CENTRO REAL */
+.sn-container::before {
   content: "";
   position: absolute;
+  left: 50%;            /* ⭐ EXACTO A LA MITAD */
+  top: 0;
+  transform: translateX(-0.5px);
   width: 1px;
   height: 100%;
   background-color: #c7b8ac;
-  left: 50%;
-  top: 0;
-  transform: translateX(-0.5px);
 }
 
-/* ===================================== */
-/*                IZQUIERDA              */
-/* ===================================== */
+/* ========================================= */
+/*                   IZQUIERDA               */
+/* ========================================= */
 
-.sensorial-left {
+.sn-left {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.sensorial-image-wrapper {
+.sn-img {
   width: 100%;
-  max-width: 380px;   /* + equilibrio visual */
+  max-width: 350px;
+  height: 460px;
+  object-fit: cover;
+  filter: brightness(0.96);
 }
 
-.sensorial-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+/* ========================================= */
+/*                   DERECHA                 */
+/* ========================================= */
 
-/* ===================================== */
-/*                DERECHA                */
-/* ===================================== */
-
-.sensorial-right {
+.sn-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;   /* 🔥 Alineación editorial */
-  padding-left: 60px;        /* equilibrio real */
+  max-width: 100%; /* ⭐ Ya no limita más que la izquierda */
 }
 
-/* TÍTULO */
-.sensorial-title {
+.sn-title {
   font-family: "aviano-flare", serif;
-  font-weight: 400;
-  font-size: 2.0rem;
-  line-height: 1.25;
+  font-size: 1.8rem;
   color: #805b4a;
-  max-width: 430px;
-  margin-bottom: 25px;
-
-  text-align: left !important;   /* ← fuerza alineación */
-  align-self: flex-start;         /* ← evita centrado por flexbox */
-  margin-left: 0;                 /* ← elimina centrado automático */
+  margin-bottom: 20px;
 }
 
-/* TEXTO */
-.sensorial-text {
+.sn-text {
   font-family: "Barlow", sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 440px;
   color: rgba(0,0,0,0.55);
-  margin-bottom: 35px;
-  white-space: pre-line;
-
-  text-align: left !important;   /* ← obliga la alineación */
-  align-self: flex-start;         /* ← evita centrado por flexbox */
-  margin-left: 0;                 /* ← elimina centrado automático */
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 32px;
 }
-
 
 /* BOTÓN */
-.sensorial-btn {
-  padding: 13px 90px;
+.sn-btn {
+  padding: 12px 58px;
+  font-family: "Barlow", sans-serif;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
-  font-family: "Barlow", sans-serif;
-  cursor: pointer;
   font-size: 0.9rem;
-  border-radius: 0;
-  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.sensorial-btn:hover {
-  background-color: #d9cdc5;
-}
+/* ========================================= */
+/*                RESPONSIVE 1024            */
+/* ========================================= */
 
-/* ===================================== */
-/*               RESPONSIVE              */
-/* ===================================== */
-
-/* ===================================== */
-/*            📲 TABLET <=900px         */
-/* ===================================== */
 @media (max-width: 1024px) {
-
-  .sensorial-container {
-    padding: 70px 50px;
-    border: none;
-    grid-template-columns: 1fr;   /* Se vuelve vertical */
+  .sn-container {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    padding: 40px 26px;
   }
 
-  /* Quitar línea central */
-  .sensorial-container::before {
+  .sn-container::before {
     display: none;
   }
 
-  .sensorial-right {
-    padding-left: 0;
-    align-items: center;
-    text-align: center;
-    margin-top: 45px;
-  }
-
-  .sensorial-title {
-    font-size: 1.6rem;
-    max-width: 100%;
-  }
-
-  .sensorial-text {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-
-  .sensorial-btn {
-    padding: 13px 120px;
-        font-size: 0.70rem;
-
-  }
-
-  .sensorial-image-wrapper {
-    max-width: 320px;
+  .sn-img {
+    height: auto;
   }
 }
 
-/* ===================================== */
-/*             📱 MÓVIL <=480px          */
-/* ===================================== */
+/* ========================================= */
+/*                RESPONSIVE 480             */
+/* ========================================= */
+
 @media (max-width: 480px) {
+  .sn-section {
+    padding: 80px 0;
+  }
 
-  /* =============================== */
-  /*           SECCIÓN               */
-  /* =============================== */
-  .sensorial-section {
-    padding: 90px 0;
+  .sn-container {
+    padding: 32px 18px;
+    gap: 32px;
+  }
+
+  .sn-title {
+    font-size: 1.35rem;
+  }
+
+  .sn-btn {
     width: 100%;
+    padding: 12px 0;
   }
-
-  /* =============================== */
-  /*       CONTENEDOR PRINCIPAL      */
-  /* =============================== */
-  .sensorial-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 55px 0;
-    position: relative;
-    background-color: #e2d9d2;
-    border: none;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  /* ⭐ LÍNEA DIVISORA SUPERIOR ⭐ */
-  .sensorial-container::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #c7b8ac;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  /* =============================== */
-  /*            IMAGEN               */
-  /* =============================== */
-  .sensorial-image-wrapper {
-    width: 100%;
-    max-width: 310px; /* perfecto como tu referencia */
-    margin: 0 auto;
-  }
-
-  /* =============================== */
-  /*             TÍTULO              */
-  /* =============================== */
-  .sensorial-title {
-    max-width: 300px;        /* ⭐ ancho editorial EXACTO */
-    width: 100%;
-    font-size: 1.3rem;
-    line-height: 1.18;
-    color: #805b4a;
-
-    text-align: left;
-    margin: 35px auto 18px;
-    padding: 0;
-  }
-
-  /* =============================== */
-  /*              TEXTO              */
-  /* =============================== */
-  .sensorial-text {
-    max-width: 300px;         /* misma medida del título */
-    width: 100%;
-    font-size: 0.86rem;
-    color: rgba(0,0,0,0.55);
-    line-height: 1.48;
-
-    text-align: left;
-    white-space: normal;      /* permite saltos naturales */
-    margin: 0 auto 28px;
-    padding: 0;
-  }
-
-  /* =============================== */
-  /*             BOTÓN               */
-  /* =============================== */
-  .sensorial-btn {
-    padding: 12px 90px;
-    border: 1px solid #805b4a;
-    background: transparent;
-    font-size: 0.7rem;
-    color: #805b4a;
-
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-
 }
-
-

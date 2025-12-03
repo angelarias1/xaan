@@ -1,194 +1,174 @@
-/* ============================= */
-/*     SECCIÓN LO MÁS PEDIDO     */
-/* ============================= */
+/* =========================================== */
+/*   SECCIÓN LO MÁS PEDIDO — NUEVA VERSIÓN     */
+/* =========================================== */
 
-.lomas-section {
+.np-section {
   width: 100%;
-  padding: 90px 5%;
   background-color: #e2d9d2;
+  padding: 90px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* ============================= */
-/*            TÍTULO             */
-/* ============================= */
+/* CONTENEDOR OFICIAL */
+.np-container {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
 
-.lomas-title {
+/* TÍTULO */
+.np-title {
   font-family: "Barlow", sans-serif;
   font-size: 0.78rem;
   color: #805b4a;
-  letter-spacing: 2.5px;
+  letter-spacing: 2.4px;
   margin-bottom: 55px;
-
   text-align: left;
-  display: block;
 }
 
-/* ============================= */
-/*        GRID DE PRODUCTOS      */
-/* ============================= */
-
-.lomas-grid {
+/* GRID */
+.np-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px;                       /* mejor equilibrio */
+  gap: 48px;
 }
 
-/* ============================= */
-/*        CARD PRODUCTO          */
-/* ============================= */
-
-.producto-card {
+/* PRODUCT CARD */
+.np-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 /* IMAGEN */
-.producto-img {
+.np-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 0;
   filter: brightness(0.97);
 }
 
 /* CATEGORÍA */
-.producto-cat {
+.np-cat {
   margin-top: 16px;
   font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  color: #805b4a;
   font-size: 0.82rem;
   letter-spacing: 2px;
+  color: #805b4a;
 }
 
 /* NOMBRE */
-.producto-nombre {
+.np-name {
   font-family: "aviano-flare", serif;
-  font-weight: 400;
-
-  font-size: 1.18rem;       /* 🔥 más pequeño, más elegante */
-  line-height: 1.15;        /* mejor respiración entre líneas */
-
-  margin-top: 6px;
+  font-size: 1.18rem;
   color: #805b4a;
-
-  text-align: left !important;
-  letter-spacing: 0.5px;    /* 🔥 más fino visualmente */
-  max-width: 90%;           /* ayuda a que no se desborde */
+  margin-top: 6px;
+  line-height: 1.15;
+  max-width: 90%;
 }
 
-/* DESCRIPCIÓN */
-.producto-sub {
+/* SUBTÍTULO */
+.np-sub {
   margin-top: 14px;
   font-family: "Barlow", sans-serif;
-  font-size: 0.9rem;
   color: #805b4a;
+  font-size: 0.9rem;
   opacity: 0.9;
-  line-height: 1.4;
 }
 
 /* OPCIONES */
-.producto-opciones {
+.np-options {
   display: flex;
   gap: 14px;
   margin-top: 12px;
 }
 
-.producto-opciones span {
+.np-options span {
   border: 1px solid #805b4a;
   padding: 5px 13px;
   font-family: "Barlow", sans-serif;
   font-size: 0.85rem;
   color: #805b4a;
-  letter-spacing: .5px;
-  background: transparent;
 }
 
-/* BOTÓN */
-.producto-btn {
+/* =========================================== */
+/*                BOTÓN                        */
+/* =========================================== */
+
+.np-btn {
   margin-top: 18px;
-  padding: 12px 0;
-  width: 100%;
+
+  /*  ⭐ AUMENTA EL ANCHO REAL DEL BOTÓN  */
+  padding: 25px 140px;        /* ← MÁS grande que tu versión original */
+  min-width: 370px;           /* ← evita que se haga pequeño */
+  max-width: 380px;           /* ← puedes subirlo a 420 si quieres */
+
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
+
   font-family: "Barlow", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1rem;            /* ← más grande */
   letter-spacing: 1px;
+
   cursor: pointer;
-  border-radius: 0;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  white-space: nowrap;        /* ← evita que el texto salte */
 }
 
-.producto-btn:hover {
+.np-btn:hover {
   background-color: #d9cdc5;
 }
 
+
 /* AVISO */
-.lomas-aviso {
+.np-warning {
   margin-top: 60px;
-  font-size: 0.8rem;
   font-family: "Barlow", sans-serif;
-  color: #81492C;
-  text-align: center;
+  font-size: 0.8rem;
   opacity: 0.9;
+  color: #81492c;
+  text-align: center;
 }
 
-/* ============================= */
-/*           RESPONSIVO          */
-/* ============================= */
+/* =========================================== */
+/*                RESPONSIVE                   */
+/* =========================================== */
 
-/* TABLET */
 @media (max-width: 992px) {
-  .lomas-section {
-    padding: 70px 5%;
+  .np-section {
+    padding: 70px 0;
   }
 
-  .lomas-grid {
+  .np-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-
-  .producto-nombre {
-    font-size: 1.2rem;
-  }
-
-  .producto-cat {
-    font-size: 0.78rem;
-  }
-
-  .producto-sub {
-    font-size: 0.88rem;
-  }
 }
 
-/* MÓVIL */
 @media (max-width: 600px) {
-  .lomas-section {
-    padding: 55px 5%;
+  .np-section {
+    padding: 55px 0;
   }
 
-  .lomas-title {
-    margin-bottom: 40px;
+  .np-title {
     font-size: 0.72rem;
+    margin-bottom: 40px;
   }
 
-  .lomas-grid {
+  .np-grid {
     grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 42px;
   }
 
-  .producto-nombre {
-    font-size: 1.15rem;
-  }
-
-  .producto-sub {
+  .np-btn {
     font-size: 0.85rem;
-  }
-
-  .producto-btn {
-    padding: 12px 0;
-    font-size: 0.85rem;
+    padding: 12px 28px;
   }
 }

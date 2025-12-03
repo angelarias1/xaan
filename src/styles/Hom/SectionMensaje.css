@@ -1,116 +1,113 @@
-/* ============================= */
-/*        SECCIÓN MENSAJE        */
-/* ============================= */
+/* ========================================= */
+/*        SECCIÓN MENSAJE NUEVA              */
+/* ========================================= */
 
-.mensaje-section {
+.nm-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 110px 5%;
+  padding: 110px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR OFICIAL */
+.nm-wrapper {
+  width: 90%;
+  max-width: 1350px;   /* 🔥 ANCHO ESTÁNDAR */
+  margin: 0 auto;
   text-align: center;
 }
 
 /* ICONO */
-.mensaje-icono {
+.nm-icon {
   width: 42px;
-  margin-bottom: 25px;
   opacity: 0.78;
+  margin: 0 auto 25px auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* TÍTULO */
-.mensaje-titulo {
+.nm-title {
   font-family: "aviano-flare", serif;
-  font-weight: 400;
-  font-size: 1.2rem;
   color: #805b4a;
+  font-size: 1.2rem;
   line-height: 1.38;
-  margin-bottom: 22px;
-
+  font-weight: 400;
   max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+
+  margin: 0 auto 22px auto;
 }
 
-.mensaje-titulo br {
+.nm-title br {
   display: block;
   margin-bottom: 6px;
-  line-height: 1.38;
 }
 
 /* TEXTO */
-.mensaje-texto {
+.nm-text {
   font-family: "Barlow", sans-serif;
-  font-size: 0.96rem;
   color: rgba(0, 0, 0, 0.55);
+  font-size: 0.96rem;
+
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.64;
 }
 
-/* ============================= */
-/*             TABLET            */
-/*        <= 1024px             */
-/* ============================= */
+/* ========================================= */
+/*                TABLET                     */
+/* ========================================= */
 
 @media (max-width: 1024px) {
-  .mensaje-titulo {
-    font-size: .8rem;
+  .nm-section {
+    padding: 95px 0;
+  }
+
+  .nm-title {
+    font-size: 0.9rem;
     line-height: 1.34;
   }
 
-  .mensaje-titulo br {
-    margin-bottom: 5px;
-  }
-
-  .mensaje-texto {
-    font-size: 0.77rem;
+  .nm-text {
+    font-size: 0.8rem;
     max-width: 95%;
   }
 
-  .mensaje-icono {
+  .nm-icon {
     width: 38px;
   }
 
-  .mensaje-section {
-    padding: 95px 5%;
+  .nm-title br {
+    margin-bottom: 5px;
   }
 }
 
-/* ============================= */
-/*              MÓVIL            */
-/*        <= 480px              */
-/* ============================= */
+/* ========================================= */
+/*                 MÓVIL                     */
+/* ========================================= */
 
 @media (max-width: 480px) {
-  .mensaje-section {
-    padding: 80px 5%;
+  .nm-section {
+    padding: 80px 0;
   }
 
-  .mensaje-titulo {
-    font-size: .96rem;
-    line-height: 1.30;
+  .nm-title {
+    font-size: 0.95rem;
     max-width: 100%;
-    margin-top: 10px;
-    text-align: center;
   }
 
-  .mensaje-titulo br {
+  .nm-title br {
     margin-bottom: 4px;
   }
 
-  .mensaje-texto {
-    font-size:.81rem;
+  .nm-text {
+    font-size: 0.78rem;
     line-height: 1.6;
     max-width: 100%;
-    margin-top: 40px;
-
-
+    margin-top: 35px;
   }
 
-  .mensaje-icono {
+  .nm-icon {
     width: 30px;
   }
 }

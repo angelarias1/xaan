@@ -42,7 +42,7 @@ p, span, a, button {
 }
 
 /* ========================================== */
-/* PALETA DE COLOR Y MEDIDAS GLOBALES         */
+/* PALETA DE COLOR Y UTILIDADES               */
 /* ========================================== */
 
 :root {
@@ -52,47 +52,19 @@ p, span, a, button {
   --brand-line: #c7b8ac;
   --brand-text: #3a3a3a;
   --brand-text-soft: rgba(0,0,0,0.55);
-
-  /* Sistema global de tamaños */
-  --section-max-width: 1350px;
-  --section-padding-desktop: 100px;
-  --section-padding-tablet: 80px;
-  --section-padding-mobile: 60px;
 }
 
 /* ========================================== */
-/* SISTEMA GLOBAL DE SECCIONES                */
-/* ========================================== */
-
-.section {
-  width: 100%;
-  padding: var(--section-padding-desktop) 0;
-  background-color: var(--brand-bg);
-}
-
-.section-wrapper {
-  width: 90%;
-  max-width: 1350px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
-/* ========================================== */
-/* CONTENEDORES ADICIONALES (Opcionales)      */
-/* ========================================== */
-
-/* ========================================== */
-/*   NUEVO: CONTENEDOR GLOBAL PROFESIONAL     */
+/* CONTENEDOR GLOBAL OPCIONAL                 */
+/* (NO OBLIGA A NINGUNA SECCIÓN)              */
 /* ========================================== */
 
 .container {
   width: 100%;
-  max-width: 1280px;     /* Tamaño ideal para tu diseño */
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;       /* Evita que pegue a los bordes */
+  padding: 0 32px;
 }
-
 
 /* ========================================== */
 /* BOTÓN GLOBAL                               */
@@ -158,32 +130,16 @@ footer {
 }
 
 /* ========================================== */
-/* RESPONSIVE — TABLET 1024px                 */
+/* RESPONSIVE (TABLET Y MÓVIL)                */
 /* ========================================== */
 
 @media (max-width: 1024px) {
-  .section {
-    padding: var(--section-padding-tablet) 0;
-  }
-
-  .section-wrapper {
-    width: 92%;
+  h1, h2, h3 {
+    line-height: 1.15;
   }
 }
 
-/* ========================================== */
-/* RESPONSIVE — MÓVIL 480px                   */
-/* ========================================== */
-
 @media (max-width: 480px) {
-  .section {
-    padding: var(--section-padding-mobile) 0;
-  }
-
-  .section-wrapper {
-    width: 94%;
-  }
-
   h1, h2, h3 {
     font-size: 1.9rem;
   }

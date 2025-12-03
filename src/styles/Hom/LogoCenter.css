@@ -1,15 +1,21 @@
 /* ============================= */
-/*      FONDO GENERAL            */
+/*      SECCIÓN GENERAL          */
 /* ============================= */
 
 .logo-center-section {
   width: 100%;
   background-color: #e2d9d2;
-
-  padding: 120px 0;        /* antes 160px → demasiado vacío */
+  padding: 120px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+/* CONTENEDOR OFICIAL */
+.logo-center-container {
+  width: 90%;
+  max-width: 1350px;         /* 🔥 estándar XA'AN */
+  display: flex;
+  justify-content: center;
 }
 
 /* ============================= */
@@ -17,14 +23,14 @@
 /* ============================= */
 
 .logo-center-img {
-  width: 110px;            /* antes 120px → baja 8% para elegancia */
-  opacity: 0.78;           /* ligera claridad */
+  width: 110px;
+  opacity: 0.78;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .logo-center-img:hover {
   opacity: 1;
-  transform: scale(1.04);  /* más suave, premium */
+  transform: scale(1.04);
 }
 
 /* ============================= */
@@ -38,7 +44,7 @@
   }
 
   .logo-center-img {
-    width: 10px;
+    width: 120px;  /* antes 10px → era un error */
   }
 }
 

@@ -3,34 +3,44 @@
 /* =============================== */
 /*          FOOTER GENERAL         */
 /* =============================== */
+/* ====================================== */
+/*               FOOTER GENERAL           */
+/* ====================================== */
 
 .footer-section {
   width: 100%;
   background-color: #e2d9d2;
   padding: 80px 0 40px;
   display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR OFICIAL */
+.footer-container {
+  width: 100%;
+  max-width: 1350px;   /* 🔥 ancho oficial XA’AN */
+  padding: 0 5%;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* =============================== */
-/*             LOGO                */
-/* =============================== */
+/* ====================================== */
+/*                 LOGO                   */
+/* ====================================== */
 
 .footer-logo {
   height: 90px;
   margin-bottom: 25px;
 }
 
-/* =============================== */
-/*          TOP FOOTER             */
-/* =============================== */
+/* ====================================== */
+/*               FOOTER TOP               */
+/* ====================================== */
 
 .footer-top {
   width: 100%;
-  max-width: 1300px;
-  padding: 0 40px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +55,7 @@
   cursor: pointer;
 }
 
-/* NAV */
+/* NAV SUPERIOR */
 
 .footer-nav-top {
   display: flex;
@@ -64,7 +74,7 @@
   opacity: 0.7;
 }
 
-/* EMAIL + ICONOS */
+/* RIGHT GROUP */
 
 .footer-right-group {
   display: flex;
@@ -100,21 +110,20 @@
   background-color: rgba(128, 91, 74, 0.12);
 }
 
-/* =============================== */
-/*             DIVIDER             */
-/* =============================== */
+/* ====================================== */
+/*               DIVISOR                  */
+/* ====================================== */
 
 .footer-divider {
   width: 100%;
-  max-width: 1300px;
   height: 1px;
   background-color: #c7b8ac;
   margin: 25px 0;
 }
 
-/* =============================== */
-/*          FOOTER BOTTOM          */
-/* =============================== */
+/* ====================================== */
+/*          FOOTER BOTTOM LINKS           */
+/* ====================================== */
 
 .footer-bottom {
   display: flex;
@@ -131,13 +140,9 @@
   text-decoration: none;
 }
 
-.footer-bottom a:hover {
-  opacity: 0.7;
-}
-
-/* =============================== */
-/*         COPY TOOLTIP            */
-/* =============================== */
+/* ====================================== */
+/*        COPY TOOLTIP                    */
+/* ====================================== */
 
 .copy-txt {
   position: relative;
@@ -155,7 +160,6 @@
   font-size: 0.7rem;
   border-radius: 4px;
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.25s ease;
 }
 
@@ -163,9 +167,9 @@
   opacity: 1;
 }
 
-/* =============================== */
-/*        DROPDOWN SUPERIOR        */
-/* =============================== */
+/* ====================================== */
+/*         DROPDOWN SUPERIOR              */
+/* ====================================== */
 
 .dropdown {
   position: relative;
@@ -207,220 +211,83 @@
   transform: translateY(0);
 }
 
-/* =============================== */
-/*         ICON TOOLTIPS           */
-/* =============================== */
+/* ====================================== */
+/*            TABLET 1024px               */
+/* ====================================== */
 
-.icon-tooltip {
-  position: relative;
-}
-
-.icon-tooltip::after {
-  content: attr(data-text);
-  position: absolute;
-  bottom: -26px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #81492C;
-  color: white;
-  padding: 3px 8px;
-  font-size: 0.68rem;
-  border-radius: 4px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-}
-
-.icon-tooltip:hover::after {
-  opacity: 1;
-}
-
-/* =============================== */
-/*            TABLET 1024px        */
-/* =============================== */
-
-/* =============================== */
-/*            TABLET 1024px        */
-/* =============================== */
-/* =============================== */
-/*            TABLET 1024px        */
-/* =============================== */
 @media (max-width: 1024px) {
 
-  /* SECCIÓN */
   .footer-section {
     padding-bottom: 5px !important;
   }
 
-  /* BLOQUE SUPERIOR */
   .footer-top {
-    width: 100%;
-    padding: 0 30px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;  /* un poco más aire que móvil */
-    padding-bottom: 0 !important;
+    gap: 16px;
   }
 
-  /* LOGO */
   .footer-logo {
-    height: 180px;      /* más grande que en móvil */
+    height: 180px;
     margin-bottom: 35px;
   }
 
-  /* TEL, EMAIL, NAV */
-  .footer-phone,
-  .footer-email,
-  .footer-nav-top a,
-  .dropdown-btn {
-    font-size: 1rem;      /* más grande que en móvil */
-    line-height: 1.20;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* NAV — LISTA VERTICAL */
   .footer-nav-top {
     flex-direction: column;
     gap: 14px;
   }
 
-  /* EMAIL + ICONOS */
   .footer-right-group {
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 18px;
   }
 
-  /* ICONOS */
-  .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin-top: 8px;
-  }
-
-  .footer-icon-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .footer-icon-btn img {
-    width: 18px;
-    height: 18px;
-  }
-
-  /* DIVIDER */
   .footer-divider {
-    margin: 6px 0 !important;   /* pegado pero elegante */
+    margin: 6px 0;
   }
 
-  /* BOTTOM LINKS */
   .footer-bottom {
-    gap: 40px !important;  
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .footer-bottom a {
-    font-size: 0.85rem;
-    line-height: 1.15;
-    margin-bottom: -8px;
-    margin-top: 10px;
+    gap: 40px;
   }
 }
 
+/* ====================================== */
+/*               MÓVIL 480px              */
+/* ====================================== */
 
-
-/* =============================== */
-/*            MÓVIL 480px          */
-/* =============================== */
 @media (max-width: 480px) {
 
-  /* SECCIÓN FOOTER */
   .footer-section {
-    padding-bottom: 0 !important;  /* 🔥 ultra-compacto */
-  }
-
-  /* BLOQUE SUPERIOR */
-  .footer-top {
-    width: 100%;
-    padding: 0 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px; 
     padding-bottom: 0 !important;
   }
 
-  /* LOGO */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   .footer-logo {
-    height: 150px;        /* grande y elegante */
+    height: 150px;
     margin-bottom: 30px;
   }
 
-  /* TEXTO DE TEL/EMAIL Y NAV */
-  .footer-phone,
-  .footer-email,
-  .footer-nav-top a,
-  .dropdown-btn {
-    font-size: 0.85rem;
-    line-height: 1.15;     /* interlineado fino */
-    margin: 0;
-    padding: 0;
-  }
-
-  /* NAV — LISTA VERTICAL */
   .footer-nav-top {
     flex-direction: column;
-    gap: 12px;   /* ⭐ separación elegante */
+    gap: 12px;
   }
 
-  /* GRUPO DE EMAIL + ICONOS */
   .footer-right-group {
     flex-direction: column;
     gap: 6px;
-    margin-bottom: 15px;  /* antes 50px */
   }
 
-  /* ICONOS */
-  .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 6px;
-  }
-
-  .footer-icon-btn {
-    width: 28px;
-    height: 28px;
-  }
-
-  .footer-icon-btn img {
-    width: 16px;
-    height: 16px;
-  }
-
-  /* DIVIDER — ULTRA PEGADO */
   .footer-divider {
-    margin: 4px 0 !important;
-  }
-
-  /* FOOTER BOTTOM */
-  .footer-bottom {
-    gap: 45px !important;          /* Antes 76px */
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    margin: 4px 0;
   }
 
   .footer-bottom a {
     font-size: 0.75rem;
-    line-height: 1.1;
-    margin-bottom: -15px;
-    margin-top: 15px;
-
   }
-
 }
-

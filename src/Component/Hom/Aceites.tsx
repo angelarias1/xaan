@@ -20,65 +20,58 @@ const Aceites: React.FC = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // AUTO-SLIDE
+  // 🔥 AUTO-SLIDE SUAVE Y SIN BUGS
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 3500);
+    }, 3500); // cada 3.5 segundos
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="section aceites-section">
-      <div className="section-wrapper">
+   <section className="aceites-section">
+  <div className="aceites-container-main">
 
-        <div className="aceites-container">
+    {/* IZQUIERDA */}
+    <div className="aceites-left">
+      <span className="aceites-tag">LO MÁS PEDIDO</span>
 
-          {/* IZQUIERDA */}
-          <div className="aceites-left">
-            <span className="aceites-tag">LO MÁS PEDIDO</span>
+      <h3 className="aceites-title">ACEITES CORPORALES</h3>
 
-            <h3 className="aceites-title">ACEITES CORPORALES</h3>
+      <p className="aceites-text">
+        Gracias a los aromas y fórmula de nuestros productos que eliminan
+        los malos olores y generan un ambiente característico en tu negocio.
+      </p>
 
-            <p className="aceites-text">
-              Gracias a los aromas y fórmula de nuestros productos que eliminan
-              los malos olores y generan un ambiente característico en tu negocio.
-            </p>
+      <button className="aceites-btn">
+        Ver todos nuestros productos
+      </button>
 
-            <button className="aceites-btn">
-              Ver productos
-            </button>
+      <div className="aceites-buttons">
+        <button className="icon-btn" onClick={prev}>
+          <img src={ArrowLeft} />
+        </button>
 
-            <div className="aceites-buttons">
-              <button className="icon-btn" onClick={prev}>
-                <img src={ArrowLeft} alt="Imagen anterior" />
-              </button>
-              <button className="icon-btn" onClick={next}>
-                <img src={ArrowRight} alt="Imagen siguiente" />
-              </button>
-            </div>
-          </div>
-
-          {/* IMAGEN */}
-          <div className="aceites-manual">
-            <img
-              src={images[index]}
-              key={index}
-              className="aceite-img"
-              alt={`Aceite corporal ${index + 1}`}
-            />
-
-            {/* contador opcional */}
-            <div className="aceites-counter">
-              {index + 1}/{images.length}
-            </div>
-          </div>
-
-        </div>
-
+        <button className="icon-btn" onClick={next}>
+          <img src={ArrowRight} />
+        </button>
       </div>
-    </section>
+    </div>
+
+    {/* IMAGEN MANUAL + AUTO-SLIDE */}
+    <div className="aceites-manual">
+      <img
+        src={images[index]}
+        key={index}
+        className="aceite-img"
+        alt="Aceite corporal XA'AN"
+      />
+    </div>
+
+  </div>
+</section>
+
   );
 };
 

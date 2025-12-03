@@ -8,12 +8,14 @@
   width: 100%;
   background-color: #e2d9d2;
   padding: 110px 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .who-container {
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1350px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;

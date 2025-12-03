@@ -1,36 +1,43 @@
-/* ============================= */
-/*         SECCIÓN BASE          */
-/* ============================= */
+/* ========================================= */
+/*               SECCIÓN BASE                */
+/* ========================================= */
 
-.qs-section {
+.qnw-section {
   width: 100%;
   background-color: #e2d9d2;
-  padding: 110px 0;
+  padding: 120px 0;
   display: flex;
   justify-content: center;
 }
 
-.qs-container {
-  width: 90%;
-  max-width: 1300px;
+/* ========================================= */
+/*        CONTENEDOR OFICIAL 1350px          */
+/* ========================================= */
+
+.qnw-inner {
+  width: 100%;
+  max-width: 1350px;
+  padding: 0 5%;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: 42% 58%;
-  align-items: center;
   gap: 70px;
+  align-items: center;
 }
 
-/* ============================= */
-/*             IZQUIERDA         */
-/* ============================= */
+/* ========================================= */
+/*                   IZQUIERDA               */
+/* ========================================= */
 
-.qs-left {
-  text-align: left;
+.qnw-left {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  text-align: left;
 }
 
-.qs-subtitle {
+.qnw-sub {
   font-family: "Barlow", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 2px;
@@ -38,44 +45,42 @@
   opacity: 0.9;
 }
 
-.qs-text {
+.qnw-title {
   font-family: "aviano-flare", serif;
-  font-weight: 500;
-  color: #805b4a;
   font-size: 1.3rem;
   line-height: 1.55;
+  font-weight: 500;
+  color: #805b4a;
   max-width: 380px;
 }
 
-.qs-btn {
+.qnw-btn {
   font-family: "Barlow", sans-serif;
   font-size: 0.88rem;
   padding: 10px 22px;
   background: transparent;
   border: 1px solid #805b4a;
-  color: #81492C;
+  color: #81492c;
   cursor: pointer;
-  width: fit-content;
   letter-spacing: 0.5px;
-  border-radius: 0;
   transition: 0.3s ease;
 }
 
-.qs-btn:hover {
+.qnw-btn:hover {
   background-color: #d9cdc5;
 }
 
-/* ============================= */
-/*             DERECHA           */
-/* ============================= */
+/* ========================================= */
+/*                   DERECHA                 */
+/* ========================================= */
 
-.qs-right {
+.qnw-right {
   display: flex;
-  gap: 26px;
   align-items: center;
+  gap: 26px;
 }
 
-.qs-img {
+.qnw-img {
   width: 300px;
   height: 370px;
   object-fit: cover;
@@ -83,142 +88,86 @@
   filter: brightness(0.97);
 }
 
-.img-up { transform: translateY(-70px); }
-.img-down { transform: translateY(45px); }
+.qnw-img-up {
+  transform: translateY(-70px);
+}
 
-/* ============================= */
-/*         TABLET ≤1024px        */
-/* ============================= */
+.qnw-img-down {
+  transform: translateY(45px);
+}
+
+/* ========================================= */
+/*               RESPONSIVE 1024px           */
+/* ========================================= */
 
 @media (max-width: 1024px) {
-
-  .qs-section {
+  .qnw-section {
     padding: 95px 0;
   }
 
-  .qs-container {
+  .qnw-inner {
     grid-template-columns: 1fr;
     gap: 60px;
-    justify-content: center !important;
-    align-items: center !important;
   }
 
-  .qs-left {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .qs-text {
-    font-size: 1.6rem;
+  .qnw-title {
+    font-size: 1.55rem;
     max-width: 100%;
   }
 
-  .qs-btn {
-    font-size: 0.8rem;
-    padding: 8px 126px;
+  .qnw-btn {
+    font-size: 0.82rem;
+    padding: 10px 130px;
   }
 
-  /* ========================= */
-  /*   IMÁGENES CENTRADAS     */
-  /* ========================= */
-
-  .qs-right {
-    width: 100%;
-    display: flex;
+  .qnw-right {
     flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
     gap: 30px;
-    margin: 0 auto;
-    padding: 0;
+    align-items: center;
   }
 
-  .qs-img {
-    width: 85vw;              /* ancho grande */
-    max-width: 500px;         /* 🔥 MÁS GRANDE AÚN */
+  .qnw-img {
+    width: 85vw;
+    max-width: 480px;
     height: auto;
-
-    display: block;
-    margin-left: auto;        /* 🔥 centrado absoluto */
-    margin-right: auto;       /* 🔥 centrado absoluto */
-    border-radius: 6px;
   }
 
-  /* Sin escalonados */
-  .img-up,
-  .img-down {
-    transform: none !important;
+  .qnw-img-up,
+  .qnw-img-down {
+    transform: none;
   }
 }
 
-
-
-/* ============================= */
-/*         MÓVIL ≤480px          */
-/* ============================= */
+/* ========================================= */
+/*               RESPONSIVE 480px            */
+/* ========================================= */
 
 @media (max-width: 480px) {
-
-  .qs-section {
+  .qnw-section {
     padding: 80px 0;
   }
 
- .qs-container {
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-
-  /* ========================= */
-  /*      TEXTO IZQUIERDA     */
-  /* ========================= */
-
-  .qs-text {
+  .qnw-title {
     font-size: 1rem;
-    line-height: 1.45;
-    max-width: 100%;
+    line-height: 1.48;
   }
 
-  .qs-left {
+  .qnw-btn {
+    padding: 8px 40px;
+    font-size: 0.8rem;
+  }
+
+  .qnw-right {
     gap: 20px;
   }
 
-  .qs-btn {
-    font-size: 0.8rem;
-    padding: 8px 43px;
+  .qnw-img {
+    width: 85vw;
+    max-width: 340px;
   }
 
-  /* ========================= */
-  /*   IMÁGENES — NUEVO ESTILO */
-  /* ========================= */
-
-.qs-right {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center !important;
-  align-items: center !important;
-
-  padding: 0;      /* 🔥 Elimina empujones laterales */
-  margin: 0 auto;  /* 🔥 Centra el contenedor completo */
-}
-
-
-.qs-img {
-  width: 85vw;
-  max-width: 350px;
-  height: auto;
-
-  display: block;
-  margin-left: auto;   /* 🔥 fuerza el centrado */
-  margin-right: auto;  /* 🔥 fuerza el centrado */
-}
-
-
-  /* 🔥 Sin escalonados en móvil */
-  .img-up,
-  .img-down {
-    transform: none !important;
+  .qnw-img-up,
+  .qnw-img-down {
+    transform: none;
   }
 }
-

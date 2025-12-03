@@ -6,55 +6,48 @@ import imagen2 from "../../assets/web/imagen2.webp";
 
 const WhoWeAre: React.FC = () => {
   return (
-    <section className="section who-section" id="acerca">
-      <div className="section-wrapper">
+    <section className="who-section" id="acerca">
+      <div className="who-container">
 
-        <div className="who-container">
+        {/* TEXTO IZQUIERDO */}
+        <div className="who-left">
 
-          {/* TEXTO IZQUIERDO */}
-          <div className="who-left">
+          <span className="who-tag">QUIÉNES SOMOS</span>
 
-            {/* TAG SEO */}
-            <span className="who-tag">QUIÉNES SOMOS</span>
+          <h2 className="who-title">
+            SOMOS UNA EMPRESA  
+            <br />MEXICANA DEDICADA  
+            <br />AL CUIDADO Y SALUD  
+            <br />DE LA PIEL
+          </h2>
 
-            {/* TÍTULO PRINCIPAL */}
-            <h2 className="who-title">
-              SOMOS UNA EMPRESA  
-              <br />MEXICANA DEDICADA  
-              <br />AL CUIDADO Y SALUD  
-              <br />DE LA PIEL
-            </h2>
+          <p className="who-description">
+            Nuestros productos están elaborados a base de ingredientes naturales,
+            saludables y con los más altos estándares de calidad.
+          </p>
 
-            {/* DESCRIPCIÓN */}
-            <p className="who-description">
-              Nuestros productos están elaborados a base de ingredientes naturales,
-              saludables y con los más altos estándares de calidad.
-            </p>
-
-            {/* CTA */}
-            <button className="who-button">
-              QUIERO HACER UN PEDIDO
-            </button>
-          </div>
-
-          {/* IMÁGENES */}
-          <div className="who-right">
-            <img
-              src={imagen1}
-              className="who-img img1"
-              alt="Ingredientes naturales y productos para el cuidado de la piel – XAAN"
-              loading="lazy"
-            />
-
-            <img
-              src={imagen2}
-              className="who-img img2"
-              alt="Productos mexicanos dedicados a la salud de la piel – XAAN"
-              loading="lazy"
-            />
-          </div>
-
+          <button className="who-button">
+            QUIERO HACER UN PEDIDO
+          </button>
         </div>
+
+        {/* IMÁGENES */}
+        <div className="who-right">
+          <img
+            src={imagen1}
+            className="who-img img1"
+            alt="Ingredientes naturales y productos para el cuidado de la piel – XAAN"
+            loading="lazy"
+          />
+
+          <img
+            src={imagen2}
+            className="who-img img2"
+            alt="Productos mexicanos dedicados a la salud de la piel – XAAN"
+            loading="lazy"
+          />
+        </div>
+
       </div>
     </section>
   );

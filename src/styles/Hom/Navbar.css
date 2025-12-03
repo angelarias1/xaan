@@ -18,13 +18,16 @@
 
 /* BOTÓN MENU (≡) */
 .nav-menu-btn {
+  position: relative;     /* 🔥 NECESARIO PARA QUE top/left FUNCIONEN */
+  left: 60px;             /* ➜ muévelo aquí */
+  top: 5px;               /* ➜ muévelo aquí */
+
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-
   outline: none !important;
-  transition: transform 0.35s ease;  /* efecto suave */
+  transition: transform 0.35s ease;
 }
 
 .nav-menu-btn:focus {
@@ -42,13 +45,10 @@
 
 /* ICONO MENU */
 .menu-img {
-  width: 28px;
+  width: 38px;
+  height: 38px;
   opacity: 0.85;
-
-  display: block;   /* elimina márgenes invisibles alrededor */
-  margin: 0;
-  padding: 0;
-  border: none;
+  display: block;
   object-fit: contain;
 }
 
@@ -117,7 +117,7 @@
 
   position: absolute;
   top: 10%;
-  left: 290px;
+  left: 200px;
   background: none;
   border: none;
   cursor: pointer;

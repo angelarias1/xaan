@@ -1,24 +1,21 @@
-/* =============================== */
-/*      SECCIÓN ACEITES            */
-/* =============================== */
+/* ====================================== */
+/* SECCIÓN ACEITES — ESTRECHA Y ELEGANTE  */
+/* ====================================== */
 
 .aceites-section {
   width: 100%;
   background: #e2d9d2;
-  padding: 90px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
 }
 
-/* CONTENEDOR CENTRAL — 1350px */
-.section-wrapper,
-.aceites-container {
+/* CONTENEDOR ESTRECHO */
+.aceites-container-main {
   width: 100%;
-  max-width: 1350px;      /* 🔥 Se corrige a 1350px */
+  max-width: 1350px;
   margin: 0 auto;
-}
-
-.aceites-container {
+  padding: 0 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -29,11 +26,11 @@
 
 .aceites-tag {
   font-family: "Barlow", sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 2px;
   color: #805b4a;
   opacity: 0.9;
-  margin-bottom: 90px;
+  margin-bottom: 6px;
   margin-top: -6px;
 }
 
@@ -43,88 +40,71 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  max-width: 480px;
+  max-width: 420px; 
 }
 
 .aceites-title {
   font-family: "aviano-flare", serif;
   font-weight: 400;
   color: #805b4a;
-  font-size: 2rem;
-  margin-bottom: 14px;
+  font-size: 1.9rem;   
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 
 .aceites-text {
   font-family: "Barlow", sans-serif;
   color: rgba(0,0,0,0.55);
-  line-height: 1.6;
-  margin-bottom: 28px;
-  font-size: 1.05rem;
-  max-width: 380px;
+  line-height: 1.55;
+  margin-bottom: 26px;
+  font-size: 1rem;
+  max-width: 360px;
 }
 
 /* ------------------ BOTÓN PRINCIPAL ------------------ */
 
 .aceites-btn {
-  padding: 12px 32px;
+  padding: 12px 30px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
   cursor: pointer;
+  border-radius: 0;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
-  font-size: 0.95rem;
-  border-radius: 0;
-  transition: background-color .35s, box-shadow .35s, transform .25s;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
 }
 
 .aceites-btn:hover {
   background-color: rgba(217, 204, 196, 0.85);
-  border-color: #70503f;
-  box-shadow: 0 0 18px rgba(128, 91, 74, 0.25);
 }
 
-.aceites-btn:active {
-  transform: scale(0.95);
-}
-
-/* ------------------ BOTONES MINI ------------------ */
+/* ------------------ BOTONES MINI (AUMENTADOS) ------------------ */
 
 .aceites-buttons {
   display: flex;
-  gap: 14px;
-  margin-top: 15px;
+  gap: 12px;
+  margin-top: 14px;
 }
 
 .icon-btn {
-  width: 55px;
-  height: 26px;
+  width: 50px;     /* ✔ más grande */
+  height: 26px;    /* ✔ más grande */
   border: 1px solid #805b4a;
   background: transparent;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform .25s, box-shadow .3s, border-color .3s;
-}
-
-.icon-btn:hover {
-  box-shadow: 0 0 12px rgba(117, 42, 8, 0.25);
-  border-color: #9f7863;
-}
-
-.icon-btn:active {
-  transform: scale(0.88);
 }
 
 .icon-btn img {
-  width: 100%;
-  pointer-events: none;
+  width: 16px;     /* ✔ flecha más grande */
+  height: auto;
+  opacity: 0.9;
 }
 
-/* ------------------ IMAGEN MANUAL ------------------ */
+/* ------------------ IMAGEN DERECHA (AUMENTADA) ------------------ */
 
 .aceites-manual {
   width: 100%;
@@ -133,124 +113,98 @@
   align-items: center;
 }
 
-/* 🔥 LAS IMÁGENES YA NO SE CORTAN */
 .aceite-img {
-  width: 100%;          
-  max-width: 480px;      /* antes era fijo → AHORA mantiene proporción */
-  height: auto;          /* 🔥 NO se recorta NUNCA */
-  object-fit: contain;   /* 🔥 se muestra COMPLETA */
+  width: 230px;    /* ✔ imagen más grande */
+  height: 280px;   /* ✔ sigue proporcionada */
+  object-fit: contain !important;
+
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.94);
   animation: fadePop 0.6s ease forwards;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.22));
 }
 
 @keyframes fadePop {
-  0% { opacity: 0; transform: scale(0.92); }
+  0% { opacity: 0; transform: scale(0.88); }
   100% { opacity: 1; transform: scale(1); }
 }
 
 /* =============================== */
-/*           TABLET 1024px         */
+/*     RESPONSIVE TABLET 1024px    */
 /* =============================== */
 
 @media (max-width: 1024px) {
-
-  .aceites-section {
-    padding: 70px 0;
-  }
-
-  .aceites-container {
+  .aceites-container-main {
+    max-width: 650px;
     grid-template-columns: 1fr;
-    gap: 50px;
-    justify-items: center;
+    gap: 45px;
   }
 
   .aceites-left {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-    align-items: flex-start;
+    max-width: 500px;
   }
 
-  .aceites-tag {
-    width: 100%;
-    margin-bottom: 25px;
-    margin-top: 0;
-  }
-
-  .aceites-title {
-    font-size: 2.2rem;
-  }
-
-  .aceites-text {
-    max-width: 100%;
-    font-size: 1.3rem;
-  }
-
-  .aceites-btn {
-    font-size: 1rem;
-    padding: 10px 170px;
-  }
-
-  /* 🔥 Mantener imagen completa */
   .aceite-img {
-    max-width: 360px;
-    height: auto;
+    width: 200px;
+    height: 240px;
   }
 }
 
 /* =============================== */
-/*           MÓVIL 480px           */
+/*        RESPONSIVE 768px         */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+  .aceites-title {
+    font-size: 1.7rem;
+  }
+
+  .aceites-text {
+    font-size: 0.95rem;
+  }
+
+  .aceite-img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* =============================== */
+/*        RESPONSIVE 480px         */
 /* =============================== */
 
 @media (max-width: 480px) {
 
-  .aceites-section {
-    padding: 55px 0;
-  }
-
-  .aceites-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .aceites-left {
-    max-width: 300px;
-    align-items: flex-start;
-    margin: 0 auto;
-  }
-
-  .aceites-tag {
-    font-size: 0.7rem;
-    margin-bottom: 18px;
+    max-width: 280px;
   }
 
   .aceites-title {
     font-size: 1.45rem;
-    line-height: 1.25;
   }
 
   .aceites-text {
-    font-size: 0.8rem;
-    line-height: 1.45;
-    max-width: 300px;
+    font-size: 0.82rem;
   }
 
-  /* 🔥 Mantener imagen completa */
   .aceite-img {
-    max-width: 260px;
-    height: auto;
+    width: 150px;
+    height: 180px;
   }
 
   .aceites-btn {
-    font-size: 0.61rem;
-    padding: 10px 100px;
+    font-size: 0.75rem;
+    padding: 8px 18px;
   }
 
   .icon-btn {
-    width: 45px;
+    width: 42px;
     height: 22px;
+  }
+
+  .icon-btn img {
+    width: 14px;
   }
 }

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "../../styles/Hom/WhySection.css";
 
-const items = [
+interface FAQItem {
+  title: string;
+  content: string;
+}
+
+const faqData: FAQItem[] = [
   {
     title: "Nuestros productos son de origen vegetal",
     content:
@@ -30,57 +35,56 @@ const items = [
 ];
 
 const WhySection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [active, setActive] = useState<number | null>(null);
 
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleOpen = (index: number) => {
+    setActive(active === index ? null : index);
   };
 
   return (
-    <section className="section why-section">
-      <div className="section-wrapper">
+    <section className="nw-why">
+      <div className="nw-why-inner">
 
-        <div className="why-container">
-
-          {/* IZQUIERDA */}
-          <div className="why-left">
-            <h3 className="why-title">
-              ¿POR QUÉ COMPRAR LOS
-              <br />
-              PRODUCTOS DE XA’AN
-              <br />
-              SKIN CARE?
-            </h3>
-          </div>
-
-          {/* DERECHA — ACCORDION */}
-          <div className="why-right">
-            {items.map((item, index) => (
-              <div key={index} className="why-item">
-
-                <button className="why-button" onClick={() => toggle(index)}>
-                  <span>{item.title}</span>
-
-                  {/* flecha */}
-                  <span className={`arrow ${openIndex === index ? "open" : ""}`}>
-                    ▾
-                  </span>
-                </button>
-
-                <div
-                  className={`why-content ${openIndex === index ? "show" : ""}`}
-                >
-                  <p>{item.content}</p>
-                </div>
-
-                {/* línea separadora */}
-                <span className="why-line"></span>
-              </div>
-            ))}
-          </div>
-
+        {/* IZQUIERDA */}
+        <div className="nw-why-left">
+          <h3 className="nw-why-title">
+            ¿POR QUÉ COMPRAR LOS <br />
+            PRODUCTOS DE XA’AN <br />
+            SKIN CARE?
+          </h3>
         </div>
 
+        {/* DERECHA */}
+        <div className="nw-why-right">
+          {faqData.map((item, index) => (
+            <div key={index} className="nw-why-block">
+
+              <button
+                className="nw-why-btn"
+                onClick={() => toggleOpen(index)}
+              >
+                <span className="nw-why-btn-text">{item.title}</span>
+
+                <span
+                  className={`nw-arrow ${active === index ? "nw-open" : ""}`}
+                >
+                  ▾
+                </span>
+              </button>
+
+              <div
+                className={`nw-why-content ${
+                  active === index ? "nw-visible" : ""
+                }`}
+              >
+                <p>{item.content}</p>
+              </div>
+
+              <div className="nw-line"></div>
+
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

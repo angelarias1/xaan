@@ -6,15 +6,14 @@ import imgChica from "../../assets/web/imagen7.webp";
 
 const QuienesSomos: React.FC = () => {
   return (
-    <section className="section qs-section">
+    <section className="qnw-section">
+      <div className="qnw-inner">
 
-      <div className="section-wrapper qs-container">
+        {/* IZQUIERDA */}
+        <div className="qnw-left">
+          <span className="qnw-sub">¿QUIÉNES SOMOS?</span>
 
-        {/* TEXTO */}
-        <div className="qs-left">
-          <span className="qs-subtitle">¿QUIÉNES SOMOS?</span>
-
-          <h3 className="qs-text">
+          <h3 className="qnw-title">
             NUESTRA FINALIDAD ES <br />
             PROTEGER LA PIEL DE <br />
             NUESTROS CLIENTES DE <br />
@@ -25,32 +24,29 @@ const QuienesSomos: React.FC = () => {
             TECNOLOGÍA DE PUNTA.
           </h3>
 
-          <button className="qs-btn">
+          <button className="qnw-btn">
             Ver catálogo de los dispensadores
           </button>
         </div>
 
-        {/* IMÁGENES */}
-        <div className="qs-right">
-
-          <img 
-            src={imgGrande} 
-            className="qs-img img-up"
-            alt="Productos de XA'AN Skin Care en presentación profesional"
+        {/* DERECHA */}
+        <div className="qnw-right">
+          <img
+            src={imgGrande}
+            alt="Imagen principal XA’AN Skin Care"
+            className="qnw-img qnw-img-up"
             loading="lazy"
           />
 
-          <img 
-            src={imgChica} 
-            className="qs-img img-down"
-            alt="Botellas y envases para el cuidado de la piel de XA'AN"
+          <img
+            src={imgChica}
+            alt="Imagen secundaria productos XA’AN"
+            className="qnw-img qnw-img-down"
             loading="lazy"
           />
-          
         </div>
 
       </div>
-
     </section>
   );
 };
