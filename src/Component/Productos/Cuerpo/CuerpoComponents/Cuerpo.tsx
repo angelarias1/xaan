@@ -9,9 +9,9 @@ const Cuerpo: React.FC = () => {
         {/* IZQUIERDA — TÍTULO */}
         <div className="cu-left">
           <h2 className="cu-title">
-            ESENCIAS QUE <br />
-            NUTREN EL <br />
-            ALMA
+            Belleza<br />
+            NATURAL PARA <br />
+            TU CUERPO
           </h2>
         </div>
 
@@ -31,9 +31,8 @@ const Cuerpo: React.FC = () => {
           </button>
 
           <div className="cu-links">
-            <a href="#">AROMATIZANTE DE BLANCOS <span>↗</span></a>
-            <a href="#">AROMATIZANTE DE AMBIENTES <span>↗</span></a>
-            <a href="#">DIFUSORES <span>↗</span></a>
+            <a href="#">FACIAL <span>↗</span></a>
+            <a href="#">CORPORAL <span>↗</span></a>
           </div>
 
         </div>

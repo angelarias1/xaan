@@ -50,7 +50,7 @@
 
 /* NOMBRE */
 .ac-name {
-  font-family: "Marcellus", serif;
+  font-family: "aviano-flare", serif;
   font-size: 1.45rem;
   line-height: 1.3;
   margin-bottom: 18px;
@@ -97,4 +97,87 @@
 /* 🔥 Hace que el <Link> no rompa el layout */
 .ac-card a {
   display: block;
+}
+
+/* ===================================================== */
+/* ================== TABLET 1024px ==================== */
+/* ===================================================== */
+
+@media (max-width: 1024px) {
+
+  .ac-section {
+    padding: 70px 0;
+  }
+
+  .ac-container {
+    grid-template-columns: 1fr;   /* UNA CARD */
+    width: 100%;
+    gap: 45px;
+    justify-items: center;        /* CENTRA LAS CARDS */
+  }
+
+  .ac-card {
+    width: 420px;                 /* 🔥 CARD más grande */
+    margin: 0 auto;
+  }
+
+  .ac-img {
+    width: 100%;
+    height: 420px;                /* 🔥 Imagen más grande */
+    object-fit: cover;
+  }
+
+  .ac-order {
+    width: 100%;                  /* MISMO ANCHO QUE LA CARD */
+    margin: 0 auto;
+  }
+
+  .ac-name {
+    font-size: 1.45rem;
+  }
+}
+
+/* ===================================================== */
+/* =================== MÓVIL 480px ===================== */
+/* ===================================================== */
+
+@media (max-width: 480px) {
+
+  .ac-section {
+    padding: 60px 0;
+  }
+
+  .ac-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 32px;
+    justify-items: center;
+  }
+
+  .ac-card {
+    width: 340px;                /* 🔥 CARD más ancha */
+    margin: 0 auto;
+  }
+
+  .ac-img {
+    width: 100%;
+    height: 360px;               /* 🔥 Imagen aumentada */
+    object-fit: cover;
+  }
+
+  .ac-name {
+    font-size: 1.3rem;
+  }
+
+  .ac-options button {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .ac-order {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.85rem;
+    margin: 0 auto;
+  }
 }

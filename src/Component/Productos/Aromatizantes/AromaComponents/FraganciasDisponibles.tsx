@@ -12,37 +12,38 @@ const FraganciasDisponibles: React.FC = () => {
 
           {/* COLUMNA 1 */}
           <ul className="fd-col">
-            <li>Sándalo con toque de vainilla.</li>
-            <li>Sándalo con lavanda.</li>
-            <li>Té blanco</li>
-            <li>Brisas del mar.</li>
-            <li>Plátano</li>
-            <li>Melón</li>
-            <li>Brisas orientales</li>
-            <li>Fusión de cítricos.</li>
+           <li>SÁNDALO CON TOQUE DE VAINILLA.</li>
+  <li>SÁNDALO CON LAVANDA.</li>
+  <li>TÉ BLANCO</li>
+  <li>BRISAS DEL MAR.</li>
+  <li>PLÁTANO</li>
+  <li>MELÓN</li>
+  <li>BRISAS ORIENTALES</li>
+  <li>FUSIÓN DE CÍTRICOS.</li>
           </ul>
 
           {/* COLUMNA 2 */}
           <ul className="fd-col">
-            <li>Lavanda con palo de rosa.</li>
-            <li>Lavanda y romero</li>
-            <li>Jojoba y macadamia</li>
-            <li>Té verde miel y rosas</li>
-            <li>Hierbas mexicanas</li>
-            <li>Menta</li>
-            <li>Aguacate</li>
-            <li>Mamey</li>
+              <li>LAVANDA CON PALO DE ROSA.</li>
+  <li>LAVANDA Y ROMERO</li>
+  <li>JOJOBA Y MACADAMIA</li>
+  <li>TÉ VERDE MIEL Y ROSAS</li>
+  <li>HIERBAS MEXICANAS</li>
+  <li>MENTA</li>
+  <li>AGUACATE</li>
+  <li>MAMEY</li>
+
           </ul>
 
           {/* COLUMNA 3 */}
           <ul className="fd-col">
-            <li>Aloe vera y pepino</li>
-            <li>Limón lavanda. Aloe vera</li>
-            <li>Cítricos.</li>
-            <li>Menta y eucalipto</li>
-            <li>Coco</li>
-            <li>Aceite de manzanilla</li>
-            <li>Aceite de avellana</li>
+            <li>ALOE VERA Y PEPINO</li>
+  <li>LIMÓN LAVANDA. ALOE VERA</li>
+  <li>CÍTRICOS.</li>
+  <li>MENTA Y EUCALIPTO</li>
+  <li>COCO</li>
+  <li>ACEITE DE MANZANILLA</li>
+  <li>ACEITE DE AVELLANA</li>
           </ul>
 
         </div>

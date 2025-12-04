@@ -13,6 +13,9 @@ import Producto2Aromatizante from "./Component/Productos/Aromatizantes/AromaComp
 import Producto3Aromatizante from "./Component/Productos/Aromatizantes/AromaComponents/Productos/AromaDifusor";
 import CuerpoPage from "./Component/Productos/Cuerpo/CuerpoComponents/CuerpoPages";
 import AceitesPage from "./Component/Productos/Aceites/AceitesComponents/AceitesPages";
+import Cuerpo1 from "./Component/Productos/Cuerpo/CuerpoComponents/Productos/Cuerpo1";
+import Cuerpo2 from "./Component/Productos/Cuerpo/CuerpoComponents/Productos/Cuerpo2";
+import Cuerpo3 from "./Component/Productos/Cuerpo/CuerpoComponents/Productos/Cuerpo3";
 
 function App() {
   return (
@@ -34,6 +37,13 @@ function App() {
         <Route path="/aromatizantes/blancos" element={<Producto1Aromatizante />} />
         <Route path="/aromatizantes/ambientes" element={<Producto2Aromatizante />} />
         <Route path="/aromatizantes/difusores" element={<Producto3Aromatizante />} />
+
+        <Route path="/cuerpo1" element={<Cuerpo1 />} />
+        <Route path="/cuerpo2" element={<Cuerpo2 />} />
+        <Route path="/cuerpo3" element={<Cuerpo3 />} />
+
+
+
 
 
       </Routes>

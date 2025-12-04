@@ -2,7 +2,7 @@
 /* SECCIÓN GENERAL */
 /* ================================ */
 
-.p1-section {
+.p2-section {
   width: 90%;
   background-color: #e2d9d2;
   padding: 120px 0;
@@ -11,7 +11,7 @@
 }
 
 /* CONTENEDOR 1350px */
-.p1-container {
+.p2-container {
   width: 90%;
   max-width: 1350px;
   margin: 0 auto;
@@ -26,13 +26,13 @@
 /* IZQUIERDA */
 /* ================================ */
 
-.p1-left {
+.p2-left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.p1-img {
+.p2-img {
   width: 500px;   /* 🔥 Imagen más pequeña */
   height: auto;
   object-fit: contain;
@@ -42,19 +42,19 @@
 /* DERECHA */
 /* ================================ */
 
-.p1-back {
+.p2-back {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 18px;
 }
 
-.p1-arrow {
+.p2-arrow {
   width: 16px;
   opacity: 0.9;
 }
 
-.p1-back-link {
+.p2-back-link {
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   font-size: 0.9rem;
@@ -62,12 +62,12 @@
   border-bottom: 1px solid #805b4a;
 }
 
-.p1-back-link:hover {
+.p2-back-link:hover {
   opacity: 0.7;
 }
 
 /* TÍTULO */
-.p1-title {
+.p2-title {
   font-family: "aviano-flare", serif;
   font-size: 2.8rem;
   color: #805b4a;
@@ -76,7 +76,7 @@
 }
 
 /* TEXTO */
-.p1-text {
+.p2-text {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   line-height: 1.55;
@@ -86,7 +86,7 @@
 }
 
 /* BOTÓN */
-.p1-btn {
+.p2-btn {
   padding: 12px 26px;
   width: 270px;
   border: 1px solid #805b4a;
@@ -98,12 +98,12 @@
   margin-bottom: 36px;
 }
 
-.p1-btn:hover {
+.p2-btn:hover {
   background-color: #d4c7bf;
 }
 
 /* DROPDOWN */
-.p1-dropdown {
+.p2-dropdown {
   width: 100%;
   border-top: 1px solid #805b4a;
   padding-top: 12px;
@@ -119,7 +119,7 @@
   cursor: pointer;
 }
 
-.p1-drop-arrow {
+.p2-drop-arrow {
   font-size: 1.3rem;
 }
 
@@ -128,30 +128,30 @@
 /* ================================ */
 
 @media (max-width: 1024px) {
-  .p1-container {
+  .p2-container {
     grid-template-columns: 1fr;
     text-align: left;
   }
 
-  .p1-left {
+  .p2-left {
     text-align: center;
   }
 
-  .p1-img {
+  .p2-img {
     width: 260px;  /* 🔥 más pequeño y limpio en tablet */
   }
 }
 
 @media (max-width: 480px) {
-  .p1-title {
+  .p2-title {
     font-size: 1.9rem;
   }
 
-  .p1-img {
+  .p2-img {
     width: 220px; /* 🔥 tamaño ideal en móvil */
   }
 
-  .p1-btn {
+  .p2-btn {
     width: 100%;
   }
 }

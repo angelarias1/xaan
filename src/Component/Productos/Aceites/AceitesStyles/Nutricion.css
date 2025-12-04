@@ -27,14 +27,13 @@
 /*                 IZQUIERDA             */
 /* ===================================== */
 
-.nu-left { }
-
 .nu-title {
   font-family: "aviano-flare", serif;
   font-size: 2.6rem;
   color: #805b4a;
   line-height: 1.1;
   letter-spacing: 1px;
+  margin-top: -190px;   /* igual que CU y PF */
 }
 
 /* ===================================== */
@@ -48,10 +47,13 @@
   line-height: 1.55;
   max-width: 420px;
   margin-bottom: 28px;
+
+  margin-left: auto;       /* 🔥 texto alineado a la derecha */
+  text-align: justify;
 }
 
 .nu-btn {
-  padding: 14px 32px;
+  padding: 10px 80px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
@@ -62,6 +64,9 @@
   letter-spacing: 1px;
   
   transition: 0.25s ease;
+
+  display: block;
+  margin-left: 200px;      /* 🔥 botón a la derecha igual que CU & PF */
 }
 
 .nu-btn:hover {
@@ -73,7 +78,12 @@
 /* ===================================== */
 
 .nu-links {
+  width: 70%;           /* 🔥 estrecho igual que CU & PF */
+  max-width: 420px;
   margin-top: 22px;
+
+  margin-left: auto;     /* 🔥 alineado a la DERECHA */
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -81,13 +91,13 @@
 
 .nu-links a {
   font-family: "Barlow", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #805b4a;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 
   border-bottom: 1px solid #805b4a;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 
   display: flex;
   justify-content: space-between;
@@ -98,43 +108,82 @@
 
 .nu-links a:hover {
   opacity: 0.75;
-  padding-left: 4px;
+  padding-left: 3px;
 }
 
 .nu-links span {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* ===================================== */
 /*              RESPONSIVE               */
 /* ===================================== */
 
+/* ============ TABLET 1024px ============ */
 @media (max-width: 1024px) {
+
+  .nu-section {
+    padding: 90px 0;
+  }
+
   .nu-container {
     grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 40px;
+    text-align: left;
   }
 
   .nu-title {
-    font-size: 2.2rem;
+    margin-top: 0;
+    font-size: 2.3rem;
+    text-align: center;
   }
 
   .nu-text {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .nu-btn {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .nu-links {
+    margin-left: 0;
+    width: 100%;
     max-width: 100%;
   }
 }
 
+/* ============ MÓVIL 480px ============ */
 @media (max-width: 480px) {
+
+  .nu-section {
+    padding: 70px 0;
+  }
+
   .nu-title {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .nu-text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .nu-btn {
+    padding: 10px 40px;
+    font-size: 0.85rem;
+    margin: 0 auto;     /* CENTRADO EN MÓVIL */
+  }
+
+  .nu-links {
+    gap: 12px;
     width: 100%;
-    padding: 12px 0;
+  }
+
+  .nu-links a {
+    font-size: 0.8rem;
   }
 }

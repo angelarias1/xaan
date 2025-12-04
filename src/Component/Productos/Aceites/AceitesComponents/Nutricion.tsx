@@ -9,9 +9,9 @@ const Nutricion: React.FC = () => {
         {/* IZQUIERDA — TÍTULO */}
         <div className="nu-left">
           <h2 className="nu-title">
-            ESENCIAS QUE <br />
-            NUTREN EL <br />
-            ALMA
+            NUTRICIÓN Y<br />
+            CUIDADO PARA<br />
+            TU PIEL
           </h2>
         </div>
 

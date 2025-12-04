@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "../CuerpoStyles/ProductosCuerpo.css";
 
 // IMPORTA TUS 6 IMÁGENES
-import img1 from "../../../../assets/web/imagen5.webp";
+import img1 from "../../../../assets/web/imagen10.webp";
 import img2 from "../../../../assets/web/imagen5.webp";
-import img3 from "../../../../assets/web/imagen5.webp";
-import img4 from "../../../../assets/web/imagen5.webp";
+import img3 from "../../../../assets/web/imagen6.webp";
+import img4 from "../../../../assets/web/imagen10.webp";
 import img5 from "../../../../assets/web/imagen5.webp";
-import img6 from "../../../../assets/web/imagen5.webp";
+import img6 from "../../../../assets/web/imagen6.webp";
 
 const ProductosCuer: React.FC = () => {
   return (
@@ -17,13 +17,13 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 1 */}
         <article className="cuer-card">
-          <Link to="/cuer/1">
+          <Link to="/cuerpo1">
             <img src={img1} alt="Producto corporal 1" className="cuer-img" />
           </Link>
 
           <span className="cuer-cat">CUERPO</span>
 
-          <h3 className="cuer-name">PRODUCTO 1</h3>
+          <h3 className="cuer-name">SHAMPOO REPARACIÓN</h3>
 
           <span className="cuer-sub">PRESENTACIONES</span>
 
@@ -38,13 +38,13 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 2 */}
         <article className="cuer-card">
-          <Link to="/cuer/2">
+          <Link to="/cuerpo2">
             <img src={img2} alt="Producto corporal 2" className="cuer-img" />
           </Link>
 
           <span className="cuer-cat">CUERPO</span>
 
-          <h3 className="cuer-name">PRODUCTO 2</h3>
+          <h3 className="cuer-name">CREMA CORPORAL</h3>
 
           <span className="cuer-sub">PRESENTACIONES</span>
 
@@ -59,13 +59,13 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 3 */}
         <article className="cuer-card">
-          <Link to="/cuer/3">
+          <Link to="/cuerpo3">
             <img src={img3} alt="Producto corporal 3" className="cuer-img" />
           </Link>
 
           <span className="cuer-cat">CUERPO</span>
 
-          <h3 className="cuer-name">PRODUCTO 3</h3>
+          <h3 className="cuer-name">ACONDICIONADOR REPARADOR</h3>
 
           <span className="cuer-sub">PRESENTACIONES</span>
 
@@ -86,7 +86,7 @@ const ProductosCuer: React.FC = () => {
 
           <span className="cuer-cat">CUERPO</span>
 
-          <h3 className="cuer-name">PRODUCTO 4</h3>
+          <h3 className="cuer-name">BODY WASH</h3>
 
           <span className="cuer-sub">PRESENTACIONES</span>
 
@@ -107,7 +107,7 @@ const ProductosCuer: React.FC = () => {
 
           <span className="cuer-cat">CUERPO</span>
 
-          <h3 className="cuer-name">PRODUCTO 5</h3>
+          <h3 className="cuer-name">AGUA MICELAR</h3>
 
           <span className="cuer-sub">PRESENTACIONES</span>
 

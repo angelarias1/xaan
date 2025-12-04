@@ -29,10 +29,11 @@
 
 .cu-title {
   font-family: "aviano-flare", serif;
-  font-size: 2.6rem;
+  font-size: 2.7rem;
   color: #805b4a;
   line-height: 1.1;
   letter-spacing: 1px;
+  margin-top: -190px;
 }
 
 /* ===================================== */
@@ -42,14 +43,17 @@
 .cu-text {
   font-family: "Barlow", sans-serif;
   color: rgba(0,0,0,0.65);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.55;
   max-width: 420px;
   margin-bottom: 28px;
+
+  margin-left: auto; 
+  text-align: justify;
 }
 
 .cu-btn {
-  padding: 14px 32px;
+  padding: 10px 80px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
@@ -60,6 +64,9 @@
   letter-spacing: 1px;
 
   transition: 0.25s ease;
+
+  display: block;         
+  margin-left: 200px; 
 }
 
 .cu-btn:hover {
@@ -71,7 +78,12 @@
 /* ===================================== */
 
 .cu-links {
+  width: 70%;
+  max-width: 420px;
   margin-top: 22px;
+
+  margin-left: auto;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -79,13 +91,13 @@
 
 .cu-links a {
   font-family: "Barlow", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #805b4a;
   text-decoration: none;
-  letter-spacing: 1px;
-
+  letter-spacing: 0.8px;
+  
   border-bottom: 1px solid #805b4a;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 
   display: flex;
   justify-content: space-between;
@@ -96,43 +108,85 @@
 
 .cu-links a:hover {
   opacity: 0.75;
-  padding-left: 4px;
+  padding-left: 3px;
 }
 
 .cu-links span {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* ===================================== */
 /*              RESPONSIVE               */
 /* ===================================== */
 
+/* ============ TABLET 1024px ============ */
 @media (max-width: 1024px) {
+
+  .cu-section {
+    padding: 90px 0;
+  }
+
   .cu-container {
-    grid-template-columns: 1fr;
-    gap: 45px;
+    grid-template-columns: 1fr;   /* UNA COLUMNA */
+    gap: 40px;
+    text-align: left;
   }
 
   .cu-title {
-    font-size: 2.2rem;
+    margin-top: 0;       /* Se corrige el desplazamiento */
+    font-size: 2.4rem;
+    text-align: center;
   }
 
   .cu-text {
-   max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .cu-title {
-    font-size: 1.7rem;
-  }
-
-  .cu-text {
-    font-size: 0.85rem;
+    margin-left: 0;
+    text-align: justify;
+    max-width: 100%;
   }
 
   .cu-btn {
+    margin-left: 0;
+    margin-right: auto; 
+  }
+
+  .cu-links {
+    margin-left: 0;
     width: 100%;
-    padding: 12px 0;
+    max-width: 100%;
+  }
+}
+
+/* ============ MÓVIL 480px ============ */
+@media (max-width: 480px) {
+
+  .cu-section {
+    padding: 70px 0;
+  }
+
+  .cu-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cu-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .cu-btn {
+    padding: 10px 40px;
+    font-size: 0.85rem;
+    margin: 0 auto;     /* CENTRADO EN MÓVIL */
+  }
+
+  .cu-links {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cu-links a {
+    font-size: 0.8rem;
+    padding-bottom: 3px;
   }
 }

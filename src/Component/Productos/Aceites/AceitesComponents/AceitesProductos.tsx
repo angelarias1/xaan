@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../AceitesStyles/AceitesProductos.css";
 
-import img1 from "../../../../assets/web/Blanco.webp";
-import img2 from "../../../../assets/web/Ambiente.webp";
-import img3 from "../../../../assets/web/Difusor.webp";
+import img1 from "../../../../assets/web/imagen10.webp";
+import img2 from "../../../../assets/web/imagen5.webp";
+import img3 from "../../../../assets/web/imagen6.webp";
 
 const AceitesProductos: React.FC = () => {
   return (

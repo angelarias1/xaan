@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../AromaStyles/ProductosStyles/AromaBlanco.css";
+import "../../AromaStyles/ProductosStyles/AromasProductos.css";
 
 import imgAroma from "../../../../../assets/web/Blanco.webp";
 import flecha from "../../../../../assets/web/izquierda.webp";

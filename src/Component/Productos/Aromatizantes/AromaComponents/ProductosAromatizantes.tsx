@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../AromaStyles/ProductosAromatizantes.css";
 
-import img1 from "../../../../assets/web/Blanco.webp";
-import img2 from "../../../../assets/web/Ambiente.webp";
-import img3 from "../../../../assets/web/Difusor.webp";
+import img1 from "../../../../assets/web/AB.webp";
+import img2 from "../../../../assets/web/AA.webp";
+import img3 from "../../../../assets/web/Difusor1.webp";
 
 const ProductosAromatizantes: React.FC = () => {
   return (

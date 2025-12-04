@@ -1,52 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../AromaStyles/ProductosStyles/AromaBlanco.css";
+import "../../CuerpoStyles/ProductosStyles/CuerpoProductos.css";
 
 import imgAroma from "../../../../../assets/web/Difusor.webp";
 import flecha from "../../../../../assets/web/izquierda.webp";
 import NuevaSeccion from "../../../../Hom/NuevaSeccion";
 
-const Producto3Aromatizante: React.FC = () => {
+const Cuerpo2: React.FC = () => {
   return (
     <>
-      <section className="p1-section">
-        <div className="p1-container">
+      <section className="p2-section">
+        <div className="p2-container">
 
           {/* IZQUIERDA */}
-          <div className="p1-left">
-            <img src={imgAroma} alt="Difusor Aromático" className="p1-img" />
+          <div className="p2-left">
+            <img src={imgAroma} alt="Difusor Aromático" className="p2-img" />
           </div>
 
           {/* DERECHA */}
-          <div className="p1-right">
+          <div className="p2-right">
 
             {/* REGRESAR */}
-            <div className="p1-back">
-              <img src={flecha} alt="volver" className="p1-arrow" />
-              <Link to="/aromatizantes" className="p1-back-link">
+            <div className="p2-back">
+              <img src={flecha} alt="volver" className="p2-arrow" />
+              <Link to="/aromatizantes" className="p2-back-link">
                 Aromatizantes
               </Link>
             </div>
 
             {/* TÍTULO */}
-            <h2 className="p1-title">
+            <h2 className="p2-title">
               DIFUSORES <br /> AROMÁTICOS
             </h2>
 
             {/* TEXTO */}
-            <p className="p1-text">
+            <p className="p2-text">
               Nuestros difusores liberan fragancias de manera constante y elegante.
               Ideales para crear ambientes que transmiten serenidad, lujo y bienestar
               sin necesidad de aerosoles o intervención manual.
             </p>
 
             {/* BOTÓN */}
-            <button className="p1-btn">Quiero hacer un pedido</button>
+            <button className="p2-btn">Quiero hacer un pedido</button>
 
             {/* DROPDOWN */}
-            <div className="p1-dropdown">
+            <div className="p2-dropdown">
               <span>MODO DE USO</span>
-              <span className="p1-drop-arrow">⌄</span>
+              <span className="p2-drop-arrow">⌄</span>
             </div>
 
           </div>
@@ -58,4 +58,4 @@ const Producto3Aromatizante: React.FC = () => {
   );
 };
 
-export default Producto3Aromatizante;
+export default Cuerpo2;
