@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../CuerpoStyles/ProductosStyles/CuerpoProductos.css";
 
-import imgAroma from "../../../../../assets/web/Difusor.webp";
+import imgAroma from "../../../../../assets/web/imagen5.webp";
 import flecha from "../../../../../assets/web/izquierda.webp";
 import NuevaSeccion from "../../../../Hom/NuevaSeccion";
 
@@ -23,8 +23,8 @@ const Cuerpo2: React.FC = () => {
             {/* REGRESAR */}
             <div className="p2-back">
               <img src={flecha} alt="volver" className="p2-arrow" />
-              <Link to="/aromatizantes" className="p2-back-link">
-                Aromatizantes
+              <Link to="/cuerpos" className="p2-back-link">
+                Cuerpos
               </Link>
             </div>
 

@@ -6,18 +6,18 @@ import imgAroma from "../../../../../assets/web/imagen6.webp";
 import flecha from "../../../../../assets/web/izquierda.webp";
 import NuevaSeccion from "../../../../Hom/NuevaSeccion";
 
-const Cuerpo3: React.FC = () => {
+const Cuerpo6: React.FC = () => {
   return (
     <>
       <section className="p2-section">
         <div className="p2-container">
 
-          {/* IZQUIERDA: IMAGEN */}
+          {/* IZQUIERDA */}
           <div className="p2-left">
-            <img src={imgAroma} alt="Aromatizante de Blancos" className="p2-img" />
+            <img src={imgAroma} alt="Aromatizante de Ambientes" className="p2-img" />
           </div>
 
-          {/* DERECHA: CONTENIDO */}
+          {/* DERECHA */}
           <div className="p2-right">
 
             {/* REGRESAR */}
@@ -30,21 +30,20 @@ const Cuerpo3: React.FC = () => {
 
             {/* TÍTULO */}
             <h2 className="p2-title">
-              AROMATIZANTE <br /> DE BLANCOS
+              AROMATIZANTE <br /> DE AMBIENTES
             </h2>
 
-            {/* DESCRIPCIÓN */}
+            {/* TEXTO */}
             <p className="p2-text">
-              Nuestros aromatizantes para blancos son la elección perfecta para crear 
-              ambientes cautivadores. Con fragancias diseñadas para mezclarse 
-              armoniosamente en espacios blancos, elevamos la experiencia sensorial 
-              y el diseño interior, añadiendo un toque de lujo olfativo.
+              Diseñados para transformar cualquier espacio, nuestros aromatizantes
+              de ambiente ofrecen fragancias intensas y duraderas que elevan la 
+              experiencia sensorial. Perfectos para hoteles, spas y espacios de lujo.
             </p>
 
             {/* BOTÓN */}
             <button className="p2-btn">Quiero hacer un pedido</button>
 
-            {/* MODO DE USO */}
+            {/* DROPDOWN */}
             <div className="p2-dropdown">
               <span>MODO DE USO</span>
               <span className="p2-drop-arrow">⌄</span>
@@ -54,10 +53,9 @@ const Cuerpo3: React.FC = () => {
         </div>
       </section>
 
-      {/* 🔥 NUEVA SECCIÓN VA AQUÍ, DEBAJO DE TODO EL PRODUCTO */}
       <NuevaSeccion />
     </>
   );
 };
 
-export default Cuerpo3;
+export default Cuerpo6;

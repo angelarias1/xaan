@@ -414,6 +414,8 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
     padding-bottom: 80px;
   }
 
+
+
   .menu-half {
     width: 100%;
     height: auto;
@@ -501,6 +503,12 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   .social-icon {
     width: 28px;
   }
+  .nav-menu-btn {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+
 
   /* DIRECCIÓN FINAL */
   .right-address {
@@ -625,6 +633,11 @@ font-family: "aviano-flare", serif;  /* 🔥 TU FUENTE REAL */
   .social-icon {
     width: 24px;
   }
+.nav-menu-btn {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
 
   /* DIRECCIÓN FINAL */
   .right-address {

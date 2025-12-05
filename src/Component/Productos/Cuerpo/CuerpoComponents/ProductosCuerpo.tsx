@@ -80,7 +80,7 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 4 */}
         <article className="cuer-card">
-          <Link to="/cuer/4">
+          <Link to="/cuerpo4">
             <img src={img4} alt="Producto corporal 4" className="cuer-img" />
           </Link>
 
@@ -101,7 +101,7 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 5 */}
         <article className="cuer-card">
-          <Link to="/cuer/5">
+          <Link to="/cuerpo5">
             <img src={img5} alt="Producto corporal 5" className="cuer-img" />
           </Link>
 
@@ -122,7 +122,7 @@ const ProductosCuer: React.FC = () => {
 
         {/* CARD 6 */}
         <article className="cuer-card">
-          <Link to="/cuer/6">
+          <Link to="/cuerpo6">
             <img src={img6} alt="Producto corporal 6" className="cuer-img" />
           </Link>
 

@@ -13,7 +13,7 @@ const AceitesProductos: React.FC = () => {
 
         {/* CARD 1 */}
         <article className="ac-card">
-          <Link to="/aceites/blancos">
+          <Link to="/aceite1">
             <img src={img1} alt="Aceite corporal de blancos" className="ac-img" />
           </Link>
 
@@ -36,7 +36,7 @@ const AceitesProductos: React.FC = () => {
 
         {/* CARD 2 */}
         <article className="ac-card">
-          <Link to="/aceites/ambientes">
+          <Link to="/aceite2">
             <img src={img2} alt="Aceite corporal de ambientes" className="ac-img" />
           </Link>
 
@@ -59,7 +59,7 @@ const AceitesProductos: React.FC = () => {
 
         {/* CARD 3 */}
         <article className="ac-card">
-          <Link to="/aceites/difusores">
+          <Link to="/aceites">
             <img src={img3} alt="Difusores de aromas XA’AN" className="ac-img" />
           </Link>
 

@@ -1,5 +1,5 @@
 /* ====================================== */
-/* SECCIÓN ACEITES — ESTRECHA Y ELEGANTE  */
+/* SECCIÓN ACEITES — ESTILO ORIGINAL      */
 /* ====================================== */
 
 .aceites-section {
@@ -10,7 +10,6 @@
   justify-content: center;
 }
 
-/* CONTENEDOR ESTRECHO */
 .aceites-container-main {
   width: 100%;
   max-width: 1350px;
@@ -22,7 +21,7 @@
   align-items: center;
 }
 
-/* ------------------ TAG ------------------ */
+/* ---------------- TAG ---------------- */
 
 .aceites-tag {
   font-family: "Barlow", sans-serif;
@@ -34,20 +33,20 @@
   margin-top: -6px;
 }
 
-/* ------------------ TEXTO ------------------ */
+/* ---------------- TEXTO ---------------- */
 
 .aceites-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 420px; 
+  max-width: 420px;
 }
 
 .aceites-title {
   font-family: "aviano-flare", serif;
   font-weight: 400;
   color: #805b4a;
-  font-size: 1.9rem;   
+  font-size: 1.9rem;
   margin-bottom: 12px;
   line-height: 1.2;
 }
@@ -61,7 +60,7 @@
   max-width: 360px;
 }
 
-/* ------------------ BOTÓN PRINCIPAL ------------------ */
+/* ---------------- BOTÓN PRINCIPAL ---------------- */
 
 .aceites-btn {
   padding: 12px 30px;
@@ -69,7 +68,6 @@
   background: transparent;
   color: #805b4a;
   cursor: pointer;
-  border-radius: 0;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
   font-size: 0.9rem;
@@ -80,7 +78,7 @@
   background-color: rgba(217, 204, 196, 0.85);
 }
 
-/* ------------------ BOTONES MINI (AUMENTADOS) ------------------ */
+/* ---------------- BOTONES MINI ---------------- */
 
 .aceites-buttons {
   display: flex;
@@ -89,8 +87,8 @@
 }
 
 .icon-btn {
-  width: 50px;     /* ✔ más grande */
-  height: 26px;    /* ✔ más grande */
+  width: 50px;
+  height: 26px;
   border: 1px solid #805b4a;
   background: transparent;
   display: flex;
@@ -99,40 +97,60 @@
 }
 
 .icon-btn img {
-  width: 16px;     /* ✔ flecha más grande */
-  height: auto;
+  width: 16px;
   opacity: 0.9;
 }
 
-/* ------------------ IMAGEN DERECHA (AUMENTADA) ------------------ */
+/* ======================================= */
+/*           CARRUSEL 3D MEJORADO          */
+/* ======================================= */
 
-.aceites-manual {
+.aceites-carousel {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 22px;
+  perspective: 900px; /* Activar profundidad 3D */
 }
 
-.aceite-img {
-  width: 230px;    /* ✔ imagen más grande */
-  height: 280px;   /* ✔ sigue proporcionada */
-  object-fit: contain !important;
-
-  opacity: 0;
-  transform: scale(0.94);
-  animation: fadePop 0.6s ease forwards;
-
+/* IMAGEN CENTRAL: principal */
+.aceite-img.center {
+  width: 260px;
+  height: 300px;
+  object-fit: contain; /* No se corta */
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.22));
+  transition: all 0.6s ease;
 }
 
-@keyframes fadePop {
-  0% { opacity: 0; transform: scale(0.88); }
-  100% { opacity: 1; transform: scale(1); }
+/* IMÁGENES LATERALES: esperando turno */
+.aceite-img.side {
+  width: 180px;
+  height: 220px;
+  object-fit: contain; /* No se corta */
+  opacity: 0.33;
+  transform: scale(0.8) rotateY(35deg);
+  filter: blur(1px);
+  transition: all 0.6s ease;
 }
 
-/* =============================== */
-/*     RESPONSIVE TABLET 1024px    */
-/* =============================== */
+/* Lado izquierdo */
+.aceite-img.left {
+  transform-origin: center right;
+  transform: scale(0.8) rotateY(35deg);
+}
+
+/* Lado derecho */
+.aceite-img.right {
+  transform-origin: center left;
+  transform: scale(0.8) rotateY(-35deg);
+}
+
+/* ======================================= */
+/* RESPONSIVE                              */
+/* ======================================= */
 
 @media (max-width: 1024px) {
   .aceites-container-main {
@@ -140,71 +158,21 @@
     grid-template-columns: 1fr;
     gap: 45px;
   }
-
-  .aceites-left {
-    max-width: 500px;
-  }
-
-  .aceite-img {
-    width: 200px;
-    height: 240px;
-  }
 }
 
-/* =============================== */
-/*        RESPONSIVE 768px         */
-/* =============================== */
-
-@media (max-width: 768px) {
-
-  .aceites-title {
-    font-size: 1.7rem;
+@media (max-width: 480px) {
+  .aceites-carousel {
+    gap: 14px;
   }
 
-  .aceites-text {
-    font-size: 0.95rem;
-  }
-
-  .aceite-img {
+  .aceite-img.center {
     width: 180px;
     height: 220px;
   }
-}
 
-/* =============================== */
-/*        RESPONSIVE 480px         */
-/* =============================== */
-
-@media (max-width: 480px) {
-
-  .aceites-left {
-    max-width: 280px;
-  }
-
-  .aceites-title {
-    font-size: 1.45rem;
-  }
-
-  .aceites-text {
-    font-size: 0.82rem;
-  }
-
-  .aceite-img {
-    width: 150px;
-    height: 180px;
-  }
-
-  .aceites-btn {
-    font-size: 0.75rem;
-    padding: 8px 18px;
-  }
-
-  .icon-btn {
-    width: 42px;
-    height: 22px;
-  }
-
-  .icon-btn img {
-    width: 14px;
+  .aceite-img.side {
+    width: 120px;
+    height: 150px;
+    transform: scale(0.75) rotateY(25deg);
   }
 }

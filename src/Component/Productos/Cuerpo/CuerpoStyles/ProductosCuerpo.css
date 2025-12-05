@@ -29,7 +29,22 @@
   flex-direction: column;
   align-items: flex-start;
   color: #805b4a;
+
+  height: 650px;              /* 🔥 MISMO ALTO PARA TODAS LAS CARDS */
 }
+
+.cuer-card > *:not(.cuer-order) {
+  flex-shrink: 0;             /* 🔥 Nada se colapsa */
+}
+
+/* El botón siempre queda abajo */
+.cuer-order {
+  margin-top: auto;           /* 🔥 BOTÓN PEGADO ABAJO */
+}
+
+/* ================================ */
+/* IMAGEN */
+/* ================================ */
 
 .cuer-img {
   width: 100%;
@@ -109,20 +124,21 @@
   }
 
   .cuer-container {
-    grid-template-columns: 1fr;      /* 🔥 UNA CARD */
+    grid-template-columns: 1fr; 
     gap: 45px;
     width: 100%;
-    justify-items: center;           /* 🔥 CENTRAR */
+    justify-items: center;
   }
 
   .cuer-card {
-    width: 420px;                    /* 🔥 CARD MÁS GRANDE */
+    width: 420px;
+    height: 600px;          /* 🔥 ALTURA PERFECTA PARA TABLET */
     margin: 0 auto;
   }
 
   .cuer-img {
     width: 100%;
-    height: 420px;                   /* 🔥 IMAGEN GRANDE */
+    height: 420px;
     object-fit: cover;
   }
 
@@ -147,20 +163,22 @@
   }
 
   .cuer-container {
-    grid-template-columns: 1fr;     /* 1 CARD */
+    grid-template-columns: 1fr;
     gap: 32px;
     width: 100%;
     justify-items: center;
   }
 
   .cuer-card {
-    width: 340px;                   /* 🔥 CARD MÁS GRANDE PARA MÓVIL */
+    width: 340px;
+    height: 540px;          /* 🔥 ALTURA PERFECTA PARA MÓVIL */
     margin: 0 auto;
   }
 
   .cuer-img {
     width: 100%;
-    height: 360px;                   /* 🔥 IMAGEN MÁS GRANDE */
+    height: 360px;
+    object-fit: cover;
   }
 
   .cuer-name {

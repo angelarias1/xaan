@@ -12,11 +12,11 @@
 
 .ac-container {
   width: 83%;
-  max-width: 1350px;   /* 🔥 ANCHO FIJO */
+  max-width: 1350px; 
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 TARJETAS */
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -29,7 +29,22 @@
   flex-direction: column;
   align-items: flex-start;
   color: #805b4a;
+
+  height: 650px;              /* 🔥 TODAS IGUALADAS */
 }
+
+.ac-card > *:not(.ac-order) {
+  flex-shrink: 0;             /* 🔥 Nada se colapsa */
+}
+
+/* 🔥 BOTÓN SIEMPRE ABAJO */
+.ac-order {
+  margin-top: auto;
+}
+
+/* ================================ */
+/* IMAGEN */
+/* ================================ */
 
 .ac-img {
   width: 100%;
@@ -94,7 +109,7 @@
   border-radius: 2px;
 }
 
-/* 🔥 Hace que el <Link> no rompa el layout */
+/* LINK FIX */
 .ac-card a {
   display: block;
 }
@@ -110,25 +125,26 @@
   }
 
   .ac-container {
-    grid-template-columns: 1fr;   /* UNA CARD */
+    grid-template-columns: 1fr;
     width: 100%;
     gap: 45px;
-    justify-items: center;        /* CENTRA LAS CARDS */
+    justify-items: center;
   }
 
   .ac-card {
-    width: 420px;                 /* 🔥 CARD más grande */
+    width: 420px;
+    height: 600px;         /* 🔥 ALTURA PERFECTA EN TABLET */
     margin: 0 auto;
   }
 
   .ac-img {
     width: 100%;
-    height: 420px;                /* 🔥 Imagen más grande */
+    height: 420px;
     object-fit: cover;
   }
 
   .ac-order {
-    width: 100%;                  /* MISMO ANCHO QUE LA CARD */
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -155,13 +171,14 @@
   }
 
   .ac-card {
-    width: 340px;                /* 🔥 CARD más ancha */
+    width: 340px;
+    height: 540px;         /* 🔥 ALTURA AJUSTADA PARA MÓVIL */
     margin: 0 auto;
   }
 
   .ac-img {
     width: 100%;
-    height: 360px;               /* 🔥 Imagen aumentada */
+    height: 360px;
     object-fit: cover;
   }
 

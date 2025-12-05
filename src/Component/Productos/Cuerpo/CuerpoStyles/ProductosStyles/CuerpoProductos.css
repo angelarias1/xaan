@@ -3,7 +3,7 @@
 /* ================================ */
 
 .p2-section {
-  width: 90%;
+  width: 100%;
   background-color: #e2d9d2;
   padding: 120px 0;
   display: flex;
@@ -17,13 +17,13 @@
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 45% 55%; /* 🔥 Mejor equilibrio visual */
+  grid-template-columns: 45% 55%;
   align-items: center;
   gap: 40px;
 }
 
 /* ================================ */
-/* IZQUIERDA */
+/* IZQUIERDA (IMAGEN) */
 /* ================================ */
 
 .p2-left {
@@ -33,19 +33,30 @@
 }
 
 .p2-img {
-  width: 500px;   /* 🔥 Imagen más pequeña */
+  width: 500px;
   height: auto;
   object-fit: contain;
 }
 
 /* ================================ */
-/* DERECHA */
+/* DERECHA (TEXTO + BOTÓN + DROPDOWN) */
+/* ================================ */
+
+.p2-right {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: 140px;
+}
+
+/* ================================ */
+/* REGRESAR (FLECHA + LINK) */
 /* ================================ */
 
 .p2-back {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex;              /* 🔥 mantiene flecha y texto alineados */
+  align-items: center;        /* 🔥 alineación vertical perfecta */
+  gap: 6px;                   /* 🔥 separación justa */
   margin-bottom: 18px;
 }
 
@@ -66,7 +77,10 @@
   opacity: 0.7;
 }
 
+/* ================================ */
 /* TÍTULO */
+/* ================================ */
+
 .p2-title {
   font-family: "aviano-flare", serif;
   font-size: 2.8rem;
@@ -75,20 +89,25 @@
   margin-bottom: 24px;
 }
 
+/* ================================ */
 /* TEXTO */
+/* ================================ */
+
 .p2-text {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.65);
-  max-width: 500px;
   margin-bottom: 28px;
 }
 
+/* ================================ */
 /* BOTÓN */
+/* ================================ */
+
 .p2-btn {
   padding: 12px 26px;
-  width: 270px;
+  width: 100%;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
@@ -102,7 +121,10 @@
   background-color: #d4c7bf;
 }
 
+/* ================================ */
 /* DROPDOWN */
+/* ================================ */
+
 .p2-dropdown {
   width: 100%;
   border-top: 1px solid #805b4a;
@@ -119,39 +141,76 @@
   cursor: pointer;
 }
 
-.p2-drop-arrow {
-  font-size: 1.3rem;
-}
-
 /* ================================ */
-/* RESPONSIVE */
+/* RESPONSIVE — TABLET 1024px */
 /* ================================ */
 
 @media (max-width: 1024px) {
   .p2-container {
-    grid-template-columns: 1fr;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
   }
 
-  .p2-left {
-    text-align: center;
+  .p2-right {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .p2-title {
+    font-size: 2rem;
+    width: 100%;
+    max-width: 430px;
+    text-align: left;
+    line-height: 1.05;
   }
 
   .p2-img {
-    width: 260px;  /* 🔥 más pequeño y limpio en tablet */
+    width: 330px;
   }
 }
 
+/* ================================ */
+/* RESPONSIVE — MÓVIL 480px */
+/* ================================ */
+
 @media (max-width: 480px) {
+  .p2-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;  /* 🔥 imagen abajo */
+    align-items: center;
+    gap: 45px;
+  }
+
+  .p2-right {
+    width: 100%;
+    max-width: 300px;        /* 🔥 ancho EXACTO como tu referencia */
+    margin: 0 auto;
+  }
+
   .p2-title {
-    font-size: 1.9rem;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.7rem;
+    line-height: 1.05;
+    text-align: left;
+  }
+
+  .p2-text {
+    max-width: 300px;
+    font-size: 0.95rem;
+  }
+
+  .p2-btn,
+  .p2-dropdown {
+    width: 100%;
+    max-width: 300px;
   }
 
   .p2-img {
-    width: 220px; /* 🔥 tamaño ideal en móvil */
-  }
-
-  .p2-btn {
-    width: 100%;
+    width: 230px;
   }
 }
