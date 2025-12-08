@@ -44,7 +44,7 @@ const Cuerpo: React.FC = () => {
               productos, las pinceladas de indulgencia que lo cuidan.
             </p>
 
-            {/* BOTÓN QUE AHORA SÍ FUNCIONA */}
+            {/* BOTÓN */}
             <Link className="cuerpo-ver" to="/cuerpos">
               VER PRODUCTOS →
             </Link>

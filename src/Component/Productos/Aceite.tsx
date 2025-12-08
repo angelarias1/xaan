@@ -3,28 +3,31 @@ import { Link } from "react-router-dom";
 import "../../styles/Categorias/Aceite.css";
 
 import aceiteImg from "../../assets/web/Categoria/Rectangle 979.webp";
-import selloImg from "../../assets/web/icono.webp"; // sello real importado
+import selloImg from "../../assets/web/icono.webp";
 
 const Aceites: React.FC = () => {
   return (
     <section className="aceite-section">
       <div className="aceite-container-main">
 
-        {/* TÍTULO */}
-        <h2 className="aceite-title">ACEITES</h2>
+        {/* CONTENEDOR 2 COLUMNAS REALES */}
+        <div className="aceite-columns">
 
-        <div className="aceite-container">
+          {/* IZQUIERDA — SOLO SELLO */}
+          <div className="aceite-left">
+            <img 
+              src={selloImg} 
+              alt="Decoración sello XA’AN" 
+              className="aceite-seal"
+            />
+          </div>
 
-          {/* SELLO IZQUIERDA */}
-          <img
-            src={selloImg}
-            alt="Decoración sello de XA’AN"
-            className="aceite-seal"
-          />
+          {/* DERECHA — TODO EL CONTENIDO */}
+          <div className="aceite-right">
 
-          {/* TEXTO */}
-          <div className="aceite-text">
-            <p>
+            <h2 className="aceite-title">ACEITES</h2>
+
+            <p className="aceite-paragraph">
               Explora nuestros aceites corporales, el elixir de cuidado que toda piel
               anhela. Creados para nutrir y rejuvenecer, cada gota es un abrazo
               de hidratación. Desde revitalizantes mezclas hasta aromas relajantes,
@@ -32,21 +35,20 @@ const Aceites: React.FC = () => {
               toque suave y radiante.
             </p>
 
-            {/* LINK FUNCIONAL */}
             <Link to="/aceites" className="aceite-ver">
               VER PRODUCTOS →
             </Link>
-          </div>
 
-          {/* IMAGEN DERECHA */}
-          <div className="aceite-img-box">
-            <img
-              src={aceiteImg}
-              alt="Aceites corporales XA’AN"
-              className="aceite-img"
-            />
-          </div>
+            {/* IMAGEN */}
+            <div className="aceite-img-box">
+              <img 
+                src={aceiteImg} 
+                alt="Aceites corporales XA’AN" 
+                className="aceite-img"
+              />
+            </div>
 
+          </div>
         </div>
 
       </div>

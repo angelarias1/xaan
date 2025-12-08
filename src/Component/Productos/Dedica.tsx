@@ -1,7 +1,6 @@
 import React from "react";
 import "../../styles/Categorias/Dedica.css";
 
-import logo from "../../assets/web/icono.webp";
 
 const Dedica: React.FC = () => {
   return (
@@ -17,18 +16,8 @@ const Dedica: React.FC = () => {
         </p>
 
         {/* LOGO */}
-        <img 
-          src={logo} 
-          alt="Sello representativo de XA'AN Skin Care" 
-          className="dedica-logo"
-          loading="lazy"
-        />
+       
 
-        {/* MARCA */}
-        <p className="dedica-brand">
-          XA’AN <br />
-          SKIN CARE
-        </p>
 
       </div>
     </section>

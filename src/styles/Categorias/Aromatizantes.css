@@ -13,13 +13,15 @@
 /* CONTENEDOR OFICIAL */
 .aroma-container {
   width: 100%;
-  max-width: 1350px;    /* 🔥 MISMO ANCHO QUE HERO */
+  max-width: 1350px;
   padding: 0 5%;
   margin: 0 auto;
   display: flex;
+
+  /* 🔥 MÁS CERCA DEL TEXTO */
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 26px; /* ANTES 32px */
 }
 
 /* ====================================== */
@@ -60,27 +62,37 @@
 .aroma-right {
   width: 60%;
   display: flex;
-  justify-content: flex-end;
-  gap: 22px;
+
+  /* 🔥 ACERCAR LAS IMÁGENES AL TEXTO */
+  justify-content: flex-start;
+
+  /* 🔥 JUNTAR LAS IMÁGENES ENTRE SI */
+  gap: 16px; /* ANTES 28px */
   align-items: flex-start;
 }
 
-/* Imagen grande */
+/* ====================================== */
+/* IMAGEN GRANDE — MÁS GRANDE              */
+/* ====================================== */
+
 .aroma-big img {
   width: 100%;
-  max-width: 420px;
-  height: 580px;
+  max-width: 460px; /* ANTES 430px — un poco más grande */
+  height: 620px;    /* ANTES 590px */
   object-fit: cover;
   border-radius: 6px;
 }
 
-/* Imagen pequeña */
+/* ====================================== */
+/* IMAGEN PEQUEÑA — MÁS GRANDE Y CUADRADA */
+/* ====================================== */
+
 .aroma-small img {
-  width: 100%;
-  max-width: 250px;
-  height: 350px;
+  width: 340px; /* ANTES 320px — más grande */
+  aspect-ratio: 1 / 1; /* cuadrada */
   object-fit: cover;
   border-radius: 6px;
+margin-top: 326px;  /* Estética escalonada mar*/
   align-self: flex-end;
 }
 
@@ -91,6 +103,7 @@
 @media (max-width: 1024px) {
   .aroma-container {
     flex-direction: column;
+    gap: 50px;
   }
 
   .aroma-left,
@@ -107,11 +120,16 @@
   .aroma-right {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
-  .aroma-big img,
-  .aroma-small img {
-    max-width: 100%;
+  .aroma-big img {
+    max-width: 90%;
     height: auto;
+  }
+
+  .aroma-small img {
+    width: 60%;
+    aspect-ratio: 1 / 1;
   }
 }
