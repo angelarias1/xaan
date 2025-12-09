@@ -29,7 +29,7 @@
 
 .ciencia-left {
   flex: 1;
-  max-width: 480px;
+  max-width: 600px;   /* 🔥 Aumentado */
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -52,19 +52,21 @@
 .ciencia-text {
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 380px;
+  max-width: 530px;
   color: rgba(0, 0, 0, 0.75);
 }
 
 .ciencia-btn {
   margin-top: 10px;
-  padding: 12px 32px;
+  padding: 10px 110px;
   border: 1px solid #805b4a;
   background: transparent;
   color: #805b4a;
   font-size: 0.95rem;
   cursor: pointer;
   transition: 0.3s ease;
+  align-self: flex-start;   /* 🔥 Hace que deje de ocupar todo el ancho */
+
 }
 
 .ciencia-btn:hover {

@@ -12,8 +12,9 @@ const Quienes: React.FC = () => {
     <p className="quienes-tag">QUIÉNES SOMOS</p>
 
     <div className="quienes-img-row">
-      <img src={imgCrema} alt="Producto XA'AN" className="quienes-img" />
       <img src={imgLab} alt="Laboratorio natural" className="quienes-img" />
+            <img src={imgCrema} alt="Producto XA'AN" className="quienes-imge" />
+
     </div>
 
     <div className="quienes-line"></div>

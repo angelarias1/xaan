@@ -4,14 +4,15 @@
 
 .dedica-section {
   width: 100%;
-  height: 100vh;                 /* Full screen */
+  min-height: 50vh;     /* 🔥 Más baja pero elegante */
   background: #e2d9d2;
   display: flex;
   justify-content: center;
-  align-items: center;           /* CENTRADO VERTICAL REAL */
+  align-items: center;
   text-align: center;
   padding: 0 5%;
 }
+
 
 /* Contenedor interno */
 .dedica-wrapper {

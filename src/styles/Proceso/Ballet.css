@@ -41,12 +41,12 @@
 }
 
 .ballet-title {
-  font-family: "aviano-flare", serif;
+  font-family: "Barlow", sans-serif;
   color: #805b4a;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.35;
   letter-spacing: 1px;
-  max-width: 520px;
+  max-width: 620px;
 }
 
 /* DERECHA */
@@ -58,11 +58,13 @@
 
 .ballet-paragraph {
   font-family: "Barlow", sans-serif;
-  font-size: 1rem;
+  font-size: .95rem;
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.7);
-  max-width: 460px;
+  max-width: 400px;
   text-align: left;
+  margin-top: -30px;
+  margin-left: 100px;
 }
 
 /* ========================================= */

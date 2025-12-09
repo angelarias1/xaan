@@ -63,9 +63,9 @@ grid-template-columns: 0.70fr 0.9fr;
 
 /* TEXTO */
 .aceite-paragraph {
-  max-width: 380px;
+  max-width:450px;
   font-family: "Barlow", sans-serif;
-  font-size: 1rem;
+  font-size: 1.03rem;
   color: #5a4d45;
   line-height: 1.6;
   text-align: left;
@@ -78,6 +78,8 @@ grid-template-columns: 0.70fr 0.9fr;
   color: #805b4a;
   text-decoration: underline;
   cursor: pointer;
+  margin-left: 400px;
+  margin-top: -30px;
 }
 
 /* ========================================= */

@@ -20,9 +20,7 @@ const Aromatizantes: React.FC = () => {
       </p>
 
       <p className="aroma-paragraph">
-        Nuestros aromatizantes generan la atmósfera perfecta para tu espacio.
-        Cada aroma cuenta su propia historia, transportando a tus clientes
-        a un lugar de serenidad y evocación.
+        Nuestros aromatizantes generan la atmósfera perfecta para tu espacio. Deja que cada aroma cuente su propia historia, que cada exhalación transporte a tus clientes a un lugar de serenidad y evocación. Permítenos ser la firma aromática de tus momentos, tejiendo recuerdos inolvidables en cada fragancia.
       </p>
 
       <a href="aromatizantes" className="aroma-link">

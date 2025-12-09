@@ -12,9 +12,9 @@ const Funcionamos: React.FC = () => {
     <div className="fun-top">
 
       <h2 className="fun-title">
-        FUSIONAMOS LA <br />
-        BELLEZA NATURAL CON <br />
-        LA RESPONSABILIDAD <br />
+        FUSIONAMOS LA 
+        BELLEZA NATURAL CON 
+        LA RESPONSABILIDAD 
         ECOLÓGICA
       </h2>
 

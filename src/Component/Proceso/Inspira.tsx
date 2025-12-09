@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Proceso/Inspira.css";
 
-const Inspira: React.FC = () => {
+const NosInspira: React.FC = () => {
   return (
     <section className="inspira-section">
       <div className="inspira-container">
@@ -17,4 +17,4 @@ const Inspira: React.FC = () => {
   );
 };
 
-export default Inspira;
+export default NosInspira;

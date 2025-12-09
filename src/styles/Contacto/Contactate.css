@@ -56,7 +56,7 @@
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   line-height: 1.55;
-  max-width: 380px;
+  max-width: 410px;
   margin-bottom: 28px;
   color: rgba(0,0,0,0.70);
 }
@@ -66,7 +66,9 @@
 /* ----------------------------------------- */
 
 .contacto-btn {
-  padding: 12px 18px;
+  width: 350px;          /* 🔥 ancho fijo */
+  padding: 10px 0;       /* 🔥 padding reducido */
+  text-align: center;    /* Asegura el centrado */
   font-family: "Barlow", sans-serif;
   font-size: 0.95rem;
   background: transparent;
@@ -74,12 +76,14 @@
   color: #805b4a;
   cursor: pointer;
   transition: 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .contacto-btn:hover {
   background-color: #805b4a;
   color: #e2d9d2;
 }
+
 
 /* ----------------------------------------- */
 /* RESPONSIVE */

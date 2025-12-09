@@ -7,13 +7,13 @@
   background-color: #E2D9D2;
   padding: 120px 0;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* 🔥 Centra el bloque oficial */
 }
 
 /* CONTENEDOR OFICIAL */
 .quienes-container {
   width: 100%;
-  max-width: 1350px;   /* 🔥 MISMO ANCHO ESTÁNDAR */
+  max-width: 1350px;         /* 🔥 MISMO ANCHO ESTÁNDAR */
   padding: 0 5%;
   margin: 0 auto;
 
@@ -37,12 +37,21 @@
 
 .quienes-img-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;   /* 🔥 AMBAS IMÁGENES A LA DERECHA */
   gap: 36px;
 }
 
+/* IMAGEN 1 → MÁS ESTRECHA */
 .quienes-img {
-  flex: 1;
+  width: 340px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* IMAGEN 2 → MÁS ANCHA */
+.quienes-imge {
+  width: 450px;
   height: 480px;
   object-fit: cover;
   border-radius: 8px;
@@ -62,11 +71,17 @@
 /* ========================================= */
 
 @media (max-width: 900px) {
+
   .quienes-img-row {
     flex-direction: column;
+    align-items: center;   /* 🔥 IMPORTANTE: centra las imágenes en móvil */
+    gap: 24px;
   }
 
-  .quienes-img {
+  .quienes-img,
+  .quienes-imge {
+    width: 100%;
+    max-width: 400px;
     height: 330px;
   }
 }

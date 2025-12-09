@@ -50,15 +50,21 @@
   padding: 55px 40px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: center;     /* 🔥 CENTRA TU COLUMNA VISUALMENTE */
+  align-items: center;
+
+  text-align: left;            /* Mantiene texto alineado */
 }
 
-/* Todos los elementos alineados sin trucos raros */
-.contact-box > * {
+/* NUEVO WRAPPER INTERNO PARA CENTRAR CORRECTAMENTE */
+.contact-inner {
   width: 100%;
-  text-align: left;
+  max-width: 350px;            /* Ajusta ancho visual del bloque */
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 /* ========================================= */
@@ -77,8 +83,8 @@
   font-family: "Barlow", sans-serif;
   color: #805b4a;
   line-height: 1.4;
-  font-size: 0.85rem;
-  max-width: 270px;
+  font-size: .99rem;
+  max-width: 350px;
   margin-bottom: 12px;
 }
 
@@ -94,7 +100,7 @@
 /* ========================================= */
 
 .contact-form {
-  max-width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -158,8 +164,8 @@
     border-top: none;
   }
 
-  .contact-form {
-    max-width: 100%;
+  .contact-inner {
+    max-width: 100%;   /* Se adapta al ancho en tablet */
   }
 
   .contact-info,

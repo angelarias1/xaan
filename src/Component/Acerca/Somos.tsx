@@ -24,7 +24,7 @@ const Somos: React.FC = () => {
         Aportamos parte de nuestras ventas a distintas causas sociales,
         así como al medio ambiente. Trabajamos en crear un consumo
         consciente en nuestros clientes, logrando un sistema de apoyo
-        al medio ambiente a través de cada compra.
+        al medio ambiente.
       </p>
 
       <button className="somos-btn">Quiero hacer un pedido</button>

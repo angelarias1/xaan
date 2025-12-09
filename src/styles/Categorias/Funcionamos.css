@@ -36,15 +36,34 @@
 .fun-title {
   font-family: "aviano-flare", serif;
   color: #805b4a;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   line-height: 1.1;
-  max-width: 520px;
+  max-width: 550px;
 }
 
 /* TEXTO DERECHA */
 .fun-side-text {
+  font-family: "Barlow", sans-serif;
   text-align: justify;
   max-width: 350px;
+}
+.fun-side-title{
+  font-family: "Barlow", sans-serif;
+  text-align: justify;
+  max-width: 350px;
+}
+.fun-link{
+   font-family: "Barlow", sans-serif;
+  font-size: .9rem;
+  color: #805b4a;
+  text-decoration: underline;
+  margin-bottom: 24px;
+  display: inline-block;
+
+}
+.fun-side-desc{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* ========================================= */
@@ -66,19 +85,43 @@
 /*                RESPONSIVE 1024            */
 /* ========================================= */
 
+/* ========================================= */
+/*                RESPONSIVE TABLET 1024     */
+/* ========================================= */
+
 @media (max-width: 1024px) {
+  
   .fun-container {
     padding: 100px 6%;
+    gap: 45px;  /* un poco más amplio que móvil */
   }
 
+  /* 🔥 Apilar como móvil */
   .fun-top {
-    gap: 40px;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  /* Título más grande que móvil pero más pequeño que desktop */
+  .fun-title {
+    font-size: 1.9rem; 
+    max-width: 100%;
+  }
+
+  /* Texto ancho como móvil */
+  .fun-side-text,
+  .fun-side-title {
+    max-width: 70%;
+            font-size: 1.23rem;
+
   }
 
   .fun-img {
-    height: 360px;
+    height: 340px; /* más grande que móvil, menos que desktop */
   }
 }
+
 
 /* ========================================= */
 /*                RESPONSIVE 480             */
@@ -96,14 +139,19 @@
   }
 
   .fun-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     max-width: 100%;
   }
 
   .fun-side-text {
-    max-width: 100%;
-  }
+    max-width: 70%;
+        font-size: .825rem;
 
+  }
+.fun-side-title{
+      max-width: 100%;
+
+}
   .fun-img {
     height: 260px;
   }

@@ -18,24 +18,28 @@ export default function NuevaSeccion() {
 
         {/* BLOQUE DE CONTACTO */}
         <div className="contact-box">
-          <p className="contact-label">CONTACTA A UN ASESOR</p>
+          <div className="contact-inner">   {/* 🟢 AGREGADO */}
 
-          <p className="contact-address">
-            Colima 392, 2do. Piso Colonia Roma, Delegación Cuauhtémoc  
-            C.P. 06700, Ciudad de México.
-          </p>
+            <p className="contact-label">CONTACTA A UN ASESOR</p>
 
-          <p className="contact-info">
-            Tel. +52 998 87 7665 | email: hola@xaan.mx
-          </p>
+            <p className="contact-address">
+              Colima 392, 2do. Piso Colonia Roma, Delegación Cuauhtémoc  
+              C.P. 06700, Ciudad de México.
+            </p>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Nombre completo" />
-            <input type="email" placeholder="Email" />
-            <input type="tel" placeholder="Teléfono" />
-            <textarea placeholder="Mensaje"></textarea>
-            <button className="contact-btn">Enviar</button>
-          </form>
+            <p className="contact-info">
+              Tel. +52 998 87 7665 | email: hola@xaan.mx
+            </p>
+
+            <form className="contact-form">
+              <input type="text" placeholder="Nombre completo" />
+              <input type="email" placeholder="Email" />
+              <input type="tel" placeholder="Teléfono" />
+              <textarea placeholder="Mensaje"></textarea>
+              <button className="contact-btn">Enviar</button>
+            </form>
+
+          </div> {/* 🟢 CIERRE contact-inner */}
         </div>
 
       </div>
