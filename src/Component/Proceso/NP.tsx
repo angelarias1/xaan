@@ -8,64 +8,57 @@ import ArrowLeft from "../../assets/web/izquierda.webp";
 import ArrowRight from "../../assets/web/derecha.webp";
 
 const NP: React.FC = () => {
-
-  // 🔥 Lista de imágenes del carrusel (PUEDES AGREGAR MÁS)
   const images = [npImg2, npImg1, npImg2, npImg1];
 
   const [index, setIndex] = useState(0);
 
-  // 🔥 función para avanzar a la siguiente imagen
   const next = () => {
     setIndex((prev) => (prev + 1) % images.length);
   };
 
-  // 🔥 función para retroceder
   const prev = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // 🔥 autoplay (cada 4 segundos)
   useEffect(() => {
     const interval = setInterval(next, 4000);
     return () => clearInterval(interval);
   }, []);
 
+  // imagen principal (derecha)
+  const mainImg = images[index];
+
+  // imagen secundaria (izquierda)
+  const leftImg = images[(index - 1 + images.length) % images.length];
+
   return (
     <section className="np-section">
-      <div className="np-container">
+      <div className="np-container np-center">
 
-        {/* COLUMNA IZQUIERDA */}
-        <div className="np-left">
-          <img src={npImg1} alt="Proceso laboratorio" className="np-img" />
-          <p className="np-title">NUESTRO PROCESO</p>
+        {/* 🔥 TÍTULO */}
+        <p className="np-title">NUESTRO PROCESO</p>
+
+        {/* 🔥 CARRUSEL CON 2 IMÁGENES */}
+        <div className="np-dual">
+          <img src={leftImg} className="np-img np-small" alt="previa" />
+          <img src={mainImg} className="np-img np-main" alt="actual" />
         </div>
 
-        {/* COLUMNA DERECHA */}
-        <div className="np-right">
+        {/* 🔥 CONTROLES */}
+        <div className="vutom-controls">
+          <div className="vutom-buttons">
+            <button className="vutom-btn" onClick={prev}>
+              <img src={ArrowLeft} alt="Anterior" className="vutom-arrow" />
+            </button>
 
-          {/* 🔥 IMAGEN DINÁMICA DEL CARRUSEL */}
-          <img
-            src={images[index]}
-            alt="Carrusel"
-            className="np-img"
-          />
-
-          {/* CONTROLES RENOMBRADOS */}
-          <div className="vutom-controls">
-            <div className="vutom-buttons">
-              <button className="vutom-btn" onClick={prev}>
-                <img src={ArrowLeft} alt="Anterior" className="vutom-arrow" />
-              </button>
-              <button className="vutom-btn" onClick={next}>
-                <img src={ArrowRight} alt="Siguiente" className="vutom-arrow" />
-              </button>
-            </div>
-
-            {/* 🔥 CONTADOR AUTOMÁTICO */}
-            <p className="np-counter">
-              {String(index + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
-            </p>
+            <button className="vutom-btn" onClick={next}>
+              <img src={ArrowRight} alt="Siguiente" className="vutom-arrow" />
+            </button>
           </div>
+
+          <p className="np-counter">
+            {String(index + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+          </p>
         </div>
 
       </div>

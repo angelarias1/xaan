@@ -13,7 +13,7 @@
 /* CONTENEDOR OFICIAL */
 .ciencia-container {
   width: 100%;
-  max-width: 1350px;         /* 🔥 ANCHO OFICIAL */
+  max-width: 1350px;
   padding: 0 5%;
   margin: 0 auto;
 
@@ -29,7 +29,7 @@
 
 .ciencia-left {
   flex: 1;
-  max-width: 600px;   /* 🔥 Aumentado */
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -65,8 +65,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: 0.3s ease;
-  align-self: flex-start;   /* 🔥 Hace que deje de ocupar todo el ancho */
-
+  align-self: flex-start; /* Desktop */
 }
 
 .ciencia-btn:hover {
@@ -96,7 +95,7 @@
 
 @media (max-width: 1024px) {
   .ciencia-container {
-    flex-direction: column-reverse;
+    flex-direction: column; /* Imagen abajo */
     gap: 50px;
   }
 
@@ -104,8 +103,26 @@
     font-size: 2.2rem;
   }
 
+  .ciencia-text {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+
+  /* 🔥 IMAGEN FULL WIDTH EN TABLET */
   .ciencia-img {
-    max-width: 420px;
+    width: 100%;       /* 👉 ocupa todo el ancho del contenido */
+    max-width: 100%;   /* 👉 evita que reduzca */
+    height: auto;      /* 👉 mantiene proporción */
+  }
+
+  /* 🔥 BOTÓN FULL WIDTH EN TABLET */
+  .ciencia-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    align-self: stretch;
+    font-size: 1rem;
   }
 }
 
@@ -115,12 +132,25 @@
   }
 
   .ciencia-text {
-    font-size: 0.92rem;
+    font-size: 1rem;
+    text-align: justify;
   }
 
+  /* 🔥 IMAGEN FULL WIDTH EN MÓVIL */
   .ciencia-img {
+    width: 100%;       /* 👉 ocupa todo el ancho */
     max-width: 100%;
-    height: 250px;
+    height: auto;      /* 👉 ajusta proporción sin recortes */
     object-fit: cover;
+  }
+
+  /* 🔥 BOTÓN FULL WIDTH EN MÓVIL */
+  .ciencia-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    align-self: stretch;
+    font-size: 0.95rem;
   }
 }

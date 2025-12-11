@@ -7,95 +7,95 @@ import img3 from "../../assets/web/imagen6.webp";
 
 const LoMasPedido: React.FC = () => {
   return (
-    <section className="np-section">
+    <section className="nppn-section">
 
-      <div className="np-container">
+      <div className="nppn-container">
 
-        <h2 className="np-title">LO MÁS PEDIDO</h2>
+        <h2 className="nppn-title">LO MÁS PEDIDO</h2>
 
-        <div className="np-grid">
+        <div className="nppn-grid">
 
           {/* PRODUCTO 1 */}
-          <article className="np-card">
+          <article className="nppn-card">
             <img
               src={img1}
               alt="Aceite para masaje Energía"
-              className="np-img"
+              className="nppn-img"
               loading="lazy"
             />
 
-            <span className="np-cat">ACEITES</span>
+            <span className="nppn-cat">ACEITES</span>
 
-            <h3 className="np-name">
+            <h3 className="nppn-name">
               ACEITE PARA <br /> MASAJE ENERGÍA
             </h3>
 
-            <span className="np-sub">PRESENTACIONES</span>
+            <span className="nppn-sub">PRESENTACIONES</span>
 
-            <div className="np-options">
+            <div className="nppn-options">
               <span>1 L.</span>
               <span>4 L.</span>
               <span>20 L.</span>
             </div>
 
-            <button className="np-btn">Quiero hacer un pedido</button>
+            <button className="nppn-btn">Quiero hacer un pedido</button>
           </article>
 
           {/* PRODUCTO 2 */}
-          <article className="np-card">
+          <article className="nppn-card">
             <img
               src={img2}
               alt="Crema corporal humectante"
-              className="np-img"
+              className="nppn-img"
               loading="lazy"
             />
 
-            <span className="np-cat">CUERPO</span>
+            <span className="nppn-cat">CUERPO</span>
 
-            <h3 className="np-name">
+            <h3 className="nppn-name">
               CREMA CORPORAL <br /> HUMECTANTE
             </h3>
 
-            <span className="np-sub">PRESENTACIONES</span>
+            <span className="nppn-sub">PRESENTACIONES</span>
 
-            <div className="np-options">
+            <div className="nppn-options">
               <span>1 L.</span>
               <span>4 L.</span>
               <span>20 L.</span>
             </div>
 
-            <button className="np-btn">Quiero hacer un pedido</button>
+            <button className="nppn-btn">Quiero hacer un pedido</button>
           </article>
 
           {/* PRODUCTO 3 */}
-          <article className="np-card">
+          <article className="nppn-card">
             <img
               src={img3}
               alt="Aromatizante de blancos"
-              className="np-img"
+              className="nppn-img"
               loading="lazy"
             />
 
-            <span className="np-cat">AROMATIZANTES</span>
+            <span className="nppn-cat">AROMATIZANTES</span>
 
-            <h3 className="np-name">
+            <h3 className="nppn-name">
               AROMATIZANTE <br /> DE BLANCOS
             </h3>
 
-            <span className="np-sub">PRESENTACIONES</span>
+            <span className="nppn-sub">PRESENTACIONES</span>
 
-            <div className="np-options">
+            <div className="nppn-options">
               <span>1 L.</span>
               <span>4 L.</span>
               <span>20 L.</span>
             </div>
 
-            <button className="np-btn">Quiero hacer un pedido</button>
+            <button className="nppn-btn">Quiero hacer un pedido</button>
           </article>
 
         </div>
 
-        <p className="np-warning">
+        <p className="nppn-warning">
           Aviso importante: Imágenes ilustrativas. Presentación varía según cantidad adquirida.
         </p>
 

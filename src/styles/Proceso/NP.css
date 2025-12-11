@@ -1,5 +1,5 @@
 /* ========================================= */
-/* SECCIÓN NP */
+/* SECCIÓN NP                                */
 /* ========================================= */
 
 .np-section {
@@ -10,20 +10,23 @@
   justify-content: center;
 }
 
-/* CONTENEDOR PRINCIPAL: 2 COLUMNAS IGUALES */
+/* ========================================= */
+/* CONTENEDOR PRINCIPAL                      */
+/* ========================================= */
+
 .np-container {
   width: 100%;
   max-width: 1350px;
   padding: 0 5%;
   margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  display: flex;             /* 🔥 flujo en columna */
+  flex-direction: column;
   gap: 40px;
 }
 
 /* ========================================= */
-/* IMÁGENES */
+/* IMÁGENES                                  */
 /* ========================================= */
 
 .np-img {
@@ -33,14 +36,52 @@
   border-radius: 6px;
 }
 
+/* Contenedor de dos imágenes (mismo ancho y largo ambas) */
+.np-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 🔥 mismas columnas */
+  gap: 8px;                         /* 🔥 ligera separación entre imágenes */
+  width: 100%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Ambas imágenes MISMO TAMAÑO */
+.np-small,
+.np-main {
+  width: 100%;
+  height: 360px;                    /* 🔥 mismo alto */
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
 /* ========================================= */
-/* COLUMNA IZQUIERDA */
+/* COLUMNA DERECHA (CARRUSEL + CONTROLES)    */
+/* ========================================= */
+
+.np-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+
+  order: 1; /* 🔥 primero: carrusel + controles */
+}
+
+/* ========================================= */
+/* COLUMNA IZQUIERDA (TÍTULO)                */
 /* ========================================= */
 
 .np-left {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-items: flex-start;
+
+  order: 2;        /* 🔥 título debajo */
+  margin-top: 8px;
 }
 
 .np-title {
@@ -51,40 +92,29 @@
 }
 
 /* ========================================= */
-/* COLUMNA DERECHA */
-/* ========================================= */
-
-.np-right {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-/* ========================================= */
-/* CONTROLES RENOMBRADOS */
+/* CONTROLES RENOMBRADOS - DESKTOP           */
 /* ========================================= */
 
 .vutom-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 120px; /* 🔥 tamaño pequeño controlado */
-  margin-top: 6px;
-  border: none !important;
-  background: transparent !important;
+  position: relative;      /* 🔥 permite mover los elementos con px en desktop */
+  width: 100%;
+  max-width: 900px;
+  margin: 10px auto 0;
+  height: 40px;            /* 🔥 altura fija para que no se mueva nada */
 }
 
-/* BOTONES RENOMBRADOS */
+/* Botones posicionados por px en DESKTOP */
 .vutom-buttons {
+  position: absolute;
+  left: 455px;             /* 🔥 ajustado a mano para desktop */
+  top: -60%;
+  transform: translateY(-50%);
   display: flex;
   gap: 6px;
-  border: none;
-  background: transparent;
 }
 
 .vutom-btn {
-  width: 90px;       /* pequeño */
+  width: 90px;
   height: 32px;
   border: 1px solid #805b4a;
   background: transparent;
@@ -109,42 +139,83 @@
   object-fit: contain;
 }
 
-/* CONTADOR */
+/* CONTADOR - DESKTOP */
 .np-counter {
+  position: absolute;
+  right: -140px;     /* 🔥 ajustado a mano para desktop */
+  top: -70%;
+  transform: translateY(-50%);
   font-family: "aviano-flare", serif;
   font-size: 0.95rem;
   color: #805b4a;
-  white-space: nowrap;
-  margin-left: 300px;
 }
 
 /* ========================================= */
-/* RESPONSIVE */
+/* RESPONSIVE TABLET (≤ 1024px)              */
 /* ========================================= */
 
-@media (max-width: 900px) {
-  .np-img {
-    height: 280px;
+@media (max-width: 1024px) {
+  /* Altura un poco más baja en tablet */
+  .np-img,
+  .np-small,
+  .np-main {
+    height: 300px;
   }
-}
 
-@media (max-width: 700px) {
-  .np-container {
+  /* Carrusel: solo una imagen visible (la principal) */
+  .np-dual {
     grid-template-columns: 1fr;
   }
+
+  .np-small {
+    display: none;
+  }
+
+  /* Controles se vuelven layout normal, no absoluto */
+  .vutom-controls {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0 0;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;  /* 🔥 botones izq, contador der */
+    align-items: center;
+  }
+
+  .vutom-buttons {
+    position: static;
+    transform: none;
+  }
+
+  .np-counter {
+    position: static;
+    transform: none;
+    text-align: right;
+  }
 }
 
-@media (max-width: 500px) {
-  .np-img {
+/* ========================================= */
+/* RESPONSIVE MÓVIL (≤ 480px)                */
+/* ========================================= */
+
+@media (max-width: 480px) {
+  .np-img,
+  .np-main {
     height: 240px;
   }
 
   .vutom-btn {
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 26px;
   }
 
   .vutom-arrow {
-    width: 9px;
+    width: 11px;
+  }
+
+  .np-title {
+    font-size: 1.1rem;
   }
 }

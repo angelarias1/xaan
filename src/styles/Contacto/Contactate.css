@@ -88,8 +88,7 @@
 /* ----------------------------------------- */
 /* RESPONSIVE */
 /* ----------------------------------------- */
-
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .contacto-container {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -97,11 +96,34 @@
 
   .contacto-title {
     font-size: 2.2rem;
+        margin-top: -100px;
+
   }
 
   .contacto-text {
     max-width: 100%;
+    font-size: 1.4rem;
+    text-align: justify;   /* 🔥 JUSTIFICADO */
+  }
+
+  /* 🔵 BOTÓN EN TABLET */
+  .contacto-btn {
+    width: 520px;          /* ancho fijo solo en tablet */
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
     font-size: 0.95rem;
+    background: transparent;
+    border: 1px solid #805b4a;
+    color: #805b4a;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .contacto-btn:hover {
+    background-color: #805b4a;
+    color: #e2d9d2;
   }
 }
 
@@ -109,9 +131,21 @@
   .contacto-title {
     font-size: 1.7rem;
     line-height: 1.15;
+    margin-top: -100px;
   }
 
   .contacto-text {
     font-size: 0.9rem;
+    text-align: justify;   /* 🔥 JUSTIFICADO */
+  }
+
+  /* 🔵 BOTÓN EN MÓVIL — más pequeño y adaptable */
+  .contacto-btn {
+    width: 100%;           /* 🔥 Se ajusta al ancho del contenedor */
+    max-width: 400px;      /* 🔥 Para que no sea gigante */
+    margin: 0 auto;        /* Centrado */
+    padding: 10px 0;
+    font-size: 0.9rem;
   }
 }
+

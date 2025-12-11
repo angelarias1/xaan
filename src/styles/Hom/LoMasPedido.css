@@ -2,7 +2,7 @@
 /*   SECCIÓN LO MÁS PEDIDO — NUEVA VERSIÓN     */
 /* =========================================== */
 
-.np-section {
+.nppn-section {
   width: 100%;
   background-color: #e2d9d2;
   padding: 90px 0;
@@ -11,14 +11,14 @@
 }
 
 /* CONTENEDOR OFICIAL */
-.np-container {
+.nppn-container {
   width: 90%;
   max-width: 1350px;
   margin: 0 auto;
 }
 
 /* TÍTULO */
-.np-title {
+.nppn-title {
   font-family: "Barlow", sans-serif;
   font-size: 0.78rem;
   color: #805b4a;
@@ -28,21 +28,21 @@
 }
 
 /* GRID */
-.np-grid {
+.nppn-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
 
 /* PRODUCT CARD */
-.np-card {
+.nppn-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 /* IMAGEN */
-.np-img {
+.nppn-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -50,7 +50,7 @@
 }
 
 /* CATEGORÍA */
-.np-cat {
+.nppn-cat {
   margin-top: 16px;
   font-family: "Barlow", sans-serif;
   font-size: 0.82rem;
@@ -59,7 +59,7 @@
 }
 
 /* NOMBRE */
-.np-name {
+.nppn-name {
   font-family: "aviano-flare", serif;
   font-size: 1.18rem;
   color: #805b4a;
@@ -69,7 +69,7 @@
 }
 
 /* SUBTÍTULO */
-.np-sub {
+.nppn-sub {
   margin-top: 14px;
   font-family: "Barlow", sans-serif;
   color: #805b4a;
@@ -78,13 +78,13 @@
 }
 
 /* OPCIONES */
-.np-options {
+.nppn-options {
   display: flex;
   gap: 14px;
   margin-top: 12px;
 }
 
-.np-options span {
+.nppn-options span {
   border: 1px solid #805b4a;
   padding: 5px 13px;
   font-family: "Barlow", sans-serif;
@@ -96,7 +96,7 @@
 /*                BOTÓN                        */
 /* =========================================== */
 
-.np-btn {
+.nppn-btn {
   margin-top: 18px;
 
   /*  ⭐ AUMENTA EL ANCHO REAL DEL BOTÓN  */
@@ -122,13 +122,13 @@
   white-space: nowrap;        /* ← evita que el texto salte */
 }
 
-.np-btn:hover {
+.nppn-btn:hover {
   background-color: #d9cdc5;
 }
 
 
 /* AVISO */
-.np-warning {
+.nppn-warning {
   margin-top: 60px;
   font-family: "Barlow", sans-serif;
   font-size: 0.8rem;
@@ -142,32 +142,32 @@
 /* =========================================== */
 
 @media (max-width: 992px) {
-  .np-section {
+  .nppn-section {
     padding: 70px 0;
   }
 
-  .np-grid {
+  .nppn-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  .np-section {
+  .nppn-section {
     padding: 55px 0;
   }
 
-  .np-title {
+  .nppn-title {
     font-size: 0.72rem;
     margin-bottom: 40px;
   }
 
-  .np-grid {
+  .nppn-grid {
     grid-template-columns: 1fr;
     gap: 42px;
   }
 
-  .np-btn {
+  .nppn-btn {
     font-size: 0.85rem;
     padding: 12px 28px;
   }

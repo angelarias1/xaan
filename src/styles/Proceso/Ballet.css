@@ -63,6 +63,8 @@
   color: rgba(0, 0, 0, 0.7);
   max-width: 400px;
   text-align: left;
+
+  /* 🔥 Estos funcionan bien en DESKTOP */
   margin-top: -30px;
   margin-left: 100px;
 }
@@ -83,18 +85,39 @@
 }
 
 /* ========================================= */
-/* RESPONSIVE */
+/* RESPONSIVE TABLET ≤ 1024px */
 /* ========================================= */
 
 @media (max-width: 1024px) {
-  .ballet-top {
-    grid-template-columns: 1fr;
+  .ballet-container {
     gap: 40px;
   }
 
+  .ballet-top {
+    grid-template-columns: 1fr;  /* 🔥 una sola columna */
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .ballet-left,
+  .ballet-right {
+    justify-content: flex-start;  /* 🔥 texto alineado a la izquierda */
+    align-items: flex-start;
+  }
+
   .ballet-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     line-height: 1.3;
+    max-width: 100%;
+  }
+
+  .ballet-paragraph {
+    max-width: 100%;
+    font-size: 0.95rem;
+
+    /* 🔥 RESETEAMOS márgenes que rompían el layout */
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .ballet-img {
@@ -102,13 +125,21 @@
   }
 }
 
+/* ========================================= */
+/* RESPONSIVE MÓVIL ≤ 480px */
+/* ========================================= */
+
 @media (max-width: 480px) {
+  .ballet-container {
+    gap: 32px;
+  }
+
   .ballet-title {
-    font-size: 1.45rem;
+    font-size: 1.2rem;
   }
 
   .ballet-paragraph {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
   }
 
   .ballet-img {

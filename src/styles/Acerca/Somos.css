@@ -97,6 +97,10 @@
 /* RESPONSIVE */
 /* ========================================= */
 
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
 @media (max-width: 1024px) {
   .somos-container-main {
     flex-direction: column;
@@ -108,8 +112,23 @@
     width: 100%;
   }
 
+  /* 🔥 IMAGEN FULL WIDTH EN TABLET */
   .somos-img {
-    max-width: 420px;
+    width: 100%;
+    max-width: 100%;     /* se expande al ancho total */
+    height: auto;
+  }
+
+  /* 🔥 JUSTIFICADO EN TABLET */
+  .somos-description {
+    text-align: justify;
+    font-size: 1.42rem;
+  }
+
+  /* 🔥 BOTÓN ANCHO COMPLETO EN TABLET */
+  .somos-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -119,6 +138,22 @@
   }
 
   .somos-description {
-    font-size: 0.92rem;
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  /* 🔥 IMAGEN FULL WIDTH TAMBIÉN EN MÓVIL */
+  .somos-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 🔥 BOTÓN FULL-WIDTH EN MÓVIL */
+  .somos-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
   }
 }
+

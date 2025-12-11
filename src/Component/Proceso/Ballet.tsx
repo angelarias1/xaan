@@ -15,10 +15,10 @@ const Ballet: React.FC = () => {
       {/* IZQUIERDA */}
       <div className="ballet-left">
         <h2 className="ballet-title">
-          NUESTROS PROCESOS SON UN BALLET<br />
-          ARMONIOSO DONDE LA CIENCIA Y LA<br />
-          ESENCIA SE ENTRELAZAN PARA<br />
-          OFRECERTE PRODUCTOS DE LA MÁS<br />
+          NUESTROS PROCESOS SON UN BALLET
+          ARMONIOSO DONDE LA CIENCIA Y LA
+          ESENCIA SE ENTRELAZAN PARA
+          OFRECERTE PRODUCTOS DE LA MÁS
           ALTA CALIDAD
         </h2>
       </div>
